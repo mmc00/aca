@@ -1,0 +1,502 @@
+---
+title: "Caracterización de la Economía costarricense mediante la Matriz de Contabilidad Social"
+author: "Marlon Molina C"
+date: 2017-12-19T21:13:14-05:00
+output: 
+categories: ["Modelos"]
+tags: ["Modelos", "SAM", "CGE"]
+---
+
+\usepackage[utf8]{inputenc} 
+
+
+<div style="line-height: 2em;">
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+La Matriz de Contabilidad Social (MCS), pertenece a un conjunto de datos que elabora el Banco Central de Costa Rica, la cual permite obtener información relevante sobre el país en cuestión. Entre las características que posee la matriz, se encuentra la capacidad de mostrar todas las transacciones que se realizan en la Economía, es decir, la capacidad de mostrar las interacciones entre distintos agentes. Se podría inferir, que la MCS es una fotografía de la Economía de un país, compartiendo la característica estática.
+
+
+<style>
+ .figure1 {
+   margin-top: 20px;
+   margin-bottom: 60px;
+ }
+</style>
+
+<style>
+ .figure2 {
+   margin-top: 20px;
+   margin-bottom: 110px;
+ }
+</style>
+
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+</style>
+
+<style>
+  .col3 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+</style>
+
+<style>
+body {
+text-align: justify}
+</style>
+
+Se puede partir desde una Economía cerrada para entender el flujo circular, los factores venden su servicio a las actividades, obteniendo ingresos por ello, lo cual permite a distintas instituciones realizar compras en los diferentes mercados. Las actividades obtienen ingresos por la venta de productos, pagando a los factores y a los productos intermedios.
+
+Con una Economía abierta, se sigue la misma lógica, las instituciones venden sus servicios para la producción doméstica y externa. Además, tienen la posibilidad de comprar productos nacionales o extranjeros. Es preciso aclarar que la explicación previa es una simplificación de la Economía, porque también existen otros elementos, como los impuestos y el ahorro. Una representación del flujo circular se muestra en la figura 1.
+
+#### Figura 1. Flujo circular de una Economía cerrada
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("CFLOW.png")
+```
+
+La MCS es una matriz cuadrada, donde cada cuenta de las columnas tiene su contraparte en las filas, además, la información en cada celda tiene presente la cantidad y el precio, siendo este igual por cada entrada de la fila, desprendiendo así la Ley del Precio Único, los artículos son homogéneos y su precio no difiere por agente:
+
+$$
+T_{i,j} = \sum_{i,j} p_{i} q_{i,j} =  p_{i} Q_{i} \quad \land Q_{i} = \sum_{j} q_{i,j}
+$$
+
+Las cantidades totales tienen que ser iguales por columna y por fila, es decir:
+
+$$
+\sum_{i} p_{i,j}q_{i,j} = \sum_{i}T_{i,j} = \sum_{j}T_{j,i} = \sum_{i} p_{j,i}q_{j,i}  \qquad \forall i = j
+$$
+
+Debido al avance en Cuentas Nacionales en Costa Rica, se utiliza información de los Cuadros de Oferta y Utilización (COU) y las Cuentas Económicas Integradas (CEI), sin necesidad de recurrir a otros métodos. El año base de la MCS es 2012, se inicio con cuentas agregadas y se fueron desagregando con otras fuentes de información, como encuestas. En total, las nuevas Cuentas Nacionales del 2012 poseen 183 productos y 136 actividades, las cuales se agregaron en 32 tipos en ambos casos, esto facilita la integración a los Modelos de Equilibrio General Computable. En la figura 2 se encuentra el mapa de agregación que se siguió para la MCS. (BCCR, 2017).
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(networkD3)
+library(RColorBrewer)
+library(shiny)
+mapa <- read.csv("agric_try.csv", header = TRUE, sep = ";")
+
+links <- list()
+nodes <- list()
+links[["links_1"]] <- mapa[1:35 , c('source1','target1','value1', 'group1')]
+colnames(links[["links_1"]]) <- c('source','target','value', 'group')
+colors <- brewer.pal(3, "Pastel1")
+colors <- c(colors, rep("#CBD5E8", 35))
+nodes[["nodes_1"]] <- data.frame(mapa[1:38, c('name1')], colors)
+links[["links_2"]] <- mapa[1:30 , c('source2','target2','value2', 'group2')]
+colors <- brewer.pal(6, "Pastel1")
+colors <- c(colors, rep("#CBD5E8", 30))
+nodes[["nodes_2"]] <- data.frame(mapa[1:36, c('name2')], colors)
+links[["links_3"]] <- mapa[1:50 , c('source3','target3','value3', 'group3')]
+colors <- c(brewer.pal(6, "Pastel1"), brewer.pal(3, "Pastel2"))
+colors <- c(colors, rep("#CBD5E8", 50))
+nodes[["nodes_3"]] <- data.frame(mapa[1:59, c('name3')], colors)
+links[["links_4"]] <- mapa[1:68 , c('source4','target4','value4', 'group4')]
+colors <- c(brewer.pal(7, "Pastel1"), brewer.pal(7, "Pastel2"))
+colors <- c(colors, rep("#CBD5E8", 68))
+nodes[["nodes_4"]] <- data.frame(mapa[1:82, c('name4')], colors)
+for(i in 1:4){
+  colnames(links[[paste0('links_', i)]]) <- c('source', 'target', 'value', 'group')
+  colnames(nodes[[paste0('nodes_', i)]]) <- c('node', 'colors')
+}
+
+sankey <- list()
+
+for(i in 1:4){
+  if (i == 1){h = 500
+  w = 420
+  h1 = -10
+  w1 = 40}  
+  if (i == 2){h = 800
+  w = 420
+  h1 = -10
+  w1 = 40} 
+  if (i == 3){h = 1000
+  w = 420} 
+  if (i == 4){h = 1000
+  w = 420} 
+  if (i == 1 || i == 2){h = 800
+  w = 420} else{h = 1000
+  w =  420}  
+  colors  <- paste(unlist(nodes[[paste0('nodes_', i)]]['colors']), collapse = '", "')
+  colorJS <- paste('d3.scaleOrdinal(["', colors, '"])')  
+  sankey[[paste0('Graph',i)]] <- sankeyNetwork(Links = links[[paste0('links_', i)]], Nodes = nodes[[paste0('nodes_', i)]], 
+                                               Source = 'source', Target = 'target', Value = 'value', 
+                                               NodeID = 'node', LinkGroup = "group",
+                                               colourScale = colorJS,
+ margin = c('right' = h1, 'left' = w1),
+                                               iterations = 0, height = h, width = w, 
+                                               fontSize= 12, sinksRight = T)
+}
+```
+#### Figura 2. Esquema de agregación de bienes y servicios
+<div class="col2">
+```{r agregacion, echo=FALSE, message=FALSE, warning=FALSE, out.width='200%'}
+sankey$Graph1
+sankey$Graph3
+```
+</div>
+<div class="col3">
+```{r agregacion2, echo=FALSE, fig.show='hold', message=FALSE, warning=FALSE}
+sankey$Graph2
+sankey$Graph4
+```
+</div>
+
+Dentro de la información agregada que se puede obtener de la MCS es la composición por componentes del gasto, como se muestra en la figura 3. El componente de mayor peso es del consumo privado, en mayor medida el de los hogares urbanos, con un 54%. Por otra parte, la inversión pública solo representa un 2% del total de inversión en la Economía, el cual es 21%, la privada toma mayor relevancia con un 19%. Además, las importaciones representan un 35%, mostrando el déficit en cuenta corriente, debido a que las exportaciones son un 32%.  
+
+#### Figura 3. Composición del PIB, por el lado del Gasto.
+<div class="figure1">
+```{r Datos, echo=FALSE, message=FALSE, warning=FALSE}
+library(readxl)
+library(plotly)
+BCCR_SAM_CRI <- read_excel("sam_BCCR_32.xls") 
+BCCR_SAM_CRI <- data.frame(BCCR_SAM_CRI, row.names = T, col.names=T)
+BCCR_SAM_CRI <- BCCR_SAM_CRI[, -100]
+rownames(BCCR_SAM_CRI) <- colnames(BCCR_SAM_CRI)
+Data <- list()
+Cuenta  <- c('Consumo privado', 'Inversión', 'Gobierno', 'Exportaciones', 'Importaciones')
+Rural <- c(sum(BCCR_SAM_CRI[33:64,89])/23371405.92,
+           0, 0, 0, 0)
+Urbano <- c(sum(BCCR_SAM_CRI[33:64,90])/23371405.92,
+            0, 0, 0, 0)
+ISFLSH  <- c(sum(BCCR_SAM_CRI[33:64,91])/23371405.92,
+             0, 0, 0, 0)
+Privada <- c(0, sum(BCCR_SAM_CRI[33:64,96])/23371405.92,
+             0, 0, 0)
+assign('Pública', c(0, sum(BCCR_SAM_CRI[33:64,97])/23371405.92,
+             0, 0, 0))
+VE      <- c(0, -sum(BCCR_SAM_CRI[33:64,98])/23371405.92,
+             0, 0, 0)
+Gobierno<- c(0, 0, sum(BCCR_SAM_CRI[33:64,93])/23371405.92,
+             0, 0)
+Exportaciones<- c(0, 0, 0, sum(BCCR_SAM_CRI[33:64,94])/23371405.92,
+                  0)
+Importaciones<- c(0, 0, 0, 0, (sum(BCCR_SAM_CRI[94,33:64]))/23371405.92)
+
+Data$PIB <- data.frame(Cuenta, Rural, Urbano, ISFLSH, 
+                       Privada, get('Pública'), VE, 
+                       Gobierno, Exportaciones, Importaciones)
+colnames(Data$PIB)[6] <- "Pública"
+Graficos <- list()
+colors <- c('rgb(190,186,218)', 'rgb(178,223,138)', 'rgb(251,154,153)', 'rgb(217,217,217)', 'rgb(202,178,214)',
+            'rgb(128,177,211)', 'rgb(51,160,44)', 'rgb(251,128,114)', 'rgb(253,180,98)' , 'rgb(188,128,189)',
+            'rgb(141,211,199)', 'rgb(177,89,40)')
+
+Graficos$PIB <- plot_ly(Data$PIB, x = ~Cuenta, y = ~Rural, type = 'bar', name = 'Rural', marker = list(color = colors[[2]])) %>%
+  layout(yaxis = list(title = 'Porcentaje', tickformat = "%"), barmode = 'stack')
+for(i in 3:10){
+  Graficos$PIB <- add_trace(Graficos$PIB, y = Data$PIB[[i]], name = colnames(Data$PIB)[i], marker = list(color = colors[[i]])) 
+}
+Graficos$PIB <- layout(Graficos$PIB, legend = list(orientation = 'h', y = 1.2),  yaxis = list(title = 'Porcentaje'), xaxis = list(title = "Componente de gasto"), barmode = 'stack')
+div(Graficos$PIB, align = "center")
+```
+</div>
+La composición del gasto por bienes se observa en la tabla 1. El consumo de productos agrícolas y alimenticios son parte importante del consumo de los hogares, en el caso de los hogares urbanos el consumo en otros servicios es ligeramente superior, la diferencia en el patrón parece ser mínima por el grado de agregación de las cuentas de bienes y servicios, también es explicado por el tipo de hogares represetandos en la matriz; rurales y urbanos. El gobierno realiza un gasto importante en salud y educación, representado un 63% de su total. Las exportaciones están bastante distribuidas, sin embargo, los productos alimenticios y agrícolas son los que más se exportan, sumando un 25%, los servicios hoteleros y profesionales tienen un alto porcentaje (9% respectivamente), y la maquinaria 13.91%. Por el lado de las importaciones, el bien que toma más relevancia es la maquinaria con un 18%, además los químicos y productos refinados de petróleo suman 28%.
+
+
+#### Tabla 1. Composición del gasto en bienes.
+```{r Gasto Bienes, echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+library(knitr)
+library(formattable)
+library(dplyr)
+Bienes <- c('otragr', 'banano', 'café', 'for',
+            'pesca', 'min', 'alimentos', 'prodcafé', 'bebtab',                   'textcuero', 'otrmnf', 'refpet', 'químicos', 'cauchoplast', 'prodminmno',
+            'prodment', 'maq', 'vehículos', 'otrsvc', 'elegas',   'agua', 'cns',
+            'comercio', 'trns', 'hotelrest', 'com',
+            'svcprf', 'fin', 
+            'admpub', 'edu', 'salud',
+            'domest')
+Rural  <- c(BCCR_SAM_CRI[33:64,89])/sum(BCCR_SAM_CRI[33:64,89])
+Urbano <- c(BCCR_SAM_CRI[33:64,90])/sum(BCCR_SAM_CRI[33:64,90])
+ISFLSH <- c(BCCR_SAM_CRI[33:64,91])/sum(BCCR_SAM_CRI[33:64,91])
+Privada<- c(BCCR_SAM_CRI[33:64,96])/sum(BCCR_SAM_CRI[33:64,96])
+assign('Pública', c(BCCR_SAM_CRI[33:64,97])/sum(BCCR_SAM_CRI[33:64,97]))
+Gobierno<- c(BCCR_SAM_CRI[33:64,93])/sum(BCCR_SAM_CRI[33:64,93])
+Exportaciones<- c(BCCR_SAM_CRI[33:64,94])/sum(BCCR_SAM_CRI[33:64,94])
+Importaciones<- unlist(BCCR_SAM_CRI[94, 33:64])/sum(BCCR_SAM_CRI[94,33:64])
+Data$Consumo <- data.frame(Bienes, Rural, Urbano, ISFLSH, Privada, 'Pública' = get('Pública') ,Gobierno, Exportaciones, Importaciones)
+is.num <- sapply(Data$Consumo, is.numeric)
+Data$Consumo[is.num] <- lapply(Data$Consumo[is.num], round, 4)
+rownames(Data$Consumo) <- Bienes
+Data$Consumo %>% 
+  mutate(
+    Bienes = rownames(.),
+    Rural = color_tile("white","green")(Rural),
+    Urbano = color_tile("white","green")(Urbano),
+    ISFLSH = color_tile("white","green")(ISFLSH),
+    Privada = color_tile("white","green")(Privada),
+    'Pública' = color_tile("white","green")(get('Pública')),
+    Gobierno= color_tile("white","green")(Gobierno),
+    Exportaciones= color_tile("white","green")(Exportaciones),
+    Importaciones = color_tile("white","green")(Importaciones)
+  ) %>%
+  select(Bienes, everything()) %>%
+  kable(format = "html", escape = F, align=c(rep('c', 8)), table.attr = "style='width:30%;'") %>%
+  kable_styling(bootstrap_options = c("hover", "condensed"), position = "center", full_width = T, font_size = 12)
+```
+
+Por el lado de los ingresos, los hogares tienen distintas fuentes, los cuales se agregaron por ingresos de trabajo asalariado y no asalariado, capital, empresas, tierra, transferencias internacionales y del gobierno, además se incluye las contribuciones sociales a los trabadores, las cuales también recauda el gobierno y se encarga de realizar la transferencia. Los ingresos de los hogares urbanos son mayores que los rurales, esto se debe principalmente a la composición de sus ingresos, los cuales se muestran en la figura 3. El componente de mayor peso es el trabajo asalariado en ambos casos, el empleo no asalariado tiene mayor importancia en los hogares rurales, otra gran diferenciación son los ingresos de capital y empresas, en los hogares urbanos representan 29% y en los rurales un 21%.
+
+#### Figura 3. Ingresos de los hogares por factores.
+<div class="figure1">
+```{r Hogares, echo=FALSE, message=FALSE, warning=FALSE}
+Rural <- c(sum(BCCR_SAM_CRI['hhd.rur', 68:70]),
+           sum(BCCR_SAM_CRI['hhd.rur', 71:73]),
+           BCCR_SAM_CRI['hhd.rur','f.cap'],
+           BCCR_SAM_CRI['hhd.rur','ent'],
+           BCCR_SAM_CRI['hhd.rur','gov'],
+           BCCR_SAM_CRI['hhd.rur','row'],
+           BCCR_SAM_CRI['hhd.rur','f.land'],
+           sum(BCCR_SAM_CRI['hhd.rur', 79:81]))/BCCR_SAM_CRI['hhd.rur', 'total']
+Rural <- round(Rural*100,3)
+
+Urbano <- c(sum(BCCR_SAM_CRI['hhd.urb', 68:70]),
+            sum(BCCR_SAM_CRI['hhd.urb', 71:73]),
+            BCCR_SAM_CRI['hhd.urb','f.cap'],
+            BCCR_SAM_CRI['hhd.urb','ent'],
+            BCCR_SAM_CRI['hhd.urb','gov'],
+            BCCR_SAM_CRI['hhd.urb','row'],
+            BCCR_SAM_CRI['hhd.urb','f.land'],
+            sum(BCCR_SAM_CRI['hhd.urb', 79:81]))/BCCR_SAM_CRI['hhd.urb', 'total']
+Urbano <- round(Urbano*100,3)
+Data$Hogares <- rbind.data.frame(Rural , Urbano)
+Data$Hogares <- cbind.data.frame(Hogares = c('Rural', 'Urbano'), Data$Hogares)
+colnames(Data$Hogares) <- c('Hogares','Asalariado', 'Noasalariado', 'Capital', 'Empresas',
+             'Transferenciadelgobierno',
+             'Transferenciasdelrestodelmundo',
+             'Tierra',
+             'Contribucionessociales')
+Graficos$Hogares <- plot_ly(Data$Hogares, x = ~Asalariado, y = ~Hogares, 
+                            type = 'bar', orientation = 'h',
+                            name = 'Asalariado',
+                            marker = list(color = "#D33F6A"
+                                )) %>%
+                    add_trace(x = ~Noasalariado, name = 'No<br>asalariado', marker = list(color = "#DC5C5A")) %>% 
+                    add_trace(x = ~Capital, name = 'Capital', marker = list(color = "#E37647")) %>%
+                    add_trace(x = ~Empresas, name = 'Empresas', marker = list(color = "#E88E34")) %>%
+                    add_trace(x = ~Tierra, name = 'Tierra', marker = list(color = "#EAA628" ))  %>% 
+                    add_trace(x = ~Transferenciasdelrestodelmundo, name = 'Transferencias<br>del<br>resto<br>del<br>mundo', marker = list(color = "#E9BE35"))  %>% 
+                    add_trace(x = ~Transferenciadelgobierno, name = 'Transferencia<br>del<br>gobierno', marker = list(color = "#E6D457"))  %>%
+                    add_trace(x = ~Contribucionessociales, name = 'Contribuciones<br>sociales', marker = list(color = "#E2E6BD")) %>%
+                    layout(barmode = 'stack',
+                         xaxis = list(title = "Porcentaje")) 
+div(Graficos$Hogares, align = "center")
+```
+</div>
+
+En el caso del gobierno, las fuentes de ingreso se muestran en la figura 4, donde se evidencia que la principal fuente de ingreso son las transferencias internas con un 38.7%, de las cuales un 25% provienen de los hogares urbanos, en cambio las transferencias externas solo 0.275%. La otra gran fuente de ingreso son los ingresos indirectos con un 20.6%, siendo un 18% por el IVA y un 2.57% de los impuestos a los bienes netos (restando el valor del subsidio), los impuestos directos serían los siguientes con un 17.5%.
+
+Con la matriz se pueden obtener datos de las tasas efectivas por tipo de impuestos, las cuales se muestran en la tabla 2. Para el caso de las importaciones, la mayor tasa recae para las bebidas y tabaco con 40%, los productos refinados del petroleo tienen una tasa de 31% y los vehículos un 24%. 
+
+#### Figura 4. Composición de los ingresos del gobierno.
+<div class="figure2">
+```{r Gobierno, echo=FALSE, message=FALSE, warning=FALSE}
+library(sunburstR)
+library(dplyr)
+library(tidyr)
+library(htmlwidgets)
+Data$Gobierno <- data.frame(
+  #Cuenta = c('Valores') , 
+  Agregacion = c('Factores', 'Impuesto Actividades',
+                 'Impuestos indirectos', 'Impuestos indirectos',
+                 'Impuestos directos',
+                 'Aranceles',
+                 'Impuesto Exportaciones',
+                 'Tranferencias internas', 'Tranferencias internas', 'Tranferencias internas',
+                 'Tranferencias externas'),
+  
+  Cuenta = c('factores', 
+             'Actividades',
+             'IVA', 'Bienes',
+             'Directos',
+             'aranceles',
+             'Exportaciones',
+             'Rurales','Urbanos', 'Empresas',
+             'Transf externas'),
+  
+  Valores = round(c(
+              sum(BCCR_SAM_CRI['gov', c('f.cap', 'f.land', 'f.for', 'f.fsh', 'f.ext')]),
+              BCCR_SAM_CRI['gov', 'tax.act'],
+              BCCR_SAM_CRI['gov', 'tax.vat'],
+              BCCR_SAM_CRI['gov', 'tax.com']-BCCR_SAM_CRI['gov', 'sub.com'],
+              BCCR_SAM_CRI['gov', 'tax.dir'],
+              BCCR_SAM_CRI['gov', 'tax.imp'],
+              BCCR_SAM_CRI['gov', 'tax.exp'],
+              BCCR_SAM_CRI['gov', 'hhd.rur'],
+              BCCR_SAM_CRI['gov', 'hhd.urb'],
+              BCCR_SAM_CRI['gov', 'ent'],
+              BCCR_SAM_CRI['gov', 'row'])), 2)
+colors <- list(domain = c(unique(as.character(Data$Gobierno$Agregacion), 
+                                 unique(as.character(Data$Gobierno$Cuenta)))),
+               range  =  c(c("#B3E2CD", "#FDCDAC", "#CBD5E8", "#ffff99", "#E6F5C9", "#FFF2AE", "#fddaec",
+                             "#CCCCCC"), c('#ffff00', '#3fa678', '#f9761f',
+                                           '#3e5a8e', '#839cc9', '#ffff00', '#8dc224', '#FFF2AE',
+                                           '#f76eb5', '#aa095c', '#f42590', '#CCCCCC'))
+)
+sb  <-  Data$Gobierno %>%
+  unite(C,  Agregacion,  Cuenta, sep = "-") %>%
+  select(C,  Valores) %>%
+  sunburst(.,  count = T, colors = colors,
+           withD3 = T,
+           width="100%",
+           height = '450',
+           legend = list(w=140), 
+           legendOrder = unique(unlist(strsplit(as.character(Data$Gobierno$Agregacion),"-"))))
+sb <- htmlwidgets::onRender(
+  sb,
+  "
+  function(el,x) {
+  // force show the legend
+  d3.selectAll('.sunburst-legend text').attr('font-size', '10px');
+  
+  d3.select(el).select('.sunburst-togglelegend').property('checked', true);
+
+  //   simulate click
+  d3.select(el).select('.sunburst-togglelegend').on('click')();
+
+  // remove legend text
+  document.getElementsByClassName('sunburst-sidebar')[0].childNodes[2].nodeValue = ''; 
+
+  // remove the legend toggle
+  d3.select(el).select('.sunburst-togglelegend').remove()
+  }
+   "
+)
+sb
+```
+</div>
+
+Para el caso particular del IVA, se puede desagregar el pago de impuestos por bienes, los cuales se muestran en la figura 5. Es necesario aclarar que se excluyen los bienes y servicios: banano, café, agua, construcción, administración pública, educación, salud y domésticos, porque no muestran ningún pago de IVA, además, se excluyen: la silvicultura, pesca y productos de café, debido a su porcentaje (0.02%, 0.03% y 0.02%). Los servicios de hoteles y restaurantes son los que más aportan al IVA con un 14%, después sigue la maquinaria y alimentos con un 9%, las telecomunicaciones y químicos un 8%. Por otro lado, los bienes como los servicios profesionales, transporte, refinados del petróleo, minería y agrícolas aportan cada uno cerca de un 1%.
+
+#### Figura 5. Aporte recaudatorio de los bienes en el IVA. 
+<div class="figure2">
+```{r IVA , echo=FALSE, message=FALSE, warning=FALSE}
+Data$IVA <- data.frame(
+  bienes <- c('otragr', #'for', 'pesca',
+              'min', 'alimentos', # 'prodcafÃ©',
+              'bebtab', 'texcuero', 'otrmnf',
+              'refpet', 'químicos', 'cauchoplast', 'prodminmno',
+              'prodment', 'maq', 'vehículos', 'otrsvc', 'elegas',
+              'comercio', 'trns', 'hotelrest', 'com', 'svcprf',
+              'fin'),
+  
+  Valores <- round(c(
+    BCCR_SAM_CRI['tax.vat', 'c.otragr'],
+  #  BCCR_SAM_CRI['tax.vat', 'c.for'],
+  #  BCCR_SAM_CRI['tax.vat', 'c.pesca'],
+    BCCR_SAM_CRI['tax.vat', 'c.min'],
+    BCCR_SAM_CRI['tax.vat', 'c.alimentos'],
+  #  BCCR_SAM_CRI['tax.vat', 'c.prodcafe'],
+    BCCR_SAM_CRI['tax.vat', 'c.bebtab'],
+    BCCR_SAM_CRI['tax.vat', 'c.texcuero'],
+    BCCR_SAM_CRI['tax.vat', 'c.otrmnf'],
+    BCCR_SAM_CRI['tax.vat', 'c.refpet'],
+    BCCR_SAM_CRI['tax.vat', 'c.quimicos'],
+    BCCR_SAM_CRI['tax.vat', 'c.cauchoplast'],
+    BCCR_SAM_CRI['tax.vat', 'c.prodminnomet'],
+    BCCR_SAM_CRI['tax.vat', 'c.prodmet'],
+    BCCR_SAM_CRI['tax.vat', 'c.maq'],
+    BCCR_SAM_CRI['tax.vat', 'c.vehiculos'],
+    BCCR_SAM_CRI['tax.vat', 'c.otrsvc'],
+    BCCR_SAM_CRI['tax.vat', 'c.elegas'],
+    BCCR_SAM_CRI['tax.vat', 'c.comercio'],
+    BCCR_SAM_CRI['tax.vat', 'c.trns'],
+    BCCR_SAM_CRI['tax.vat', 'c.hotelrest'],
+    BCCR_SAM_CRI['tax.vat', 'c.com'],
+    BCCR_SAM_CRI['tax.vat', 'c.svcprf'],
+    BCCR_SAM_CRI['tax.vat', 'c.fin']
+  )/BCCR_SAM_CRI['tax.vat', 'total'],3
+  )
+)
+names <- as.character(Data$IVA[,1])
+Data$IVA <- rbind.data.frame(Data$IVA[,2])
+Data$IVA <- cbind.data.frame(Cuenta = c('Bienes'), Data$IVA)
+colnames(Data$IVA) <- c('Cuenta', names)
+
+colors <- c("#DB9D85", "#D3A178", "#CAA66E", "#BEAA67", "#B1AF64", "#A2B367", "#92B66E",
+           "#80B979", "#6DBC86", "#5ABD93", "#47BEA2", "#3ABEAF", "#39BDBC", "#45BAC8",
+           "#5AB7D2", "#70B3DA", "#87AEDF", "#9CA8E2", "#B0A3E1", "#C09DDE", "#CD99D8")
+Graficos$IVA <- plot_ly(Data$IVA, x = ~Cuenta, y = ~otragr, type = 'bar', name = 'otrogr',
+                        marker = list(color = colors[[1]])) %>%
+layout(yaxis = list(title = 'Porcentaje', tickformat = "%"))
+for(i in 3:21){
+Graficos$IVA <- add_trace(Graficos$IVA, y = Data$IVA[[i]], name = colnames(Data$IVA)[i], marker = list(color = colors[[i]])) 
+}
+Graficos$IVA <- layout(Graficos$IVA, legend = list(orientation = 'h'),  yaxis = list(title = 'Porcentaje'), xaxis = list(title = ' '))
+div(Graficos$IVA, align = "center")
+```
+</div>
+
+Con la MCS también se pueden obtener datos de las tasas efectivas por tipo de impuestos, las cuales se muestran en la tabla 2. En el caso de las tasas de ventas, la tasa más alta es de los hoteles y servicios turísticos, lo cual esta correlacionado con su alta recaudación, pero no así con los demás bienes. Para el caso de las importaciones, la mayor tasa recae para las bebidas y tabaco con 40%, los productos refinados del petróleo tienen una tasa de 31% y los vehículos un 24%. Las tasas de exportaciones son en la mayoría de los casos 0, solamente en los productos agrícolas se presenta alguna tasa, pero de un valor cercano al 1%. Para el impuesto de actividades, los valores son cercanos al 2% y 3%, siendo el agua el bien con la mayor tasa.
+
+#### Tabla 2. Tasas efectivas por tipo de impuestos.
+```{r Tasas, echo=FALSE, message=FALSE, warning=FALSE}
+Bienes <- c('otragr', 'banano', 'café', 'for',
+            'pesca', 'min', 'alimentos', 'prodcafé', 'bebtab',                   'textcuero', 'otrmnf', 'refpet', 'químicos', 'cauchoplast', 'prodminmno',
+            'prodment', 'maq', 'vehículos', 'otrsvc', 'elegas',   'agua', 'cns',
+            'comercio', 'trns', 'hotelrest', 'com',
+            'svcprf', 'fin', 
+            'admpub', 'edu', 'salud',
+            'domest')
+Importaciones <- mapply("/", c(BCCR_SAM_CRI[84,33:64]),c(BCCR_SAM_CRI[94,33:64]), SIMPLIFY = FALSE)
+Exportaciones <- mapply("/", c(BCCR_SAM_CRI[85,33:64]),c(BCCR_SAM_CRI[33:64,94]), SIMPLIFY = FALSE)
+Ventas <- list()
+for (i in 33:64) {
+  Ventas[[colnames(BCCR_SAM_CRI)[i]]] <- BCCR_SAM_CRI[83, i] /   (sum(BCCR_SAM_CRI[i, c(89:91)])+
+                                                                    BCCR_SAM_CRI[i, 93]+
+                                                                    sum(BCCR_SAM_CRI[i, c(96:98)])+
+                                                                    sum(BCCR_SAM_CRI[i, 1:32])-
+                                                                    sum(BCCR_SAM_CRI[83,i]))
+}   
+assign('Producción', list())
+Prod <- list()
+for (i in 1:32) {
+  Prod[[colnames(BCCR_SAM_CRI)[i]]] <- BCCR_SAM_CRI[82, i] / BCCR_SAM_CRI[99, i]   
+} 
+assign('Producción', Prod)
+#Actividades <- colnames(BCCR_SAM_CRI)[1:32]
+Actividades <- c('otragr', 'banano', 'café',
+                 'for', 'pesca', 'min',
+                 'alimentos', 'prodcafé',
+                 'bebtab', 'texcuero', 'otrmnf',
+                 'refpet', 'cauchoplast', 'químicos',
+                 'prodminmno', 'prodment', 'maq',
+                 'vehículos', 'otrsvc', 'elegas',
+                 'agua', 'cns', 'comercio', 'trns',
+                 'hotelrest', 'com', 'svcprf',
+                 'fin', 'edu', 'salud', 
+                 'domest', 'admpub')
+Data$Tasas <- data.frame(Bienes, Importaciones=unlist(Importaciones), Exportaciones = unlist(Exportaciones), Ventas=unlist(Ventas), Actividades, 'Producción'=unlist(get('Producción')))
+Data$Tasas <- Data$Tasas  %>% replace(is.na(.), 0)
+is.num <- sapply(Data$Tasas, is.numeric)
+Data$Tasas[is.num] <- lapply(Data$Tasas[is.num], round, 4)
+rownames(Data$Tasas) <- Bienes
+Data$Tasas %>% 
+  mutate(
+    Bienes = rownames(.),
+    Exportaciones= color_tile("white","green")(Exportaciones),
+    Importaciones = color_tile("white","green")(Importaciones),
+    Ventas = color_tile("white","green")(Ventas),
+    Actividades = color_tile("white","white")(Actividades),
+    'Producción' = color_tile("white","green")(get('Producción'))
+  ) %>%
+  select(Bienes, everything()) %>%
+  kable(format = "html", escape = F, align=c(rep('c', 8))) %>%
+  kable_styling(bootstrap_options = c("hover", "condensed"), position = "center", full_width = T)
+```
+</div>
+
+
+

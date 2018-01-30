@@ -1,16 +1,16 @@
 +++
-title = "Academic: the website designer for Hugo"
+title = "Cambio año base del PIB en Costa Rica"
 
 date = 2016-04-20
 lastmod = 2018-01-13
 draft = false
 
 tags = ["academic"]
-summary = "Create a beautifully simple website or blog in under 10 minutes."
+summary = "Las implicaciones fiscales ante el cambio en la medición del PIB"
 
 [header]
-image = "headers/getting-started.png"
-caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
+image = "headers/header3.png"
+caption = "Credito de la Imagen: BCCR"
 
 [[gallery_item]]
 album = "1"

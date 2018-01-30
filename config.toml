@@ -6,14 +6,14 @@
 baseurl = "/"
 
 # Title of your site
-title = "Academic"
+title = "Proyecto de Estudios Fiscales"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
 copyright = "&copy; 2018"
 
 theme = "hugo-academic"
-enableEmoji = true
+enableEmoji = false
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
@@ -26,8 +26,9 @@ disqusShortname = ""
 googleAnalytics = ""
 
 # Default language to use (if you setup multilingual support)
-defaultContentLanguage = "en"
+defaultContentLanguage = "es"
 defaultContentLanguageInSubdir = false
+alwaysShowLanguageChooser = true
 
 [outputs]
   home = [ "HTML", "CSS", "RSS" ]
@@ -50,20 +51,19 @@ defaultContentLanguageInSubdir = false
   font = "default"
 
   # Your details.
-  name = "Lena Smith"
-  role = "Professor of Artificial Intelligence"
-
+  name = "David Cardoza Rodriguez"
+  role = "Coordinador e Investagador"
+  
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Stanford University", url = "" } ]
-
+  organizations = [ { name = "Universidad Nacional de Costa Rica", url = "http://www.una.ac.cr/" } ]
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "test@example.org"
-  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
-  office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  phone = "888 888 88 88"
-  skype = "echo123"
+  email = "dcrunicornio@gmail.com"
+  address = "Edificio de Ciencias Sociales, piso 3, Universidad Nacional, Heredia,  86-3000, Costa Rica"
+  office_hours = "Martes a Viernes, 1:00 pm a 4:30 o por cita"
+  phone = "2562-4142"
+  skype = ""
   telegram = ""
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
@@ -75,7 +75,7 @@ defaultContentLanguageInSubdir = false
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-  logo = ""
+  logo = "Rlogo.png"
 
   # Enable/disable map in Contact widget.
   # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
@@ -92,10 +92,10 @@ defaultContentLanguageInSubdir = false
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  map = 0
-  map_api_key = ""
-  latitude = "37.4275"
-  longitude = "-122.1697"
+  map = 1
+  map_api_key = "AIzaSyAe5X298-PL-xMHrW9VpTtTDmoyM6_7aXk "
+  latitude = "9.999670"
+  longitude = "-84.111943"
   zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
@@ -115,7 +115,7 @@ defaultContentLanguageInSubdir = false
 
   # Enable global LaTeX math rendering?
   #   If false, you can enable it locally on a per page basis.
-  math = false
+  math = true
 
   # Highlight.js options
   #   highlight
@@ -173,6 +173,10 @@ defaultContentLanguageInSubdir = false
     'Book section'  # 6
   ]
 
+  uglyurls = true
+ #[permalinks]
+ # post = "/:year/:month/:day/:slug/"
+
   # Configuration of talk pages.
   [params.talks]
     # Show talk time?
@@ -194,7 +198,7 @@ defaultContentLanguageInSubdir = false
     #   1 = Detailed
     #   2 = APA
     #   3 = MLA
-    publication_format = 3
+    publication_format = 2
 
   # Social/Academic Networking
   #
@@ -244,12 +248,12 @@ defaultContentLanguageInSubdir = false
   align_right = true
 
 [[menu.main]]
-  name = "Home"
+  name = "Inicio"
   url = "#about"
   weight = 1
 
 [[menu.main]]
-  name = "Publications"
+  name = "Publicaciones"
   url = "#publications_selected"
   weight = 2
 
@@ -259,17 +263,17 @@ defaultContentLanguageInSubdir = false
   weight = 3
 
 [[menu.main]]
-  name = "Projects"
+  name = "Proyectos"
   url = "#projects"
   weight = 4
 
 [[menu.main]]
-  name = "Teaching"
+  name = "Cursos"
   url = "#teaching"
   weight = 5
 
 [[menu.main]]
-  name = "Contact"
+  name = "Contacto"
   url = "#contact"
   weight = 6
 
@@ -283,5 +287,5 @@ defaultContentLanguageInSubdir = false
 #   Create a [languages.X] block for each language you want, where X is the language ID.
 
 # Configure the English version of the website.
-[Languages.en]
-  languageCode = "en-us"
+[Languages.es]
+  languageCode = "es"

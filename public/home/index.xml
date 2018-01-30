@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Proyecto de Estudios Fiscales</title>
+    <link>/home.html</link>
+    <description>Recent content in Homes on Proyecto de Estudios Fiscales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0600</lastBuildDate>
+    
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/home/hero.html</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0600</pubDate>
+      
+      <guid>/home/hero.html</guid>
+      <description>El proyecto de Estudios fiscales es una iniciativa que nació en la escuela de Economía de la Universidad ante la necesidad de brindar herramientas análiticas para la crisis fiscal </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/about.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/about.html</guid>
+      <description>Biografía Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</description>
+    </item>
+    
+    <item>
+      <title>Publicaciones seleccionadas</title>
+      <link>/home/publications_selected.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
+      
+      <guid>/home/publications_selected.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publicaciones recientes</title>
+      <link>/home/publications.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
+      
+      <guid>/home/publications.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proximas charlas y eventos</title>
+      <link>/home/talks.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/talks.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Post recientes</title>
+      <link>/home/posts.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/posts.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proyectos</title>
+      <link>/home/projects.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/projects.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cursos</title>
+      <link>/home/teaching.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/teaching.html</guid>
+      <description>Los cursos impartidos en el proyecto, en la Universidad son:
+ Política Fiscal Econometría Introducción a R Microeconomía  </description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>/home/tags.html</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0600</pubDate>
+      
+      <guid>/home/tags.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contacto</title>
+      <link>/home/contact.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/contact.html</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

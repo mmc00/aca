@@ -1,0 +1,83 @@
+name1;source1;target1;value1;group1;name2;source2;target2;value2;group2;name3;source3;target3;value3;group3;name4;source4;target4;value4;group4
+otragr;0;3;40794.07807;otragr;for;0;6;53478.11593;for;texcuero;0;9;252102.9279;texcuero;elegas;10;14;214329.3294;otrsvc
+banano;0;4;113196.2511;otragr;pesca;1;7;69227.19013;pesca;otrmnf;0;10;494308.3983;texcuero;agua;0;15;765572.3861;elegas
+café;0;5;46486.7411;otragr;min;1;8;32996.54624;pesca;refpet;0;11;61358.27749;texcuero;cns;1;16;168889.5272;agua
+Frijol;0;6;675.8932705;otragr;alimentos;2;9;172835.1822;min;químicos;0;12;160261.3827;texcuero;comercio;10;17;101753.5693;otrsvc
+Maíz;0;7;120859.5913;otragr;prodcafe;2;10;2187.119499;min;cauchoplast;1;13;169739.2965;otrmnf;trns;10;18;7761.923115;otrsvc
+Trigo;0;8;93456.03185;otragr;bebtab;2;11;11.40374138;min;prodminno;1;14;783063.9518;otrmnf;hotelrest;2;19;842268.2998;cns
+Otros cereales;0;9;17462.45832;otragr;Productos de la silvicultura;2;12;35686.96933;min;prodmet;1;15;240302.4979;otrmnf;com;2;20;1235973.852;cns
+Legumbres y otras semillas oleaginosas;0;10;37861.54906;otragr;Productos de la pesca;3;13;298499.1297;alimentos;maq;2;16;775971.1823;refpet;fin;2;21;205724.3484;cns
+Arroz;0;11;26011.10168;otragr;Productos de la acuicultura;3;14;197927.504;alimentos;vehículos;2;17;661460.0213;refpet;svcprf;2;22;746803.9914;cns
+Sandía;0;12;19791.94055;otragr;Piedra, arena y arcilla;3;15;131621.8125;alimentos;Artículos textiles, excepto prendas de vestir;2;18;104924.9974;refpet;admpub;2;23;864574.9008;cns
+Melón;0;13;25772.45854;otragr;Sal;3;16;151195.6375;alimentos;Prendas de vestir;2;19;95954.41897;refpet;otrsvc;3;24;3370196.637;comercio
+Cebolla;0;14;70725.97446;otragr;Petróleo y gas natural;3;17;219125.6545;alimentos;Cuero y productos conexos, excepto calzado;2;20;77883.22162;refpet;edu;3;25;433678.969;comercio
+Chayote;0;15;85458.59147;otragr;Otros minerales metálicos, no metálicos;3;18;439338.0925;alimentos;Calzado;3;21;548324.3246;químicos;salud;4;26;1652.835678;trns
+Papa;0;16;102865.7748;otragr;Carne y despojos comestibles de aves;3;19;292331.9414;alimentos;Madera y corcho, productos de madera y corcho;3;22;272870.6973;químicos;domest;4;27;374908.6538;trns
+Raíces y tubérculos n.c.p.;0;17;35784.76354;otragr;Carne y despojos comestibles de ganado vacuno;3;20;193427.9272;alimentos;Papel y productos de papel;3;23;205435.3604;químicos;Servicios de reparación e instalación de maquinaria ;4;28;353690.5068;trns
+Hortalizas n.c.p.;0;18;25801.33772;otragr;Carne y despojos comestibles de ganado porcino;3;21;540464.0581;alimentos;Productos de la edición, impresión y grabaciones;3;24;201821.9814;químicos;Energía eléctrica, gas, vapor y aire acondionado;4;29;487959.5721;trns
+Caña de azúcar;0;20;442126.8725;otragr;Embutidos y otros productos cárnicos;3;22;183412.9654;alimentos;Gasolina;3;25;507209.9964;químicos;Agua potable y alcantarillado;4;30;286272.2732;trns
+Flores;0;21;24175.16541;otragr;Pescados, crustáceos y moluscos conservados;3;23;110474.356;alimentos;Diesel;3;26;165910.2552;químicos;Servicio de recogida, tratamiento de desechos;4;31;80076.37028;trns
+Follajes;0;22;438062.2228;otragr;Frutas, legumbres y hortalizas en conserva;3;24;132882.1359;alimentos;Bunker;3;27;545702.3443;químicos;Servicios de protección del medio ambiente;4;32;28305.16588;trns
+Banano;0;24;94156.07255;otragr;Aceites vegetales crudos y refinados;3;25;403786.2405;alimentos;Aceites y grasas lubricantes;4;28;288633.6223;cauchoplast;Edificaciones residenciales;4;33;148381.4019;trns
+Plátano;0;25;188089.0624;otragr;Otros aceites y grasas de origen vegetal y animal n.c.p.;3;26;183216.0588;alimentos;Otros productos derivados del petróleo y de coque;4;29;108715.753;cauchoplast;Edificaciones no residenciales;4;34;30252.62675;trns
+Piña;0;26;12748.43641;otragr;Productos lácteos;3;27;90446.19801;alimentos;Sustancias químicas básicas y abonos ;4;30;626157.2939;cauchoplast;Carreteras y vías férreas;4;35;174801.5542;trns
+Palma aceitera;0;27;25404.65524;otragr;Arroz descascarillado, elaborado y semielaborado ;3;28;43892.17695;alimentos;Plásticos y caucho sintético en formas primarias;5;31;109422.7987;prodminno;Construcción de proyectos de servicio público;10;36;93263.01441;otrsvc
+Café en fruta;0;28;7621.960451;otragr;Harina de Trigo;4;29;270826.4532;prodcafe;Pesticidas y otros productos químicos de uso agropecuario;5;32;119249.9672;prodminno;Servicios especiales y generales de la construcción;5;37;536098.5299;hotelrest
+Mango;0;29;51946.52235;otragr;Otros productos de molinería n.c.p.;4;30;102074.319;prodcafe;Pinturas, barnices, revestimientos;5;33;146537.0413;prodminno;Servicios de Comercio;5;38;1374609.249;hotelrest
+Naranja;0;30;117123.3703;otragr;Productos de panadería;3;31;541880.905;alimentos;Jabones, detergentes, perfumes;5;34;283189.4713;prodminno;Mantenimiento y reparación de vehículos;10;39;65831.83994;otrsvc
+Palmito;0;31;70029.85884;otragr;Azúcar de caña, melazas, jarabes y otros azúcares;3;32;261904.9818;alimentos;Fibras artificiales y productos químicos n.c.p;6;35;653638.6885;prodmet;Servicios de transporte por ferrocarril;6;40;480922.3527;com
+Otros productos de plantas no perennes y perennes n.c.p.;0;32;119009.9861;otragr;Cacao, chocolates y productos de confitería;5;33;106651.6618;bebtab;Productos farmacéuticos y medicinales;6;36;216122.9938;prodmet;Servicios de transporte terrestre;6;41;152101.0752;com
+Otras frutas, nueces y otros frutos oleaginosos;0;33;77064.2593;otragr;Macarrones, fideos y productos farináceos análogos;5;34;536943.8939;bebtab;Productos de caucho;6;37;65405.18242;prodmet;Servicio de taxis;6;42;205098.4415;com
+Plantas y raíces vivas;0;34;162155.2877;otragr;Café oro;5;35;70836.39283;bebtab;Perfiles, tubería y conexiones de plástico ;6;38;477280.8175;prodmet;Transporte de carga;8;43;566285.3298;svcprf
+Ganado bovino;0;35;9546.684148;otragr;Café molido, soluble, extractos y concentrados;;;;;Otros productos de plástico;7;39;317402.9331;maq;Transporte de pasajeros por vía marítima y aérea;7;44;34829.98797;fin
+Ganado porcino;0;36;71519.88346;otragr;Comidas, platos preparados y otros productos alimenticios;;;;;Vidrio y productos de vidrio;7;40;440329.7984;maq;Servicios de almacenamiento y depósito;7;45;62744.09259;fin
+Pollo en pie;0;37;186580.9092;otragr;Alimentos preparados para animales;;;;;Productos refractarios, materiales de construcción ;7;41;129128.1529;maq;Servicios de estacionamientos;7;46;797210.99;fin
+Otros animales vivos;1;19;13986.00586;banano;Bebidas alcohólicas destiladas y vinos;;;;;Cemento, cal y yeso;7;42;25775.87277;maq;Otros servicios vinculados con transporte;7;47;306425.5031;fin
+Huevos;2;23;170789.9747;café;Cerveza, malta, bebidas no alcohólicas y agua embotellada;;;;;Artículos de hormigón, cemento y yeso ;7;43;29446.45301;maq;Carga y descarga;7;48;374990.4134;fin
+Leche cruda;;;;;Productos de tabaco;;;;;Productos Básicos de Hierro y Acero ;7;44;250682.3673;maq;Otros servicios de apoyo al transporte;7;49;174591.7343;fin
+Otros productos animales n.c.p.;;;;;;;;;;Productos primarios de aluminio, zinc;7;45;289370.6321;maq;Servicios postales y de mensajería;7;50;72203.67675;fin
+Servicios de apoyo a la agricultura;;;;;;;;;;Productos metálicos para uso estructural;7;46;54935.09984;maq;Servicios de alojamiento;10;51;1956031.691;otrsvc
+;;;;;;;;;;Otros productos de metal;7;47;213098.4287;maq;Servicio de suministro de comida y bebidas;10;52;743323.1688;otrsvc
+;;;;;;;;;;Componentes y tableros electrónicos;7;48;30766.75319;maq;Servicios de radio, de televisión, películas;8;53;168788.7036;svcprf
+;;;;;;;;;;Equipos de comunicaciones ;7;49;636177.7522;maq;Servicios de telefonía;8;54;146217.9109;svcprf
+;;;;;;;;;;Equipo de medición, prueba, navegación ;8;50;814302.8288;vehículos;Servicios de internet;8;55;434450.7662;svcprf
+;;;;;;;;;;Equipo de irradiación, electrónico, médico;8;51;189445.5941;vehículos;Otros servicios de telecomunicaciones;8;56;316991.7178;svcprf
+;;;;;;;;;;Instrumentos ópticos, fotográfico;8;52;59712.26025;vehículos;Servicios de información, programación;8;57;125489.6093;svcprf
+;;;;;;;;;;Motores, generadores, transformadores eléctricos;1;53;106178.7075;otrmnf;Servicios de banca central;8;58;532193.2345;svcprf
+;;;;;;;;;;Pilas, baterías, acumuladores, cables ;1;54;160480.3296;otrmnf;Otros servicios explícitos de intermediación monetaria ;8;59;213113.0379;svcprf
+;;;;;;;;;;Equipo eléctrico de iluminación;7;55;813976.496;maq;Servicios de intermediación financiera;10;60;31273.79253;otrsvc
+;;;;;;;;;;Refrigeradoras, cocinas, lavadoras;1;56;292760.3763;otrmnf;Otros servicios financieros y de banca de inversión;10;61;396715.4107;otrsvc
+;;;;;;;;;;Otros tipos de equipo eléctrico;1;57;107974.3227;otrmnf;Servicios de seguros, reaseguros y fondos de pensiones;10;62;162755.5047;otrsvc
+;;;;;;;;;;Maquinaria de uso general y especial;1;58;341879.4894;otrmnf;Servicios auxiliares de la intermediación monetaria y financiera;10;63;35740.11218;otrsvc
+;;;;;;;;;;, remolques y semirremolques;;;;;Servicios auxiliares de seguros y fondos de pensiones;10;64;110437.2144;otrsvc
+;;;;;;;;;;Partes y piezas para vehículos automotores;;;;;Servicios de alquiler de viviendas;10;65;126467.7029;otrsvc
+;;;;;;;;;;Otros tipos de equipo de transporte;;;;;Servicios de alquiler de inmuebles no residenciales;10;66;232332.4309;otrsvc
+;;;;;;;;;;Muebles de madera;;;;;Servicios jurídicos;10;67;135247.9228;otrsvc
+;;;;;;;;;;Muebles de otro tipo de material;;;;;Servicios de contabilidad, consultoría fiscal y otros;10;68;889122.9631;otrsvc
+;;;;;;;;;;Instrumentos y suministros médicos y dentales;;;;;Servicios de consultoría en gestión financiera;9;69;702714.8807;admpub
+;;;;;;;;;;Otros productos manufactureros;;;;;Servicios de arquitectura, ingeniería y conexos;10;70;555120.2523;otrsvc
+;;;;;;;;;;Desperdicios y desechos;;;;;Servicios de investigación científica y desarrollo;10;71;24761.56547;otrsvc
+;;;;;;;;;;Servicios de manufactura;;;;;Servicios de publicidad;11;72;2050816.351;edu
+;;;;;;;;;;;;;;;Otros servicios profesionales, científicos y técnicos;12;73;1926719.36;salud
+;;;;;;;;;;;;;;;Servicios veterinarios;10;74;235986.7239;otrsvc
+;;;;;;;;;;;;;;;Servicios de alquiler de automotores;10;75;95837.54848;otrsvc
+;;;;;;;;;;;;;;;Alquiler y arrendamiento de licencias;10;76;102771.1018;otrsvc
+;;;;;;;;;;;;;;;Otros servicios de alquiler;10;77;10055.29324;otrsvc
+;;;;;;;;;;;;;;;Servicios de agencias de empleo;10;78;176517.355;otrsvc
+;;;;;;;;;;;;;;;Servicios de agencias de viajes, operadores turísticos;10;79;10403.04833;otrsvc
+;;;;;;;;;;;;;;;Servicios de seguridad  e investigación;10;80;21008.64638;otrsvc
+;;;;;;;;;;;;;;;Limpieza de edificios y cuidado del paisaje y mantenimiento;13;81;282337.9895;domest
+;;;;;;;;;;;;;;;Servicios administrativos y de apoyo de oficina;;;;
+;;;;;;;;;;;;;;;Servicios públicos generales del gobierno ;;;;
+;;;;;;;;;;;;;;;Servicios a la comunidad en general;;;;
+;;;;;;;;;;;;;;;Servicios administrativos de los regímenes de seguridad social obligatoria;;;;
+;;;;;;;;;;;;;;;Servicios de enseñanza;;;;
+;;;;;;;;;;;;;;;Servicios de atención de la salud humana;;;;
+;;;;;;;;;;;;;;;Servicios artísticos, de entretenimiento y recreativos;;;;
+;;;;;;;;;;;;;;;Servicios de asociaciones empresariales;;;;
+;;;;;;;;;;;;;;;Servicios de reparación de computadoras;;;;
+;;;;;;;;;;;;;;;Servicios de lavado, secado y limpieza de prendas;;;;
+;;;;;;;;;;;;;;;Servicios de peluquería y otros tratamientos de belleza;;;;
+;;;;;;;;;;;;;;;Servicios funerarios y conexos;;;;
+;;;;;;;;;;;;;;;Otros servicios n.c.p.;;;;
+;;;;;;;;;;;;;;;Servicios domésticos;;;;

@@ -1,0 +1,1762 @@
+---
+title: "Caracterización de la Economía costarricense mediante la Matriz de Contabilidad Social"
+author: "Marlon Molina C"
+date: 2017-12-19T21:13:14-05:00
+output: 
+categories: ["Modelos"]
+tags: ["Modelos", "SAM", "CGE"]
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/d3/d3.min.js"></script>
+<script src="/rmarkdown-libs/sankey/sankey.js"></script>
+<script src="/rmarkdown-libs/sankeyNetwork-binding/sankeyNetwork.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotlyjs/plotly-latest.min.js"></script>
+<link href="/rmarkdown-libs/sequences/sequences.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/sunburst-binding/sunburst.js"></script>
+
+
+
+<div style="line-height: 2em;">
+<p>La Matriz de Contabilidad Social (MCS), pertenece a un conjunto de datos que elabora el Banco Central de Costa Rica, la cual permite obtener información relevante sobre el país en cuestión. Entre las características que posee la matriz, se encuentra la capacidad de mostrar todas las transacciones que se realizan en la Economía, es decir, la capacidad de mostrar las interacciones entre distintos agentes. Se podría inferir, que la MCS es una fotografía de la Economía de un país, compartiendo la característica estática.</p>
+<style>
+ .figure1 {
+   margin-top: 20px;
+   margin-bottom: 60px;
+ }
+</style>
+<style>
+ .figure2 {
+   margin-top: 20px;
+   margin-bottom: 110px;
+ }
+</style>
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+</style>
+<style>
+  .col3 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+</style>
+<style>
+body {
+text-align: justify}
+</style>
+<p>Se puede partir desde una Economía cerrada para entender el flujo circular, los factores venden su servicio a las actividades, obteniendo ingresos por ello, lo cual permite a distintas instituciones realizar compras en los diferentes mercados. Las actividades obtienen ingresos por la venta de productos, pagando a los factores y a los productos intermedios.</p>
+<p>Con una Economía abierta, se sigue la misma lógica, las instituciones venden sus servicios para la producción doméstica y externa. Además, tienen la posibilidad de comprar productos nacionales o extranjeros. Es preciso aclarar que la explicación previa es una simplificación de la Economía, porque también existen otros elementos, como los impuestos y el ahorro. Una representación del flujo circular se muestra en la figura 1.</p>
+<h4 id="figura-1.-flujo-circular-de-una-economia-cerrada">Figura 1. Flujo circular de una Economía cerrada</h4>
+<p><img src="CFLOW.png" width="100%" /></p>
+<p>La MCS es una matriz cuadrada, donde cada cuenta de las columnas tiene su contraparte en las filas, además, la información en cada celda tiene presente la cantidad y el precio, siendo este igual por cada entrada de la fila, desprendiendo así la Ley del Precio Único, los artículos son homogéneos y su precio no difiere por agente:</p>
+<p><span class="math display">\[
+T_{i,j} = \sum_{i,j} p_{i} q_{i,j} =  p_{i} Q_{i} \quad \land Q_{i} = \sum_{j} q_{i,j}
+\]</span></p>
+<p>Las cantidades totales tienen que ser iguales por columna y por fila, es decir:</p>
+<p><span class="math display">\[
+\sum_{i} p_{i,j}q_{i,j} = \sum_{i}T_{i,j} = \sum_{j}T_{j,i} = \sum_{i} p_{j,i}q_{j,i}  \qquad \forall i = j
+\]</span></p>
+<p>Debido al avance en Cuentas Nacionales en Costa Rica, se utiliza información de los Cuadros de Oferta y Utilización (COU) y las Cuentas Económicas Integradas (CEI), sin necesidad de recurrir a otros métodos. El año base de la MCS es 2012, se inicio con cuentas agregadas y se fueron desagregando con otras fuentes de información, como encuestas. En total, las nuevas Cuentas Nacionales del 2012 poseen 183 productos y 136 actividades, las cuales se agregaron en 32 tipos en ambos casos, esto facilita la integración a los Modelos de Equilibrio General Computable. En la figura 2 se encuentra el mapa de agregación que se siguió para la MCS. (BCCR, 2017).</p>
+<h4 id="figura-2.-esquema-de-agregacion-de-bienes-y-servicios">Figura 2. Esquema de agregación de bienes y servicios</h4>
+<div class="col2">
+<p><div id="htmlwidget-1" style="width:420px;height:800px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"links":{"source":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2],"target":[3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20,21,22,24,25,26,27,28,29,30,31,32,33,34,35,36,37,19,23],"value":[40794.07807,113196.2511,46486.7411,675.8932705,120859.5913,93456.03185,17462.45832,37861.54906,26011.10168,19791.94055,25772.45854,70725.97446,85458.59147,102865.7748,35784.76354,25801.33772,442126.8725,24175.16541,438062.2228,94156.07255,188089.0624,12748.43641,25404.65524,7621.960451,51946.52235,117123.3703,70029.85884,119009.9861,77064.2593,162155.2877,9546.684148,71519.88346,186580.9092,13986.00586,170789.9747],"group":["otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","otragr","banano","café"]},"nodes":{"name":["otragr","banano","café","Frijol","Maíz","Trigo","Otros cereales","Legumbres y otras semillas oleaginosas","Arroz","Sandía","Melón","Cebolla","Chayote","Papa","Raíces y tubérculos n.c.p.","Hortalizas n.c.p.","Caña de azúcar","Flores","Follajes","Banano","Plátano","Piña","Palma aceitera","Café en fruta","Mango","Naranja","Palmito","Otros productos de plantas no perennes y perennes n.c.p.","Otras frutas, nueces y otros frutos oleaginosos","Plantas y raíces vivas","Ganado bovino","Ganado porcino","Pollo en pie","Otros animales vivos","Huevos","Leche cruda","Otros productos animales n.c.p.","Servicios de apoyo a la agricultura"],"group":["otragr","banano","café","Frijol","Maíz","Trigo","Otros cereales","Legumbres y otras semillas oleaginosas","Arroz","Sandía","Melón","Cebolla","Chayote","Papa","Raíces y tubérculos n.c.p.","Hortalizas n.c.p.","Caña de azúcar","Flores","Follajes","Banano","Plátano","Piña","Palma aceitera","Café en fruta","Mango","Naranja","Palmito","Otros productos de plantas no perennes y perennes n.c.p.","Otras frutas, nueces y otros frutos oleaginosos","Plantas y raíces vivas","Ganado bovino","Ganado porcino","Pollo en pie","Otros animales vivos","Huevos","Leche cruda","Otros productos animales n.c.p.","Servicios de apoyo a la agricultura"]},"options":{"NodeID":"node","NodeGroup":"node","LinkGroup":"group","colourScale":"d3.scaleOrdinal([\" #FBB4AE\", \"#B3CDE3\", \"#CCEBC5\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8 \"])","fontSize":12,"fontFamily":null,"nodeWidth":15,"nodePadding":10,"units":"","margin":{"top":null,"right":-10,"bottom":null,"left":40},"iterations":0,"sinksRight":true}},"evals":[],"jsHooks":[]}</script><div id="htmlwidget-2" style="width:420px;height:1000px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"links":{"source":[0,0,0,0,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,8,8,8,1,1,7,1,1,1],"target":[9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58],"value":[252102.9279,494308.3983,61358.27749,160261.3827,169739.2965,783063.9518,240302.4979,775971.1823,661460.0213,104924.9974,95954.41897,77883.22162,548324.3246,272870.6973,205435.3604,201821.9814,507209.9964,165910.2552,545702.3443,288633.6223,108715.753,626157.2939,109422.7987,119249.9672,146537.0413,283189.4713,653638.6885,216122.9938,65405.18242,477280.8175,317402.9331,440329.7984,129128.1529,25775.87277,29446.45301,250682.3673,289370.6321,54935.09984,213098.4287,30766.75319,636177.7522,814302.8288,189445.5941,59712.26025,106178.7075,160480.3296,813976.496,292760.3763,107974.3227,341879.4894],"group":["texcuero","texcuero","texcuero","texcuero","otrmnf","otrmnf","otrmnf","refpet","refpet","refpet","refpet","refpet","químicos","químicos","químicos","químicos","químicos","químicos","químicos","cauchoplast","cauchoplast","cauchoplast","prodminno","prodminno","prodminno","prodminno","prodmet","prodmet","prodmet","prodmet","maq","maq","maq","maq","maq","maq","maq","maq","maq","maq","maq","vehículos","vehículos","vehículos","otrmnf","otrmnf","maq","otrmnf","otrmnf","otrmnf"]},"nodes":{"name":["texcuero","otrmnf","refpet","químicos","cauchoplast","prodminno","prodmet","maq","vehículos","Artículos textiles, excepto prendas de vestir","Prendas de vestir","Cuero y productos conexos, excepto calzado","Calzado","Madera y corcho, productos de madera y corcho","Papel y productos de papel","Productos de la edición, impresión y grabaciones","Gasolina","Diesel","Bunker","Aceites y grasas lubricantes","Otros productos derivados del petróleo y de coque","Sustancias químicas básicas y abonos ","Plásticos y caucho sintético en formas primarias","Pesticidas y otros productos químicos de uso agropecuario","Pinturas, barnices, revestimientos","Jabones, detergentes, perfumes","Fibras artificiales y productos químicos n.c.p","Productos farmacéuticos y medicinales","Productos de caucho","Perfiles, tubería y conexiones de plástico ","Otros productos de plástico","Vidrio y productos de vidrio","Productos refractarios, materiales de construcción ","Cemento, cal y yeso","Artículos de hormigón, cemento y yeso ","Productos Básicos de Hierro y Acero ","Productos primarios de aluminio, zinc","Productos metálicos para uso estructural","Otros productos de metal","Componentes y tableros electrónicos","Equipos de comunicaciones ","Equipo de medición, prueba, navegación ","Equipo de irradiación, electrónico, médico","Instrumentos ópticos, fotográfico","Motores, generadores, transformadores eléctricos","Pilas, baterías, acumuladores, cables ","Equipo eléctrico de iluminación","Refrigeradoras, cocinas, lavadoras","Otros tipos de equipo eléctrico","Maquinaria de uso general y especial",", remolques y semirremolques","Partes y piezas para vehículos automotores","Otros tipos de equipo de transporte","Muebles de madera","Muebles de otro tipo de material","Instrumentos y suministros médicos y dentales","Otros productos manufactureros","Desperdicios y desechos","Servicios de manufactura"],"group":["texcuero","otrmnf","refpet","químicos","cauchoplast","prodminno","prodmet","maq","vehículos","Artículos textiles, excepto prendas de vestir","Prendas de vestir","Cuero y productos conexos, excepto calzado","Calzado","Madera y corcho, productos de madera y corcho","Papel y productos de papel","Productos de la edición, impresión y grabaciones","Gasolina","Diesel","Bunker","Aceites y grasas lubricantes","Otros productos derivados del petróleo y de coque","Sustancias químicas básicas y abonos ","Plásticos y caucho sintético en formas primarias","Pesticidas y otros productos químicos de uso agropecuario","Pinturas, barnices, revestimientos","Jabones, detergentes, perfumes","Fibras artificiales y productos químicos n.c.p","Productos farmacéuticos y medicinales","Productos de caucho","Perfiles, tubería y conexiones de plástico ","Otros productos de plástico","Vidrio y productos de vidrio","Productos refractarios, materiales de construcción ","Cemento, cal y yeso","Artículos de hormigón, cemento y yeso ","Productos Básicos de Hierro y Acero ","Productos primarios de aluminio, zinc","Productos metálicos para uso estructural","Otros productos de metal","Componentes y tableros electrónicos","Equipos de comunicaciones ","Equipo de medición, prueba, navegación ","Equipo de irradiación, electrónico, médico","Instrumentos ópticos, fotográfico","Motores, generadores, transformadores eléctricos","Pilas, baterías, acumuladores, cables ","Equipo eléctrico de iluminación","Refrigeradoras, cocinas, lavadoras","Otros tipos de equipo eléctrico","Maquinaria de uso general y especial",", remolques y semirremolques","Partes y piezas para vehículos automotores","Otros tipos de equipo de transporte","Muebles de madera","Muebles de otro tipo de material","Instrumentos y suministros médicos y dentales","Otros productos manufactureros","Desperdicios y desechos","Servicios de manufactura"]},"options":{"NodeID":"node","NodeGroup":"node","LinkGroup":"group","colourScale":"d3.scaleOrdinal([\" #FBB4AE\", \"#B3CDE3\", \"#CCEBC5\", \"#DECBE4\", \"#FED9A6\", \"#FFFFCC\", \"#B3E2CD\", \"#FDCDAC\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8 \"])","fontSize":12,"fontFamily":null,"nodeWidth":15,"nodePadding":10,"units":"","margin":{"top":null,"right":-10,"bottom":null,"left":40},"iterations":0,"sinksRight":true}},"evals":[],"jsHooks":[]}</script></p>
+</div>
+<div class="col3">
+<p><div id="htmlwidget-3" style="width:420px;height:800px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"links":{"source":[0,1,1,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,3,3,5,5,5],"target":[6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35],"value":[53478.11593,69227.19013,32996.54624,172835.1822,2187.119499,11.40374138,35686.96933,298499.1297,197927.504,131621.8125,151195.6375,219125.6545,439338.0925,292331.9414,193427.9272,540464.0581,183412.9654,110474.356,132882.1359,403786.2405,183216.0588,90446.19801,43892.17695,270826.4532,102074.319,541880.905,261904.9818,106651.6618,536943.8939,70836.39283],"group":["for","pesca","pesca","min","min","min","min","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","alimentos","prodcafe","prodcafe","alimentos","alimentos","bebtab","bebtab","bebtab"]},"nodes":{"name":["for","pesca","min","alimentos","prodcafe","bebtab","Productos de la silvicultura","Productos de la pesca","Productos de la acuicultura","Piedra, arena y arcilla","Sal","Petróleo y gas natural","Otros minerales metálicos, no metálicos","Carne y despojos comestibles de aves","Carne y despojos comestibles de ganado vacuno","Carne y despojos comestibles de ganado porcino","Embutidos y otros productos cárnicos","Pescados, crustáceos y moluscos conservados","Frutas, legumbres y hortalizas en conserva","Aceites vegetales crudos y refinados","Otros aceites y grasas de origen vegetal y animal n.c.p.","Productos lácteos","Arroz descascarillado, elaborado y semielaborado ","Harina de Trigo","Otros productos de molinería n.c.p.","Productos de panadería","Azúcar de caña, melazas, jarabes y otros azúcares","Cacao, chocolates y productos de confitería","Macarrones, fideos y productos farináceos análogos","Café oro","Café molido, soluble, extractos y concentrados","Comidas, platos preparados y otros productos alimenticios","Alimentos preparados para animales","Bebidas alcohólicas destiladas y vinos","Cerveza, malta, bebidas no alcohólicas y agua embotellada","Productos de tabaco"],"group":["for","pesca","min","alimentos","prodcafe","bebtab","Productos de la silvicultura","Productos de la pesca","Productos de la acuicultura","Piedra, arena y arcilla","Sal","Petróleo y gas natural","Otros minerales metálicos, no metálicos","Carne y despojos comestibles de aves","Carne y despojos comestibles de ganado vacuno","Carne y despojos comestibles de ganado porcino","Embutidos y otros productos cárnicos","Pescados, crustáceos y moluscos conservados","Frutas, legumbres y hortalizas en conserva","Aceites vegetales crudos y refinados","Otros aceites y grasas de origen vegetal y animal n.c.p.","Productos lácteos","Arroz descascarillado, elaborado y semielaborado ","Harina de Trigo","Otros productos de molinería n.c.p.","Productos de panadería","Azúcar de caña, melazas, jarabes y otros azúcares","Cacao, chocolates y productos de confitería","Macarrones, fideos y productos farináceos análogos","Café oro","Café molido, soluble, extractos y concentrados","Comidas, platos preparados y otros productos alimenticios","Alimentos preparados para animales","Bebidas alcohólicas destiladas y vinos","Cerveza, malta, bebidas no alcohólicas y agua embotellada","Productos de tabaco"]},"options":{"NodeID":"node","NodeGroup":"node","LinkGroup":"group","colourScale":"d3.scaleOrdinal([\" #FBB4AE\", \"#B3CDE3\", \"#CCEBC5\", \"#DECBE4\", \"#FED9A6\", \"#FFFFCC\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8 \"])","fontSize":12,"fontFamily":null,"nodeWidth":15,"nodePadding":10,"units":"","margin":{"top":null,"right":-10,"bottom":null,"left":40},"iterations":0,"sinksRight":true}},"evals":[],"jsHooks":[]}</script><div id="htmlwidget-4" style="width:420px;height:1000px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"links":{"source":[10,0,1,10,10,2,2,2,2,2,3,3,4,4,4,4,4,4,4,4,4,4,10,5,5,10,6,6,6,8,7,7,7,7,7,7,7,10,10,8,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,9,10,10,11,12,10,10,10,10,10,10,10,13],"target":[14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81],"value":[214329.3294,765572.3861,168889.5272,101753.5693,7761.923115,842268.2998,1235973.852,205724.3484,746803.9914,864574.9008,3370196.637,433678.969,1652.835678,374908.6538,353690.5068,487959.5721,286272.2732,80076.37028,28305.16588,148381.4019,30252.62675,174801.5542,93263.01441,536098.5299,1374609.249,65831.83994,480922.3527,152101.0752,205098.4415,566285.3298,34829.98797,62744.09259,797210.99,306425.5031,374990.4134,174591.7343,72203.67675,1956031.691,743323.1688,168788.7036,146217.9109,434450.7662,316991.7178,125489.6093,532193.2345,213113.0379,31273.79253,396715.4107,162755.5047,35740.11218,110437.2144,126467.7029,232332.4309,135247.9228,889122.9631,702714.8807,555120.2523,24761.56547,2050816.351,1926719.36,235986.7239,95837.54848,102771.1018,10055.29324,176517.355,10403.04833,21008.64638,282337.9895],"group":["otrsvc","elegas","agua","otrsvc","otrsvc","cns","cns","cns","cns","cns","comercio","comercio","trns","trns","trns","trns","trns","trns","trns","trns","trns","trns","otrsvc","hotelrest","hotelrest","otrsvc","com","com","com","svcprf","fin","fin","fin","fin","fin","fin","fin","otrsvc","otrsvc","svcprf","svcprf","svcprf","svcprf","svcprf","svcprf","svcprf","otrsvc","otrsvc","otrsvc","otrsvc","otrsvc","otrsvc","otrsvc","otrsvc","otrsvc","admpub","otrsvc","otrsvc","edu","salud","otrsvc","otrsvc","otrsvc","otrsvc","otrsvc","otrsvc","otrsvc","domest"]},"nodes":{"name":["elegas","agua","cns","comercio","trns","hotelrest","com","fin","svcprf","admpub","otrsvc","edu","salud","domest","Servicios de reparación e instalación de maquinaria ","Energía eléctrica, gas, vapor y aire acondionado","Agua potable y alcantarillado","Servicio de recogida, tratamiento de desechos","Servicios de protección del medio ambiente","Edificaciones residenciales","Edificaciones no residenciales","Carreteras y vías férreas","Construcción de proyectos de servicio público","Servicios especiales y generales de la construcción","Servicios de Comercio","Mantenimiento y reparación de vehículos","Servicios de transporte por ferrocarril","Servicios de transporte terrestre","Servicio de taxis","Transporte de carga","Transporte de pasajeros por vía marítima y aérea","Servicios de almacenamiento y depósito","Servicios de estacionamientos","Otros servicios vinculados con transporte","Carga y descarga","Otros servicios de apoyo al transporte","Servicios postales y de mensajería","Servicios de alojamiento","Servicio de suministro de comida y bebidas","Servicios de radio, de televisión, películas","Servicios de telefonía","Servicios de internet","Otros servicios de telecomunicaciones","Servicios de información, programación","Servicios de banca central","Otros servicios explícitos de intermediación monetaria ","Servicios de intermediación financiera","Otros servicios financieros y de banca de inversión","Servicios de seguros, reaseguros y fondos de pensiones","Servicios auxiliares de la intermediación monetaria y financiera","Servicios auxiliares de seguros y fondos de pensiones","Servicios de alquiler de viviendas","Servicios de alquiler de inmuebles no residenciales","Servicios jurídicos","Servicios de contabilidad, consultoría fiscal y otros","Servicios de consultoría en gestión financiera","Servicios de arquitectura, ingeniería y conexos","Servicios de investigación científica y desarrollo","Servicios de publicidad","Otros servicios profesionales, científicos y técnicos","Servicios veterinarios","Servicios de alquiler de automotores","Alquiler y arrendamiento de licencias","Otros servicios de alquiler","Servicios de agencias de empleo","Servicios de agencias de viajes, operadores turísticos","Servicios de seguridad  e investigación","Limpieza de edificios y cuidado del paisaje y mantenimiento","Servicios administrativos y de apoyo de oficina","Servicios públicos generales del gobierno ","Servicios a la comunidad en general","Servicios administrativos de los regímenes de seguridad social obligatoria","Servicios de enseñanza","Servicios de atención de la salud humana","Servicios artísticos, de entretenimiento y recreativos","Servicios de asociaciones empresariales","Servicios de reparación de computadoras","Servicios de lavado, secado y limpieza de prendas","Servicios de peluquería y otros tratamientos de belleza","Servicios funerarios y conexos","Otros servicios n.c.p.","Servicios domésticos"],"group":["elegas","agua","cns","comercio","trns","hotelrest","com","fin","svcprf","admpub","otrsvc","edu","salud","domest","Servicios de reparación e instalación de maquinaria ","Energía eléctrica, gas, vapor y aire acondionado","Agua potable y alcantarillado","Servicio de recogida, tratamiento de desechos","Servicios de protección del medio ambiente","Edificaciones residenciales","Edificaciones no residenciales","Carreteras y vías férreas","Construcción de proyectos de servicio público","Servicios especiales y generales de la construcción","Servicios de Comercio","Mantenimiento y reparación de vehículos","Servicios de transporte por ferrocarril","Servicios de transporte terrestre","Servicio de taxis","Transporte de carga","Transporte de pasajeros por vía marítima y aérea","Servicios de almacenamiento y depósito","Servicios de estacionamientos","Otros servicios vinculados con transporte","Carga y descarga","Otros servicios de apoyo al transporte","Servicios postales y de mensajería","Servicios de alojamiento","Servicio de suministro de comida y bebidas","Servicios de radio, de televisión, películas","Servicios de telefonía","Servicios de internet","Otros servicios de telecomunicaciones","Servicios de información, programación","Servicios de banca central","Otros servicios explícitos de intermediación monetaria ","Servicios de intermediación financiera","Otros servicios financieros y de banca de inversión","Servicios de seguros, reaseguros y fondos de pensiones","Servicios auxiliares de la intermediación monetaria y financiera","Servicios auxiliares de seguros y fondos de pensiones","Servicios de alquiler de viviendas","Servicios de alquiler de inmuebles no residenciales","Servicios jurídicos","Servicios de contabilidad, consultoría fiscal y otros","Servicios de consultoría en gestión financiera","Servicios de arquitectura, ingeniería y conexos","Servicios de investigación científica y desarrollo","Servicios de publicidad","Otros servicios profesionales, científicos y técnicos","Servicios veterinarios","Servicios de alquiler de automotores","Alquiler y arrendamiento de licencias","Otros servicios de alquiler","Servicios de agencias de empleo","Servicios de agencias de viajes, operadores turísticos","Servicios de seguridad  e investigación","Limpieza de edificios y cuidado del paisaje y mantenimiento","Servicios administrativos y de apoyo de oficina","Servicios públicos generales del gobierno ","Servicios a la comunidad en general","Servicios administrativos de los regímenes de seguridad social obligatoria","Servicios de enseñanza","Servicios de atención de la salud humana","Servicios artísticos, de entretenimiento y recreativos","Servicios de asociaciones empresariales","Servicios de reparación de computadoras","Servicios de lavado, secado y limpieza de prendas","Servicios de peluquería y otros tratamientos de belleza","Servicios funerarios y conexos","Otros servicios n.c.p.","Servicios domésticos"]},"options":{"NodeID":"node","NodeGroup":"node","LinkGroup":"group","colourScale":"d3.scaleOrdinal([\" #FBB4AE\", \"#B3CDE3\", \"#CCEBC5\", \"#DECBE4\", \"#FED9A6\", \"#FFFFCC\", \"#E5D8BD\", \"#B3E2CD\", \"#FDCDAC\", \"#CBD5E8\", \"#F4CAE4\", \"#E6F5C9\", \"#FFF2AE\", \"#F1E2CC\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8\", \"#CBD5E8 \"])","fontSize":12,"fontFamily":null,"nodeWidth":15,"nodePadding":10,"units":"","margin":{"top":null,"right":-10,"bottom":null,"left":40},"iterations":0,"sinksRight":true}},"evals":[],"jsHooks":[]}</script></p>
+</div>
+<p>Dentro de la información agregada que se puede obtener de la MCS es la composición por componentes del gasto, como se muestra en la figura 3. El componente de mayor peso es del consumo privado, en mayor medida el de los hogares urbanos, con un 54%. Por otra parte, la inversión pública solo representa un 2% del total de inversión en la Economía, el cual es 21%, la privada toma mayor relevancia con un 19%. Además, las importaciones representan un 35%, mostrando el déficit en cuenta corriente, debido a que las exportaciones son un 32%.</p>
+<h4 id="figura-3.-composicion-del-pib-por-el-lado-del-gasto.">Figura 3. Composición del PIB, por el lado del Gasto.</h4>
+<div class="figure1">
+<div align="center">
+<div id="3b4c29a042ef" style="width:100%;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="3b4c29a042ef">{"x":{"visdat":{"3b4c48a9176d":["function () ","plotlyVisDat"]},"cur_data":"3b4c48a9176d","attrs":{"3b4c48a9176d":{"x":{},"y":{},"name":"Rural","marker":{"color":"rgb(178,223,138)"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c48a9176d.1":{"x":{},"y":[0.536536114091274,0,0,0,0],"name":"Urbano","marker":{"color":"rgb(251,154,153)"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c48a9176d.2":{"x":{},"y":[0.00779344549378176,0,0,0,0],"name":"ISFLSH","marker":{"color":"rgb(217,217,217)"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c48a9176d.3":{"x":{},"y":[0,0.186520955541397,0,0,0],"name":"Privada","marker":{"color":"rgb(202,178,214)"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c48a9176d.4":{"x":{},"y":[0,0.0194604169082624,0,0,0],"name":"Pública","marker":{"color":"rgb(128,177,211)"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c48a9176d.5":{"x":{},"y":[0,0.00118542259755823,0,0,0],"name":"VE","marker":{"color":"rgb(51,160,44)"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c48a9176d.6":{"x":{},"y":[0,0,0.170792341065884,0,0],"name":"Gobierno","marker":{"color":"rgb(251,128,114)"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c48a9176d.7":{"x":{},"y":[0,0,0,0.315858055300063,0],"name":"Exportaciones","marker":{"color":"rgb(253,180,98)"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c48a9176d.8":{"x":{},"y":[0,0,0,0,0.353912038741596],"name":"Importaciones","marker":{"color":"rgb(188,128,189)"},"alpha":1,"sizes":[10,100],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"title":"Porcentaje","tickformat":"%"},"barmode":"stack","legend":{"orientation":"h","y":1.2},"xaxis":{"domain":[0,1],"title":"Componente de gasto","type":"category","categoryorder":"array","categoryarray":["Consumo privado","Exportaciones","Gobierno","Importaciones","Inversión"]},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"data":[{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0.118136133128969,0,0,0,0],"name":"Rural","marker":{"fillcolor":"rgba(31,119,180,1)","color":"rgb(178,223,138)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0.536536114091274,0,0,0,0],"name":"Urbano","marker":{"fillcolor":"rgba(255,127,14,1)","color":"rgb(251,154,153)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0.00779344549378176,0,0,0,0],"name":"ISFLSH","marker":{"fillcolor":"rgba(44,160,44,1)","color":"rgb(217,217,217)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0,0.186520955541397,0,0,0],"name":"Privada","marker":{"fillcolor":"rgba(214,39,40,1)","color":"rgb(202,178,214)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0,0.0194604169082624,0,0,0],"name":"Pública","marker":{"fillcolor":"rgba(148,103,189,1)","color":"rgb(128,177,211)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0,0.00118542259755823,0,0,0],"name":"VE","marker":{"fillcolor":"rgba(140,86,75,1)","color":"rgb(51,160,44)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0,0,0.170792341065884,0,0],"name":"Gobierno","marker":{"fillcolor":"rgba(227,119,194,1)","color":"rgb(251,128,114)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0,0,0,0.315858055300063,0],"name":"Exportaciones","marker":{"fillcolor":"rgba(127,127,127,1)","color":"rgb(253,180,98)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Consumo privado","Inversión","Gobierno","Exportaciones","Importaciones"],"y":[0,0,0,0,0.353912038741596],"name":"Importaciones","marker":{"fillcolor":"rgba(188,189,34,1)","color":"rgb(188,128,189)","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1}},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":{"render":[{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null}]}}</script>
+</div>
+</div>
+<p>La composición del gasto por bienes se observa en la tabla 1. El consumo de productos agrícolas y alimenticios son parte importante del consumo de los hogares, en el caso de los hogares urbanos el consumo en otros servicios es ligeramente superior, la diferencia en el patrón parece ser mínima por el grado de agregación de las cuentas de bienes y servicios, también es explicado por el tipo de hogares represetandos en la matriz; rurales y urbanos. El gobierno realiza un gasto importante en salud y educación, representado un 63% de su total. Las exportaciones están bastante distribuidas, sin embargo, los productos alimenticios y agrícolas son los que más se exportan, sumando un 25%, los servicios hoteleros y profesionales tienen un alto porcentaje (9% respectivamente), y la maquinaria 13.91%. Por el lado de las importaciones, el bien que toma más relevancia es la maquinaria con un 18%, además los químicos y productos refinados de petróleo suman 28%.</p>
+<h4 id="tabla-1.-composicion-del-gasto-en-bienes.">Tabla 1. Composición del gasto en bienes.</h4>
+<table style="width:30%; font-size: 12px; margin-left: auto; margin-right: auto;" class="table table-hover table-condensed">
+<thead>
+<tr>
+<th style="text-align:center;">
+Bienes
+</th>
+<th style="text-align:center;">
+Rural
+</th>
+<th style="text-align:center;">
+Urbano
+</th>
+<th style="text-align:center;">
+ISFLSH
+</th>
+<th style="text-align:center;">
+Privada
+</th>
+<th style="text-align:center;">
+Pública
+</th>
+<th style="text-align:center;">
+Gobierno
+</th>
+<th style="text-align:center;">
+Exportaciones
+</th>
+<th style="text-align:center;">
+Importaciones
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+otragr
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d5ffd5">0.0332</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dbffdb">0.0244</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0090</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #68ff68">0.0820</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0425</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+banano
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0014</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0010</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #99ff99">0.0555</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+café
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0049</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+for
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0009</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0009</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0028</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+pesca
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0018</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0013</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0005</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0042</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+min
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0003</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0042</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+alimentos
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.2048</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #21ff21">0.1509</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d4ffd4">0.0680</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0021</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #24ff24">0.1190</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #abffab">0.0588</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+prodcafé
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0066</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7">0.0048</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0328</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0011</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+bebtab
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cfffcf">0.0384</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c9ffc9">0.0368</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3fff3">0.0062</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f1fff1">0.0092</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+textcuero
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c9ffc9">0.0426</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c1ffc1">0.0422</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4">0.0142</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #beffbe">0.0452</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+otrmnf
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6">0.0328</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cbffcb">0.0349</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2">0.0302</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0238</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba">0.0376</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9fff9f">0.0670</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+refpet
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c7ffc7">0.0443</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b8ffb8">0.0484</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #3cff3c">0.1370</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+químicos
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0486</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b3ffb3">0.0516</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e9ffe9">0.0277</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #beffbe">0.0352</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #3aff3a">0.1384</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cauchoplast
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0135</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea">0.0143</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b5ffb5">0.0399</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #bfffbf">0.0446</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+prodminmno
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0018</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0019</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ebffeb">0.0107</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #edffed">0.0121</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+prodment
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0028</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa">0.0030</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0097</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0076</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0">0.0252</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #75ff75">0.0970</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+maq
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0">0.0377</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3">0.0406</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #abffab">0.2034</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c5ffc5">0.1580</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0011</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.1391</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.1794</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+vehículos
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6">0.0329</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ccffcc">0.0348</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d8ffd8">0.0936</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0457</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0015</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #99ff99">0.0717</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+otrsvc
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #34ff34">0.1625</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.1740</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.4065</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0007</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #92ff92">0.1405</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #0cff0c">0.1325</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d8ffd8">0.0273</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+elegas
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea">0.0168</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4">0.0184</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0006</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0006</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+agua
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8">0.0050</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0055</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cns
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8">0.0053</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0058</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.6219</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.7034</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+comercio
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f0fff0">0.0120</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ecffec">0.0127</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+trns
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3">0.0477</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b9ffb9">0.0476</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0009</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9dff9d">0.0530</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3">0.0195</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+hotelrest
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6">0.0586</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #a3ffa3">0.0626</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5">0.0119</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #54ff54">0.0929</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e6ffe6">0.0172</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+com
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d7ffd7">0.0314</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d2ffd2">0.0306</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0046</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0031</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa">0.0031</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+svcprf
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa">0.0034</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0036</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e0ffe0">0.0487</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0219</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e8ffe8">0.0612</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #48ff48">0.0993</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2">0.0089</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+fin
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c8ffc8">0.0441</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba">0.0468</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0082</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8">0.0078</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa">0.0027</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #efffef">0.0108</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+admpub
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #77ff77">0.1754</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+edu
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e0ffe0">0.0244</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c0ffc0">0.0426</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba">0.1094</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.3312</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7">0.0039</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+salud
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ddffdd">0.0268</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c5ffc5">0.0390</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #1dff1d">0.3591</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #17ff17">0.3013</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0092</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+domest
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e9ffe9">0.0176</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3">0.0186</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Por el lado de los ingresos, los hogares tienen distintas fuentes, los cuales se agregaron por ingresos de trabajo asalariado y no asalariado, capital, empresas, tierra, transferencias internacionales y del gobierno, además se incluye las contribuciones sociales a los trabadores, las cuales también recauda el gobierno y se encarga de realizar la transferencia. Los ingresos de los hogares urbanos son mayores que los rurales, esto se debe principalmente a la composición de sus ingresos, los cuales se muestran en la figura 3. El componente de mayor peso es el trabajo asalariado en ambos casos, el empleo no asalariado tiene mayor importancia en los hogares rurales, otra gran diferenciación son los ingresos de capital y empresas, en los hogares urbanos representan 29% y en los rurales un 21%.</p>
+<h4 id="figura-3.-ingresos-de-los-hogares-por-factores.">Figura 3. Ingresos de los hogares por factores.</h4>
+<div class="figure1">
+<div align="center">
+<div id="3b4c2e7d43be" style="width:100%;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="3b4c2e7d43be">{"x":{"visdat":{"3b4c131b3991":["function () ","plotlyVisDat"]},"cur_data":"3b4c131b3991","attrs":{"3b4c131b3991":{"x":{},"y":{},"orientation":"h","name":"Asalariado","marker":{"color":"#D33F6A"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c131b3991.1":{"x":{},"y":{},"orientation":"h","name":"No<br>asalariado","marker":{"color":"#DC5C5A"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c131b3991.2":{"x":{},"y":{},"orientation":"h","name":"Capital","marker":{"color":"#E37647"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c131b3991.3":{"x":{},"y":{},"orientation":"h","name":"Empresas","marker":{"color":"#E88E34"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c131b3991.4":{"x":{},"y":{},"orientation":"h","name":"Tierra","marker":{"color":"#EAA628"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c131b3991.5":{"x":{},"y":{},"orientation":"h","name":"Transferencias<br>del<br>resto<br>del<br>mundo","marker":{"color":"#E9BE35"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c131b3991.6":{"x":{},"y":{},"orientation":"h","name":"Transferencia<br>del<br>gobierno","marker":{"color":"#E6D457"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c131b3991.7":{"x":{},"y":{},"orientation":"h","name":"Contribuciones<br>sociales","marker":{"color":"#E2E6BD"},"alpha":1,"sizes":[10,100],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"stack","xaxis":{"domain":[0,1],"title":"Porcentaje"},"yaxis":{"domain":[0,1],"title":"Hogares","type":"category","categoryorder":"array","categoryarray":["Rural","Urbano"]},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"data":[{"x":[49.688,43.932],"y":["Rural","Urbano"],"orientation":"h","name":"Asalariado","marker":{"fillcolor":"rgba(31,119,180,1)","color":"#D33F6A","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":[10.811,7.94],"y":["Rural","Urbano"],"orientation":"h","name":"No<br>asalariado","marker":{"fillcolor":"rgba(255,127,14,1)","color":"#DC5C5A","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":[6.042,8.51],"y":["Rural","Urbano"],"orientation":"h","name":"Capital","marker":{"fillcolor":"rgba(44,160,44,1)","color":"#E37647","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":[14.73,20.749],"y":["Rural","Urbano"],"orientation":"h","name":"Empresas","marker":{"fillcolor":"rgba(214,39,40,1)","color":"#E88E34","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":[0.167,0.235],"y":["Rural","Urbano"],"orientation":"h","name":"Tierra","marker":{"fillcolor":"rgba(148,103,189,1)","color":"#EAA628","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":[1.592,1.757],"y":["Rural","Urbano"],"orientation":"h","name":"Transferencias<br>del<br>resto<br>del<br>mundo","marker":{"fillcolor":"rgba(140,86,75,1)","color":"#E9BE35","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":[7.398,8.164],"y":["Rural","Urbano"],"orientation":"h","name":"Transferencia<br>del<br>gobierno","marker":{"fillcolor":"rgba(227,119,194,1)","color":"#E6D457","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":[9.536,8.673],"y":["Rural","Urbano"],"orientation":"h","name":"Contribuciones<br>sociales","marker":{"fillcolor":"rgba(127,127,127,1)","color":"#E2E6BD","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1}},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":{"render":[{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null}]}}</script>
+</div>
+</div>
+<p>En el caso del gobierno, las fuentes de ingreso se muestran en la figura 4, donde se evidencia que la principal fuente de ingreso son las transferencias internas con un 38.7%, de las cuales un 25% provienen de los hogares urbanos, en cambio las transferencias externas solo 0.275%. La otra gran fuente de ingreso son los ingresos indirectos con un 20.6%, siendo un 18% por el IVA y un 2.57% de los impuestos a los bienes netos (restando el valor del subsidio), los impuestos directos serían los siguientes con un 17.5%.</p>
+<p>Con la matriz se pueden obtener datos de las tasas efectivas por tipo de impuestos, las cuales se muestran en la tabla 2. Para el caso de las importaciones, la mayor tasa recae para las bebidas y tabaco con 40%, los productos refinados del petroleo tienen una tasa de 31% y los vehículos un 24%.</p>
+<h4 id="figura-4.-composicion-de-los-ingresos-del-gobierno.">Figura 4. Composición de los ingresos del gobierno.</h4>
+<div class="figure2">
+<div class="sunburst html-widget" id="htmlwidget-5" style="width:100%;height:450px; position:relative;">
+<div>
+<div class="sunburst-main">
+<div class="sunburst-sequence"></div>
+<div class="sunburst-chart">
+<div class="sunburst-explanation" style="visibility:hidden;"></div>
+</div>
+</div>
+<div class="sunburst-sidebar">
+<input type="checkbox" class="sunburst-togglelegend">Legend</input>
+<div class="sunburst-legend" style="visibility:hidden;"></div>
+</div>
+</div>
+</div>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"data":{"children":[{"name":"Factores","children":[{"name":"factores","size":72638,"colname":"X2"}],"colname":"X1"},{"name":"Impuesto Actividades","children":[{"name":"Actividades","size":648585,"colname":"X2"}],"colname":"X1"},{"name":"Impuestos indirectos","children":[{"name":"IVA","size":1122978,"colname":"X2"},{"name":"Bienes","size":160175,"colname":"X2"}],"colname":"X1"},{"name":"Impuestos directos","children":[{"name":"Directos","size":1087237,"colname":"X2"}],"colname":"X1"},{"name":"Aranceles","children":[{"name":"aranceles","size":701696,"colname":"X2"}],"colname":"X1"},{"name":"Impuesto Exportaciones","children":[{"name":"Exportaciones","size":8659,"colname":"X2"}],"colname":"X1"},{"name":"Tranferencias internas","children":[{"name":"Rurales","size":388457,"colname":"X2"},{"name":"Urbanos","size":1611303,"colname":"X2"},{"name":"Empresas","size":405317,"colname":"X2"}],"colname":"X1"},{"name":"Tranferencias externas","children":[{"name":"Transf externas","size":17131,"colname":"X2"}],"colname":"X1"}],"name":"root"},"options":{"legendOrder":["Factores","Impuesto Actividades","Impuestos indirectos","Impuestos directos","Aranceles","Impuesto Exportaciones","Tranferencias internas","Tranferencias externas"],"colors":{"domain":["Factores","Impuesto Actividades","Impuestos indirectos","Impuestos directos","Aranceles","Impuesto Exportaciones","Tranferencias internas","Tranferencias externas"],"range":["#B3E2CD","#FDCDAC","#CBD5E8","#ffff99","#E6F5C9","#FFF2AE","#fddaec","#CCCCCC","#ffff00","#3fa678","#f9761f","#3e5a8e","#839cc9","#ffff00","#8dc224","#FFF2AE","#f76eb5","#aa095c","#f42590","#CCCCCC"]},"valueField":"size","percent":true,"count":true,"explanation":null,"breadcrumb":[],"legend":{"w":140},"sortFunction":null}},"evals":[],"jsHooks":{"render":[{"code":"\n  function(el,x) {\n  // force show the legend\n  d3.selectAll('.sunburst-legend text').attr('font-size', '10px');\n  \n  d3.select(el).select('.sunburst-togglelegend').property('checked', true);\n\n  //   simulate click\n  d3.select(el).select('.sunburst-togglelegend').on('click')();\n\n  // remove legend text\n  document.getElementsByClassName('sunburst-sidebar')[0].childNodes[2].nodeValue = ''; \n\n  // remove the legend toggle\n  d3.select(el).select('.sunburst-togglelegend').remove()\n  }\n   ","data":null}]}}</script>
+</div>
+<p>Para el caso particular del IVA, se puede desagregar el pago de impuestos por bienes, los cuales se muestran en la figura 5. Es necesario aclarar que se excluyen los bienes y servicios: banano, café, agua, construcción, administración pública, educación, salud y domésticos, porque no muestran ningún pago de IVA, además, se excluyen: la silvicultura, pesca y productos de café, debido a su porcentaje (0.02%, 0.03% y 0.02%). Los servicios de hoteles y restaurantes son los que más aportan al IVA con un 14%, después sigue la maquinaria y alimentos con un 9%, las telecomunicaciones y químicos un 8%. Por otro lado, los bienes como los servicios profesionales, transporte, refinados del petróleo, minería y agrícolas aportan cada uno cerca de un 1%.</p>
+<h4 id="figura-5.-aporte-recaudatorio-de-los-bienes-en-el-iva.">Figura 5. Aporte recaudatorio de los bienes en el IVA.</h4>
+<div class="figure2">
+<div align="center">
+<div id="3b4c73cc1569" style="width:100%;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="3b4c73cc1569">{"x":{"visdat":{"3b4c29c450f8":["function () ","plotlyVisDat"]},"cur_data":"3b4c29c450f8","attrs":{"3b4c29c450f8":{"x":{},"y":{},"name":"otrogr","marker":{"color":"#DB9D85"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.1":{"x":{},"y":0.013,"name":"min","marker":{"color":"#CAA66E"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.2":{"x":{},"y":0.088,"name":"alimentos","marker":{"color":"#BEAA67"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.3":{"x":{},"y":0.057,"name":"bebtab","marker":{"color":"#B1AF64"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.4":{"x":{},"y":0.053,"name":"texcuero","marker":{"color":"#A2B367"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.5":{"x":{},"y":0.049,"name":"otrmnf","marker":{"color":"#92B66E"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.6":{"x":{},"y":0.008,"name":"refpet","marker":{"color":"#80B979"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.7":{"x":{},"y":0.07,"name":"químicos","marker":{"color":"#6DBC86"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.8":{"x":{},"y":0.037,"name":"cauchoplast","marker":{"color":"#5ABD93"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.9":{"x":{},"y":0.049,"name":"prodminmno","marker":{"color":"#47BEA2"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.10":{"x":{},"y":0.06,"name":"prodment","marker":{"color":"#3ABEAF"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.11":{"x":{},"y":0.094,"name":"maq","marker":{"color":"#39BDBC"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.12":{"x":{},"y":0.078,"name":"vehículos","marker":{"color":"#45BAC8"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.13":{"x":{},"y":0.029,"name":"otrsvc","marker":{"color":"#5AB7D2"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.14":{"x":{},"y":0.028,"name":"elegas","marker":{"color":"#70B3DA"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.15":{"x":{},"y":0.033,"name":"comercio","marker":{"color":"#87AEDF"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.16":{"x":{},"y":0.01,"name":"trns","marker":{"color":"#9CA8E2"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.17":{"x":{},"y":0.144,"name":"hotelrest","marker":{"color":"#B0A3E1"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.18":{"x":{},"y":0.068,"name":"com","marker":{"color":"#C09DDE"},"alpha":1,"sizes":[10,100],"type":"bar"},"3b4c29c450f8.19":{"x":{},"y":0.007,"name":"svcprf","marker":{"color":"#CD99D8"},"alpha":1,"sizes":[10,100],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"title":"Porcentaje","tickformat":"%"},"legend":{"orientation":"h"},"xaxis":{"domain":[0,1],"title":" ","type":"category","categoryorder":"array","categoryarray":["Bienes"]},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"data":[{"x":["Bienes"],"y":[0.009],"name":"otrogr","marker":{"fillcolor":"rgba(31,119,180,1)","color":"#DB9D85","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.013],"name":"min","marker":{"fillcolor":"rgba(255,127,14,1)","color":"#CAA66E","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.088],"name":"alimentos","marker":{"fillcolor":"rgba(44,160,44,1)","color":"#BEAA67","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.057],"name":"bebtab","marker":{"fillcolor":"rgba(214,39,40,1)","color":"#B1AF64","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.053],"name":"texcuero","marker":{"fillcolor":"rgba(148,103,189,1)","color":"#A2B367","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.049],"name":"otrmnf","marker":{"fillcolor":"rgba(140,86,75,1)","color":"#92B66E","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.008],"name":"refpet","marker":{"fillcolor":"rgba(227,119,194,1)","color":"#80B979","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.07],"name":"químicos","marker":{"fillcolor":"rgba(127,127,127,1)","color":"#6DBC86","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.037],"name":"cauchoplast","marker":{"fillcolor":"rgba(188,189,34,1)","color":"#5ABD93","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.049],"name":"prodminmno","marker":{"fillcolor":"rgba(23,190,207,1)","color":"#47BEA2","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.06],"name":"prodment","marker":{"fillcolor":"rgba(31,119,180,1)","color":"#3ABEAF","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.094],"name":"maq","marker":{"fillcolor":"rgba(255,127,14,1)","color":"#39BDBC","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.078],"name":"vehículos","marker":{"fillcolor":"rgba(44,160,44,1)","color":"#45BAC8","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.029],"name":"otrsvc","marker":{"fillcolor":"rgba(214,39,40,1)","color":"#5AB7D2","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.028],"name":"elegas","marker":{"fillcolor":"rgba(148,103,189,1)","color":"#70B3DA","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.033],"name":"comercio","marker":{"fillcolor":"rgba(140,86,75,1)","color":"#87AEDF","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.01],"name":"trns","marker":{"fillcolor":"rgba(227,119,194,1)","color":"#9CA8E2","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.144],"name":"hotelrest","marker":{"fillcolor":"rgba(127,127,127,1)","color":"#B0A3E1","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.068],"name":"com","marker":{"fillcolor":"rgba(188,189,34,1)","color":"#C09DDE","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null},{"x":["Bienes"],"y":[0.007],"name":"svcprf","marker":{"fillcolor":"rgba(23,190,207,1)","color":"#CD99D8","line":{"color":"transparent"}},"type":"bar","xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1}},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":{"render":[{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null}]}}</script>
+</div>
+</div>
+<p>Con la MCS también se pueden obtener datos de las tasas efectivas por tipo de impuestos, las cuales se muestran en la tabla 2. En el caso de las tasas de ventas, la tasa más alta es de los hoteles y servicios turísticos, lo cual esta correlacionado con su alta recaudación, pero no así con los demás bienes. Para el caso de las importaciones, la mayor tasa recae para las bebidas y tabaco con 40%, los productos refinados del petróleo tienen una tasa de 31% y los vehículos un 24%. Las tasas de exportaciones son en la mayoría de los casos 0, solamente en los productos agrícolas se presenta alguna tasa, pero de un valor cercano al 1%. Para el impuesto de actividades, los valores son cercanos al 2% y 3%, siendo el agua el bien con la mayor tasa.</p>
+<h4 id="tabla-2.-tasas-efectivas-por-tipo-de-impuestos.">Tabla 2. Tasas efectivas por tipo de impuestos.</h4>
+<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Bienes
+</th>
+<th style="text-align:center;">
+Importaciones
+</th>
+<th style="text-align:center;">
+Exportaciones
+</th>
+<th style="text-align:center;">
+Ventas
+</th>
+<th style="text-align:center;">
+Actividades
+</th>
+<th style="text-align:center;">
+Producción
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+otragr
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0082</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde">0.0017</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0051</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">otragr </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d2ffd2">0.0102</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+banano
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0022</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #34ff34">0.0107</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">banano </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #6dff6d">0.0246</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+café
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #a0ffa0">0.1493</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde">0.0017</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">café </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f4fff4">0.0053</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+for
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0060</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ecffec">0.0107</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">for </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #1aff1a">0.0365</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+pesca
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0029</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0021</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">pesca </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #58ff58">0.0277</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+min
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cfffcf">0.0760</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #80ff80">0.0754</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">min </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9aff9a">0.0182</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+alimentos
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4">0.0417</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ceffce">0.0287</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">alimentos </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cdffcd">0.0109</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+prodcafé
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6">0.1149</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.0135</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0016</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">prodcafé </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e5ffe5">0.0074</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+bebtab
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.4045</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #4dff4d">0.1052</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">bebtab </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dcffdc">0.0088</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+textcuero
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c6ffc6">0.0890</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #82ff82">0.0740</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">texcuero </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3">0.0123</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+otrmnf
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4">0.0414</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0361</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">otrmnf </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0124</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+refpet
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #3bff3b">0.3103</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0051</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">refpet </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #efffef">0.0060</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+químicos
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3fff3">0.0190</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c0ffc0">0.0374</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">cauchoplast</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0">0.0105</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cauchoplast
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea">0.0331</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9aff9a">0.0596</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">químicos </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3">0.0123</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+prodminmno
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde">0.0510</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #4dff4d">0.1054</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">prodminmno </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ccffcc">0.0111</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+prodment
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5">0.0151</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9dff9d">0.0577</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">prodment </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cdffcd">0.0109</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+maq
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ebffeb">0.0303</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #aaffaa">0.0503</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">maq </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ceffce">0.0107</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+vehículos
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #6aff6a">0.2358</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #66ff66">0.0909</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">vehículos </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #5bff5b">0.0272</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+otrsvc
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5">0.0056</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">otrsvc </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #78ff78">0.0231</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+elegas
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6">0.0432</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">elegas </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #82ff82">0.0216</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+agua
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">agua </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.0403</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+cns
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">cns </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6">0.0096</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+comercio
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #60ff60">0.0944</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">comercio </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #71ff71">0.0241</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+trns
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2">0.0072</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">trns </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #63ff63">0.0261</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+hotelrest
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.1515</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">hotelrest </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #8aff8a">0.0205</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+com
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #50ff50">0.1034</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">com </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #43ff43">0.0307</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+svcprf
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7">0.0045</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">svcprf </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #90ff90">0.0196</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+fin
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0101</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">fin </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #89ff89">0.0206</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+admpub
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">edu </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0038</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+edu
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">salud </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b0ffb0">0.0151</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+salud
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">domest </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0062</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+domest
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">admpub </span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3">0.0078</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
