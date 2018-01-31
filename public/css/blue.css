@@ -12,7 +12,7 @@ h3.article-title a:hover {
 }
 
 a:hover {
-    color: rgb(0,230,118);
+    color: rgb(44,62,80);
 }
 
 .navbar-default .navbar-nav li a:hover,
@@ -70,15 +70,24 @@ a:hover {
 /* Toolbar buttons */
 
 .btn-toolbar .btn.btn-primary {
-  background: rgb(0,230,118);
+  background: rgb(44,62,80);
 }
 
 .btn-toolbar .btn.btn-primary:hover,
 .btn-toolbar .btn.btn-primary:focus {
-  background-color: rgba(0,230,118,0.6);
+  background-color: rgba(44,62,80);
 }
 
 .btn-toolbar .btn.btn-primary:active,
 .btn-toolbar .btn.btn-primary.active {
-  background-color: rgba(0,230,118,1);
+  background-color: rgba(44,62,80);
+}
+
+.circle-image{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background-image:url("http://placekitten.com/g/200/400");
+    display:block;
+    background-position-y:25% 
 }

@@ -11,6 +11,35 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Coyuntura Fiscal</title>
+      <link>/project/coyuntura.html</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/coyuntura.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David Cardoza Roodriguez</title>
+      <link>/biografia/david.html</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/biografia/david.html</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Marlon Molina Corella</title>
+      <link>/biografia/marlon.html</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/biografia/marlon.html</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Caracterización de la Economía costarricense mediante la Matriz de Contabilidad Social</title>
       <link>/post/mcsmaunal.html</link>
       <pubDate>Tue, 19 Dec 2017 21:13:14 -0500</pubDate>
@@ -1783,15 +1812,6 @@ domest
     </item>
     
     <item>
-      <title>External Project</title>
-      <link>/project/example-external-project.html</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/project/example-external-project.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Modelo Equilibrio General</title>
       <link>/project/cge.html</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -1998,23 +2018,21 @@ git submodule update --init --recursive
     </item>
     
     <item>
-      <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>/publication/person-re-identification.html</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>Using Input-output analysis to analyze the economy of the grande de San Ramón</title>
+      <link>/publication/inmigrant.html</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>/publication/person-re-identification.html</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>/publication/inmigrant.html</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search.html</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <title>Using Input-output analysis to analyze the economy of the grande de San Ramón</title>
+      <link>/publication/i_o.html</link>
+      <pubDate>Sun, 01 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>/publication/clothing-search.html</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>/publication/i_o.html</guid>
+      <description></description>
     </item>
     
   </channel>

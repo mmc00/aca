@@ -59,7 +59,7 @@ alwaysShowLanguageChooser = true
   organizations = [ { name = "Universidad Nacional de Costa Rica", url = "http://www.una.ac.cr/" } ]
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "dcrunicornio@gmail.com"
+  email = "proyecto.fiscal@una.cr"
   address = "Edificio de Ciencias Sociales, piso 3, Universidad Nacional, Heredia,  86-3000, Costa Rica"
   office_hours = "Martes a Viernes, 1:00 pm a 4:30 o por cita"
   phone = "2562-4142"
@@ -249,9 +249,9 @@ alwaysShowLanguageChooser = true
 
 [[menu.main]]
   name = "Inicio"
-  url = "#about"
+  url = "#biography"
   weight = 1
-
+  
 [[menu.main]]
   name = "Publicaciones"
   url = "#publications_selected"

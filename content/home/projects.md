@@ -37,8 +37,8 @@ filter_default = 0
   tag = ".CGE"
 
 [[filter]]
-  name = "Other"
-  tag = ".demo"
+  name = "Coyuntura Fiscal"
+  tag = ".Coyuntura"
 
 +++
 

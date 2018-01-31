@@ -2,11 +2,11 @@
 date = 2017-01-01T00:00:00  # Schedule page publish date.
 
 title = "Charla 1"
-time_start = 2030-06-01T13:00:00
-time_end = 2030-06-01T15:00:00
+time_start = 2016-06-01T19:00:00
+time_end = 2016-08-01T17:00:00
 abstract = ""
 abstract_short = ""
-event = "Foro Fiscal: Incidencia del IVA"
+event = "Cambio año del PIB y sus implicaciones fiscales"
 event_url = ""
 location = "San José, Costa Rica"
 
@@ -33,8 +33,8 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "headers/bubbles-wide.jpg"
-caption = "My caption :smile:"
+image = ""
+caption = ""
 
 +++
 
