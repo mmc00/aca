@@ -4,7 +4,7 @@ build:
     - arjen/hugo-build:
         version: "0.17" 
         theme: hugo-academic
-        flags: --buildDrafts=true 
+        flags: --buildDrafts=false --noTimes 
 deploy:
     steps:
         - install-packages:
