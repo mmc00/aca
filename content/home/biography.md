@@ -1,6 +1,6 @@
 +++
 # Projects widget.
-widget = "projects"
+widget = "people"
 active = true
 date = "2016-04-20T00:00:00"
 
@@ -13,6 +13,7 @@ weight = 5
 # Content.
 # Display content from the following folder.
 # For example, `folder = "project"` displays content from `content/project/`.
+
 folder = "Biografia"
 
 # View.
@@ -29,8 +30,8 @@ view = 1
 # Use "*" tag to show all projects or an existing tag prefixed with "." to filter by #specific tag.
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
 # [[filter]]
-#   name = ""
-#   tag = ""
+#   name = "Todos"
+#   tag = "*"
 # [[filter]]
 #   name = ""
 #   tag = ""

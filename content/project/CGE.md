@@ -11,8 +11,6 @@ summary = "Modelo de Equilibrio General Computable con enfasis en fiscal"
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "bubbles.jpg"
 
-# Tags: can be used for filtering projects.
-# Example: `tags = ["CGE", "IVA"]`
 tags = ["CGE"]
 
 # Optional external URL for project (replaces project detail page).
