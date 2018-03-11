@@ -1,14 +1,12 @@
-box: ubuntu
+box: wercker/default
 build:
   steps:
-    - arjen/hugo-build@1.14.1:
-        version: "0.18.1" 
-        theme: theme-name
-        flags: --buildDrafts=false --noTimes
+    - arjen/hugo-build@1.1.0:
+        version: 0.13
+        theme: <YOUR_THEME>
+        flags: --buildDrafts=false
 deploy:
     steps:
-        - install-packages:
-            packages: openssh-client rsync
         - add-to-known_hosts:
             hostname: $HOSTNAME
         - mktemp:
@@ -16,13 +14,16 @@ deploy:
         - create-file:
             name: write key
             filename: $PRIVATEKEY_PATH
-            content: $Private
+            content: $WERCKER_PRIVATE
             overwrite: true
+        - script:
+            name: remove old files
+            code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $HOSTNAME rm -rf /var/www/blog/*
         - script:
             name: transfer blog
             code: |
-                rsync -au -e "ssh -i $PRIVATEKEY_PATH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress public/* root@$HOSTNAME:/var/www/html
+                scp -r -i $PRIVATEKEY_PATH public/* root@$HOSTNAME:/var/www/blog
                 ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $HOSTNAME chown -R www-data:www-data /var/www/
         - script:
             name: restart nginx
-            code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $HOSTNAME nginx -s reload
+            code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $HOSTNAME service nginx reload
