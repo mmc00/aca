@@ -1,7 +1,7 @@
 @1.14.1:box: ubuntu
 build:
   steps:
-    - arjen/hugo-build
+    - arjen/hugo-build:
         version: "0.17" 
         theme: hugo-academic
         flags: --buildDrafts=true 
