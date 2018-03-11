@@ -1,7 +1,7 @@
 box: ubuntu
 build:
   steps:
-    - arjen/hugo-build@1.14.1:
+    - arjen/hugo-build:
         version: "0.3" 
         theme: hugo-academic
         flags: --buildDrafts=false --noTimes 
