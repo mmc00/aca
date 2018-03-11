@@ -10,7 +10,7 @@ deploy:
         - install-packages:
             packages: openssh-client rsync
         - add-to-known_hosts:
-            hostname: $http://159.89.146.97/
+            hostname: $HOSTNAME
         - mktemp:
             envvar: PRIVATEKEY_PATH
         - create-file:
@@ -21,7 +21,7 @@ deploy:
         - script:
             name: transfer blog
             code: |
-                rsync -au -e "ssh -i $PRIVATEKEY_PATH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress public/* root@$http://159.89.146.97/:/var/www/html
+                rsync -au -e "ssh -i $PRIVATEKEY_PATH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress public/* root@$HOSTNAME:/var/www/html
                 ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $HOSTNAME chown -R www-data:www-data /var/www/
         - script:
             name: restart nginx
