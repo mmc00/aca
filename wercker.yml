@@ -1,10 +1,10 @@
-box: ubuntu
+@1.14.1:box: ubuntu
 build:
   steps:
-    - arjen/hugo-build@1.14.1:
-        version: "0.37.1" 
+    - arjen/hugo-build
+        version: "0.17" 
         theme: hugo-academic
-        flags: --buildDrafts=false --noTimes
+        flags: --buildDrafts=true 
 deploy:
     steps:
         - install-packages:
