@@ -14,12 +14,7 @@ deploy:
         - mktemp:
             envvar: PRIVATEKEY_PATH
         - create-file:
-            name: AAAAB3NzaC1yc2EAAAABJQAAAQEAhmXDiFsJu0vTq1BY+ZxAR7NxXws98UOycc7V
-                  RIJS7ZN4WubEwkvR9gYFoRXF22c+mTjqUOBv4yQoynJgeQvma8yMJ7X+LMZLVyQX
-                  iL77cXL/qW/nw5a/+WHrEFmWE++q+Qe11/5lC2Ut3ncfX4J3iOdJrsbkX0MvS0Vx
-                  597QEreDw3pnJXCrT8REiQuqHLpkcCM3z7rbjdu6cRUP3TpcvH+Sywep8kR1C5IN
-                  g+V+lKSgxPMDgcnDL+rxpm35IUqEVAaUCZYFCwCcIv/kaTlNUq7uBeH3L91PioF7
-                  TqooqK6pnmypbwVQG+qeECANMw25IH2yfckiGEjFRkOlaNEERw==
+            name: write key
             filename: $PRIVATEKEY_PATH
             content: $WERCKER_PRIVATE
             overwrite: true
