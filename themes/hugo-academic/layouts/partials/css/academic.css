@@ -138,6 +138,12 @@ video {
   margin: 0 auto;
 }
 
+.img-responsive2 {
+  /* Extend Bootstrap declaration with centering. */
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
 figcaption:before {
   font-weight: 700;
   text-transform: uppercase;
@@ -322,7 +328,7 @@ a[data-fancybox] img {
 
 .home-section {
   background-color: {{ .Get "home_section_odd" }};
-  padding: 110px 0 110px 0;
+  padding: 60px 0 60px 0;
   animation: intro 0.3s both;
   animation-delay: 0.15s;
 }
@@ -337,7 +343,7 @@ a[data-fancybox] img {
 
 @media screen and (max-width: 768px) {
   .home-section {
-    padding: 60px 0 60px 0;
+    padding: 110px 0 110px 0;
   }
   .home-section:first-of-type {
     padding-top: 40px;
@@ -438,7 +444,6 @@ a[data-fancybox] img {
 
 #profile {
   text-align: center;
-  padding: 30px 10px;
   position: relative;
 }
 
@@ -469,6 +474,7 @@ a[data-fancybox] img {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin-top: 30px;
@@ -766,6 +772,12 @@ article .article-metadata {
 
 #projects.home-section li {
   margin-bottom: 1rem;
+  padding: 60px 0 60px 0;
+}
+
+#projects.home-section {
+  margin-bottom: 1rem;
+  padding: 60px 0 60px 0;
 }
 
 #projects.home-section li:last-of-type {
@@ -1531,5 +1543,3 @@ body.dark {
   background: rgb(40, 42, 54);
   color: rgb(248, 248, 242);
 }
-
-

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homes on Proyecto de Estudios Fiscales</title>
-    <link>/home.html</link>
-    <description>Recent content in Homes on Proyecto de Estudios Fiscales</description>
+    <title>Homes on </title>
+    <link>/home/</link>
+    <description>Recent content in Homes on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>&amp;copy; 2018</copyright>
@@ -14,101 +14,91 @@
     
     <item>
       <title></title>
-      <link>/home/hero.html</link>
+      <link>/home/hero/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 -0600</pubDate>
       
-      <guid>/home/hero.html</guid>
-      <description>El proyecto de Estudios fiscales es una iniciativa que nació en la escuela de Economía de la Universidad Nacional ante la necesidad de brindar herramientas análiticas para el tema fiscal. </description>
+      <guid>/home/hero/</guid>
+      <description>El proyecto pertenece a la Escuela de Economía de la Universidad Nacional y tiene como objetivo generar herramientas para el análisis fiscal </description>
     </item>
     
     <item>
       <title></title>
-      <link>/home/carousel.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/home/carousel.html</guid>
-      <description>{{&amp;lt; carousel key=&amp;ldquo;my_carousel&amp;rdquo; &amp;gt;}}</description>
-    </item>
-    
-    <item>
-      <title>Personas</title>
-      <link>/home/people.html</link>
+      <link>/home/people/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/people.html</guid>
-      <description></description>
+      <guid>/home/people/</guid>
+      <description>Equipo de trabajo</description>
     </item>
     
     <item>
-      <title>Publicaciones seleccionadas</title>
-      <link>/home/publications_selected.html</link>
+      <title>Publicaciones Seleccionadas</title>
+      <link>/home/publications_selected/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
       
-      <guid>/home/publications_selected.html</guid>
+      <guid>/home/publications_selected/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Publicaciones recientes</title>
-      <link>/home/publications.html</link>
+      <link>/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
       
-      <guid>/home/publications.html</guid>
+      <guid>/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Proximas charlas y eventos</title>
-      <link>/home/talks.html</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <link>/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
       
-      <guid>/home/talks.html</guid>
+      <guid>/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Post recientes</title>
-      <link>/home/posts.html</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
       
-      <guid>/home/posts.html</guid>
+      <guid>/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Proyectos</title>
-      <link>/home/projects.html</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <link>/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
       
-      <guid>/home/projects.html</guid>
+      <guid>/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cursos</title>
-      <link>/home/teaching.html</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <link>/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
       
-      <guid>/home/teaching.html</guid>
-      <description>Los cursos impartidos en el proyecto, en la Universidad son:
- Política Fiscal Econometría Introducción a R Microeconomía  </description>
+      <guid>/home/teaching/</guid>
+      <description> Política Fiscal Econometría Introducción a R Microeconomía  </description>
     </item>
     
     <item>
       <title>Tags</title>
-      <link>/home/tags.html</link>
+      <link>/home/tags/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 -0600</pubDate>
       
-      <guid>/home/tags.html</guid>
+      <guid>/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contacto</title>
-      <link>/home/contact.html</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <link>/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
       
-      <guid>/home/contact.html</guid>
+      <guid>/home/contact/</guid>
       <description></description>
     </item>
     

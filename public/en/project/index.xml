@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on </title>
+    <link>/en/project/</link>
+    <description>Recent content in Projects on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/en/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fiscal outlook</title>
+      <link>/en/project/coyuntura/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/coyuntura/</guid>
+      <description>This section provides a quarterly review of tax figures Costa Rica, in order to see the situation on the issue of revenue and expenses, will be made in addition to seeing the issues of national discussion on the management of public finances.</description>
+    </item>
+    
+    <item>
+      <title>Blanchard indicator</title>
+      <link>/en/project/tabla/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/tabla/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>General Equilibrium Model</title>
+      <link>/en/project/cge/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/cge/</guid>
+      <description>One of the objectives of the project is the realization of a Computable General Equilibrium Model, which allows analyzing the effects of a possible fiscal reform. For the execution of this, the STAGE model of the CGEMOD team has been implemented.</description>
+    </item>
+    
+    <item>
+      <title>VAT reform simulator</title>
+      <link>/en/project/incidencia/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/incidencia/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

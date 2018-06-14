@@ -3,39 +3,42 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
+baseurl = "http://www.pestudiosfiscales.com/"
 
 # Title of your site
-title = "Proyecto de Estudios Fiscales"
+title = ""
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
 copyright = "&copy; 2018"
 
 theme = "hugo-academic"
-enableEmoji = false
+enableEmoji = true  
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 paginate = 10
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+#disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-116315459-1"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "es"
+hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
-alwaysShowLanguageChooser = true
+
+# Get last modified date for content from Git?
+enableGitInfo = false
 
 [outputs]
   home = [ "HTML", "CSS", "RSS" ]
   section = [ "HTML", "RSS" ]
 
 # Configure BlackFriday Markdown rendering.
-#   See: https://gohugo.io/readfiles/bfconfig/
+#   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
 [blackfriday]
   hrefTargetBlank = true  # `true` opens external links in a new tab.
   fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
@@ -51,9 +54,9 @@ alwaysShowLanguageChooser = true
   font = "default"
 
   # Your details.
-  name = "David Cardoza Rodriguez"
-  role = "Coordinador e Investagador"
-  
+  name = "Lena Smith"
+  role = "Professor of Artificial Intelligence"
+
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
   organizations = [ { name = "Universidad Nacional de Costa Rica", url = "http://www.una.ac.cr/" } ]
@@ -61,7 +64,7 @@ alwaysShowLanguageChooser = true
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "proyecto.fiscal@una.cr"
   address = "Edificio de Ciencias Sociales, piso 3, Universidad Nacional, Heredia,  86-3000, Costa Rica"
-  office_hours = "Martes a Viernes, 1:00 pm a 4:30 o por cita"
+  office_hours = "Martes a Viernes, 1:00 pm a 4:30 pm o por cita"
   phone = "2562-4142"
   skype = ""
   telegram = ""
@@ -75,7 +78,7 @@ alwaysShowLanguageChooser = true
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-  logo = "Rlogo3.png"
+  logo = "icon4.png"
 
   # Enable/disable map in Contact widget.
   # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
@@ -92,10 +95,10 @@ alwaysShowLanguageChooser = true
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  map = 1
-  map_api_key = "AIzaSyAe5X298-PL-xMHrW9VpTtTDmoyM6_7aXk "
-  latitude = "9.999670"
-  longitude = "-84.111943"
+  map = 0
+  map_api_key = ""
+  latitude = "37.4275"
+  longitude = "-122.1697"
   zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
@@ -151,9 +154,14 @@ alwaysShowLanguageChooser = true
   # Enable native social sharing buttons?
   sharing = true
 
+  # Privacy pack
+  #   Show a cookie consent message to visitors
+  #   Anonymize IP in Google Analytics (if enabled)
+  privacy_pack = false
+
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = []
+  custom_css = ["academic.css"]
   custom_js  = []
 
   # Publication types.
@@ -172,10 +180,6 @@ alwaysShowLanguageChooser = true
     'Book',  # 5
     'Book section'  # 6
   ]
-
-  uglyurls = true
- #[permalinks]
- # post = "/:year/:month/:day/:slug/"
 
   # Configuration of talk pages.
   [params.talks]
@@ -198,7 +202,7 @@ alwaysShowLanguageChooser = true
     #   1 = Detailed
     #   2 = APA
     #   3 = MLA
-    publication_format = 2
+    publication_format = 3
 
   # Social/Academic Networking
   #
@@ -237,7 +241,16 @@ alwaysShowLanguageChooser = true
     icon = "github"
     icon_pack = "fa"
     link = "//github.com/gcushen"
+    
+# Comment out disqusShortname Key/Value pair
+#disqusShortname = ""
 
+# Add the following new Table somewhere under the params table
+  [params.staticman]
+  endpoint = "https://api.staticman.net/v2/entry"
+  username = "mmc00"
+  repository = "aca"
+  branch = "master"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -248,22 +261,42 @@ alwaysShowLanguageChooser = true
   align_right = true
 
 [[menu.main]]
-  name = "Inicio"
-  url = "#biography"
+  name = "Equipo"
+  url = "#people"
   weight = 1
   
+[[Languages.en.menu.main]]
+  name = "Team"
+  url = "#people"
+  weight = 1  
+
 [[menu.main]]
   name = "Publicaciones"
   url = "#publications_selected"
   weight = 2
-
+  
+[[Languages.en.menu.main]]
+  name = "Publications"
+  url = "#publications_selected"
+  weight = 2
+  
 [[menu.main]]
   name = "Posts"
   url = "#posts"
   weight = 3
 
+[[Languages.en.menu.main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 3
+  
 [[menu.main]]
   name = "Proyectos"
+  url = "#projects"
+  weight = 4
+  
+[[Languages.en.menu.main]]
+  name = "Projects"
   url = "#projects"
   weight = 4
 
@@ -272,8 +305,18 @@ alwaysShowLanguageChooser = true
   url = "#teaching"
   weight = 5
 
+[[Languages.en.menu.main]]
+  name = "Teaching"
+  url = "#teaching"
+  weight = 5
+
 [[menu.main]]
   name = "Contacto"
+  url = "#contact"
+  weight = 6
+  
+[[Languages.en.menu.main]]
+  name = "Contact"
   url = "#contact"
   weight = 6
 
@@ -290,6 +333,7 @@ alwaysShowLanguageChooser = true
 [Languages.es]
   languageCode = "es"
   
-[params.authors]
-
-	[params.authors.Personas]
+[Languages.en]
+  languageCode = "en-us"
+  
+  

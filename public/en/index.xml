@@ -1,0 +1,1904 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>/en/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0600</lastBuildDate>
+    <atom:link href="/en/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>David Cardoza Rodriguez</title>
+      <link>/en/people/david/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/en/people/david/</guid>
+      <description>&lt;p&gt;Bachelor’s in economics from the Universidad Nacional, and Masters in the Torcuato Di Tella. I have conducted research on tax issues and Incidence. I&amp;rsquo;m a professor of the Econometrics, Microeconomics and Statistics courses at the National University School of Economics, and I also chair the quantitative methods course.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Marlon Molina Corella</title>
+      <link>/en/people/marlon/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/en/people/marlon/</guid>
+      <description>&lt;p&gt;Economist of the Universidad Nacional, I have experience in tax models, among them microsimulations in Incidence and the elaboration of a Computable General Equilibrium Model. I am also fond of programming in R. I have worked 2 years in the Project.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Francisco Sancho Mora</title>
+      <link>/en/people/francisco/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/en/people/francisco/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fiscal outlook</title>
+      <link>/en/project/coyuntura/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/coyuntura/</guid>
+      <description>&lt;p&gt;This section provides a quarterly review of tax figures Costa Rica, in order to see the situation on the issue of revenue and expenses, will be made in addition to seeing the issues of national discussion on the management of public finances.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ricardo Alvarado Barrantes</title>
+      <link>/en/people/ricardo/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/en/people/ricardo/</guid>
+      <description>&lt;p&gt;Economist from the National University of Costa Rica. He has extensive experience in economic statistics, databases and in the preparation of dynamic reports. He has worked as a Statistical Consultant at the Central American Monetary Council since 2014 and as an independent consultant both nationally and internationally. Currently, he is completing his Bachelor&amp;rsquo;s thesis in Economics at the Universidad Nacional de Costa Rica and is pursuing the Master&amp;rsquo;s Degree in Big Data and Business Analytics at the Camilo José Cela University, Spain.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Characterization of the Costa Rican Economy through the Social Accounting Matrix</title>
+      <link>/en/post/mcsmaunal/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/mcsmaunal/</guid>
+      <description>&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/d3/d3.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/sankey/sankey.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/sankeyNetwork-binding/sankeyNetwork.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/sequences/sequences.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/sunburst-binding/sunburst.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+
+
+&lt;div style=&#34;line-height: 2em;&#34;&gt;
+
+
+&lt;p&gt;The Social Accounting Matrix (SAM), belongs to a set of data prepared by the Central bank of Costa Rica, which allow to be obtaining a relevant information about the country. Among the features that matrix has, is the ability to show the interactions between different agents. It could be inferred, that the SAM is a picture of the economy, keeping the static characteristic.&lt;/p&gt;
+&lt;style&gt;
+ .figure1 {
+   margin-top: 20px;
+   margin-bottom: 60px;
+ }
+&lt;/style&gt;
+&lt;style&gt;
+ .figure2 {
+   margin-top: 20px;
+   margin-bottom: 110px;
+ }
+&lt;/style&gt;
+&lt;style&gt;
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 150px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+&lt;/style&gt;
+&lt;style&gt;
+  .col3 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+&lt;/style&gt;
+&lt;style&gt;
+body {
+text-align: justify}
+&lt;/style&gt;
+&lt;p&gt;For the start, a closed Economy is most easy to understand for the model of circular flow, the factors sell their services to activities, obtained income for it, which allows to institutions to purchases in the different market. The activities obtain income from the sale of products and pay for factors and intermediate inputs. With an open economy, the same logic is followed, institutions sell their services for domestic and external productions. In addition, they have the possibility of buying domestic of foreign products.&lt;/p&gt;
+&lt;p&gt;The SAM is a square matrix, where each account of columns has its counterpart in the rows, and the information in each cell takes into account the quantify and the price, being this equal for each entry of row, thus reflecting the Law of the One Price (LOOP), the articles are homogeneous, and their price does not differ by agent. In fact, the matrix is an account that reflects the circular flow model.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+T_{i,j} = \sum_{i,j} p_{i} q_{i,j} =  p_{i} Q_{i} \quad \land Q_{i} = \sum_{j} q_{i,j}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The total quantities must be equal per column and per row, that is:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\sum_{i} p_{i,j}q_{i,j} = \sum_{i}T_{i,j} = \sum_{j}T_{j,i} = \sum_{i} p_{j,i}q_{j,i}  \qquad \forall i = j
+\]&lt;/span&gt; Due the advance in the Costa Rica National Accounts, the information from the Supply and Utilization Accounts is used for the construction, without the need to resort to other sources of information. The base year of SAM is 2012, started with aggregate accounts and were disaggregated with other data obtained from surveys. In total, the new National Accounts of 2012 have 183 products and 136 activities, which were added in 32 types in both cases, designed to facilitate integration in the CGE model, this appears on figure 1.&lt;/p&gt;
+&lt;div id=&#34;figure-1.-scheme-of-aggregation-of-goods-and-services&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Figure 1. Scheme of aggregation of goods and services&lt;/h4&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;div class=&#34;col-md-6&#34;&gt;
+&lt;p&gt;&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:360px;height:800px;&#34; class=&#34;sankeyNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;links&#34;:{&#34;source&#34;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2],&#34;target&#34;:[3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20,21,22,24,25,26,27,28,29,30,31,32,33,34,35,36,37,19,23],&#34;value&#34;:[40794.07807,113196.2511,46486.7411,675.8932705,120859.5913,93456.03185,17462.45832,37861.54906,26011.10168,19791.94055,25772.45854,70725.97446,85458.59147,102865.7748,35784.76354,25801.33772,442126.8725,24175.16541,438062.2228,94156.07255,188089.0624,12748.43641,25404.65524,7621.960451,51946.52235,117123.3703,70029.85884,119009.9861,77064.2593,162155.2877,9546.684148,71519.88346,186580.9092,13986.00586,170789.9747],&#34;group&#34;:[&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;agr&#34;,&#34;banana&#34;,&#34;coffee&#34;]},&#34;nodes&#34;:{&#34;name&#34;:[&#34;agr&#34;,&#34;banana&#34;,&#34;coffee&#34;,&#34;Bean&#34;,&#34;Corn&#34;,&#34;Wheat&#34;,&#34;Other cereals&#34;,&#34;Legumes and other oil seeds&#34;,&#34;Rice&#34;,&#34;Watermelon&#34;,&#34;Cantaloupe&#34;,&#34;Onions&#34;,&#34;Chayote&#34;,&#34;Potato&#34;,&#34;Roots and tubers&#34;,&#34;Vegetables&#34;,&#34;Sugar cane&#34;,&#34;Flowers&#34;,&#34;Foliage&#34;,&#34;Banana&#34;,&#34;Plantain&#34;,&#34;Pineapple&#34;,&#34;Oil palm&#34;,&#34;Coffee in fruit&#34;,&#34;Mango&#34;,&#34;Orange&#34;,&#34;Palmetto&#34;,&#34;Other non-perennial and perennial plant products&#34;,&#34;Other fruits, nuts and other oleaginous fruits&#34;,&#34;Live plants and roots&#34;,&#34;Cattle&#34;,&#34;Pig Cattle&#34;,&#34;Standing chicken&#34;,&#34;Other live animals&#34;,&#34;Eggs&#34;,&#34;Raw milk&#34;,&#34;Other animal products&#34;,&#34;Support services for agriculture&#34;],&#34;group&#34;:[&#34;agr&#34;,&#34;banana&#34;,&#34;coffee&#34;,&#34;Bean&#34;,&#34;Corn&#34;,&#34;Wheat&#34;,&#34;Other cereals&#34;,&#34;Legumes and other oil seeds&#34;,&#34;Rice&#34;,&#34;Watermelon&#34;,&#34;Cantaloupe&#34;,&#34;Onions&#34;,&#34;Chayote&#34;,&#34;Potato&#34;,&#34;Roots and tubers&#34;,&#34;Vegetables&#34;,&#34;Sugar cane&#34;,&#34;Flowers&#34;,&#34;Foliage&#34;,&#34;Banana&#34;,&#34;Plantain&#34;,&#34;Pineapple&#34;,&#34;Oil palm&#34;,&#34;Coffee in fruit&#34;,&#34;Mango&#34;,&#34;Orange&#34;,&#34;Palmetto&#34;,&#34;Other non-perennial and perennial plant products&#34;,&#34;Other fruits, nuts and other oleaginous fruits&#34;,&#34;Live plants and roots&#34;,&#34;Cattle&#34;,&#34;Pig Cattle&#34;,&#34;Standing chicken&#34;,&#34;Other live animals&#34;,&#34;Eggs&#34;,&#34;Raw milk&#34;,&#34;Other animal products&#34;,&#34;Support services for agriculture&#34;]},&#34;options&#34;:{&#34;NodeID&#34;:&#34;node&#34;,&#34;NodeGroup&#34;:&#34;node&#34;,&#34;LinkGroup&#34;:&#34;group&#34;,&#34;colourScale&#34;:&#34;d3.scaleOrdinal([\&#34; #FBB4AE\&#34;, \&#34;#B3CDE3\&#34;, \&#34;#CCEBC5\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8 \&#34;])&#34;,&#34;fontSize&#34;:12,&#34;fontFamily&#34;:null,&#34;nodeWidth&#34;:15,&#34;nodePadding&#34;:10,&#34;units&#34;:&#34;&#34;,&#34;margin&#34;:{&#34;top&#34;:null,&#34;right&#34;:-10,&#34;bottom&#34;:null,&#34;left&#34;:0},&#34;iterations&#34;:0,&#34;sinksRight&#34;:true}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:360px;height:1000px;&#34; class=&#34;sankeyNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;links&#34;:{&#34;source&#34;:[0,0,0,0,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,8,8,8,1,1,7,1,1,1],&#34;target&#34;:[9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58],&#34;value&#34;:[252102.9279,494308.3983,61358.27749,160261.3827,169739.2965,783063.9518,240302.4979,775971.1823,661460.0213,104924.9974,95954.41897,77883.22162,548324.3246,272870.6973,205435.3604,201821.9814,507209.9964,165910.2552,545702.3443,288633.6223,108715.753,626157.2939,109422.7987,119249.9672,146537.0413,283189.4713,653638.6885,216122.9938,65405.18242,477280.8175,317402.9331,440329.7984,129128.1529,25775.87277,29446.45301,250682.3673,289370.6321,54935.09984,213098.4287,30766.75319,636177.7522,814302.8288,189445.5941,59712.26025,106178.7075,160480.3296,813976.496,292760.3763,107974.3227,341879.4894],&#34;group&#34;:[&#34;texcuero&#34;,&#34;texcuero&#34;,&#34;texcuero&#34;,&#34;texcuero&#34;,&#34;otrmnf&#34;,&#34;otrmnf&#34;,&#34;otrmnf&#34;,&#34;refpet&#34;,&#34;refpet&#34;,&#34;refpet&#34;,&#34;refpet&#34;,&#34;refpet&#34;,&#34;químicos&#34;,&#34;chemicals&#34;,&#34;chemicals&#34;,&#34;chemicals&#34;,&#34;chemicals&#34;,&#34;chemicals&#34;,&#34;chemicals&#34;,&#34;rubberplast&#34;,&#34;rubberplast&#34;,&#34;rubberplast&#34;,&#34;prodminnomet&#34;,&#34;prodminnomet&#34;,&#34;prodminnomet&#34;,&#34;prodminnomet&#34;,&#34;prodmet&#34;,&#34;prodmet&#34;,&#34;prodmet&#34;,&#34;prodmet&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;mac&#34;,&#34;vehicles&#34;,&#34;vehicles&#34;,&#34;vehicles&#34;,&#34;otrmnf&#34;,&#34;otrmnf&#34;,&#34;mac&#34;,&#34;otrmnf&#34;,&#34;otrmnf&#34;,&#34;otrmnf&#34;]},&#34;nodes&#34;:{&#34;name&#34;:[&#34;text&#34;,&#34;otrmnf&#34;,&#34;refpet&#34;,&#34;Chemicals&#34;,&#34;rubberplast&#34;,&#34;prodminnomet&#34;,&#34;prodmet&#34;,&#34;mac&#34;,&#34;vehicles&#34;,&#34;Artículos textiles, excepto prendas de vestir&#34;,&#34;Clothing&#34;,&#34;Leather and related products, except footwear&#34;,&#34;Footwear&#34;,&#34;Wood and cork, wood products and cork&#34;,&#34;Paper and paper products&#34;,&#34;Products of the edition, printing and recordings&#34;,&#34;Gasoline&#34;,&#34;Diesel&#34;,&#34;Bunker&#34;,&#34;Lubricating oils and greases&#34;,&#34;Other petroleum products and coke&#34;,&#34;Basic chemicals and fertilizers&#34;,&#34;Plastics and synthetic rubber in primary forms&#34;,&#34;Pesticides and other chemical products for agricultural use&#34;,&#34;Paints, varnishes, coatings&#34;,&#34;Soaps, detergents, perfumes&#34;,&#34;Artificial fibers and chemical products&#34;,&#34;Pharmaceutical and medicinal products&#34;,&#34;Rubber products&#34;,&#34;Plastic profiles, pipe and connections&#34;,&#34;Other plastic products&#34;,&#34;Glass and glass products&#34;,&#34;Refractory products, construction materials&#34;,&#34;Cement, lime and plaster&#34;,&#34;Articles of concrete, cement and plaster&#34;,&#34;Basic Products of Iron and Steel&#34;,&#34;Primary products of aluminum, zinc&#34;,&#34;Metal products for structural use&#34;,&#34;Other metal products&#34;,&#34;Electronic components and boards&#34;,&#34;Communications equipment&#34;,&#34;Measuring equipment, test, navigation&#34;,&#34;Irradiation equipment, electronic, medical&#34;,&#34;Optical instruments, photographic&#34;,&#34;Motors, generators, electric transformers&#34;,&#34;Batteries, batteries, accumulators, cables&#34;,&#34;Electrical lighting equipment&#34;,&#34;Refrigerators, cookers, washing machines&#34;,&#34;Other types of electrical equipment&#34;,&#34;Machinery of general and special use&#34;,&#34;Trailers and semi-trailers&#34;,&#34;Parts for motor vehicles&#34;,&#34;Other types of transport equipment&#34;,&#34;Wooden furniture&#34;,&#34;Furniture of another type of material&#34;,&#34;Medical and dental instruments and supplies&#34;,&#34;Other manufacturing products&#34;,&#34;Waste and scrap&#34;,&#34;Manufacturing services&#34;],&#34;group&#34;:[&#34;text&#34;,&#34;otrmnf&#34;,&#34;refpet&#34;,&#34;Chemicals&#34;,&#34;rubberplast&#34;,&#34;prodminnomet&#34;,&#34;prodmet&#34;,&#34;mac&#34;,&#34;vehicles&#34;,&#34;Artículos textiles, excepto prendas de vestir&#34;,&#34;Clothing&#34;,&#34;Leather and related products, except footwear&#34;,&#34;Footwear&#34;,&#34;Wood and cork, wood products and cork&#34;,&#34;Paper and paper products&#34;,&#34;Products of the edition, printing and recordings&#34;,&#34;Gasoline&#34;,&#34;Diesel&#34;,&#34;Bunker&#34;,&#34;Lubricating oils and greases&#34;,&#34;Other petroleum products and coke&#34;,&#34;Basic chemicals and fertilizers&#34;,&#34;Plastics and synthetic rubber in primary forms&#34;,&#34;Pesticides and other chemical products for agricultural use&#34;,&#34;Paints, varnishes, coatings&#34;,&#34;Soaps, detergents, perfumes&#34;,&#34;Artificial fibers and chemical products&#34;,&#34;Pharmaceutical and medicinal products&#34;,&#34;Rubber products&#34;,&#34;Plastic profiles, pipe and connections&#34;,&#34;Other plastic products&#34;,&#34;Glass and glass products&#34;,&#34;Refractory products, construction materials&#34;,&#34;Cement, lime and plaster&#34;,&#34;Articles of concrete, cement and plaster&#34;,&#34;Basic Products of Iron and Steel&#34;,&#34;Primary products of aluminum, zinc&#34;,&#34;Metal products for structural use&#34;,&#34;Other metal products&#34;,&#34;Electronic components and boards&#34;,&#34;Communications equipment&#34;,&#34;Measuring equipment, test, navigation&#34;,&#34;Irradiation equipment, electronic, medical&#34;,&#34;Optical instruments, photographic&#34;,&#34;Motors, generators, electric transformers&#34;,&#34;Batteries, batteries, accumulators, cables&#34;,&#34;Electrical lighting equipment&#34;,&#34;Refrigerators, cookers, washing machines&#34;,&#34;Other types of electrical equipment&#34;,&#34;Machinery of general and special use&#34;,&#34;Trailers and semi-trailers&#34;,&#34;Parts for motor vehicles&#34;,&#34;Other types of transport equipment&#34;,&#34;Wooden furniture&#34;,&#34;Furniture of another type of material&#34;,&#34;Medical and dental instruments and supplies&#34;,&#34;Other manufacturing products&#34;,&#34;Waste and scrap&#34;,&#34;Manufacturing services&#34;]},&#34;options&#34;:{&#34;NodeID&#34;:&#34;node&#34;,&#34;NodeGroup&#34;:&#34;node&#34;,&#34;LinkGroup&#34;:&#34;group&#34;,&#34;colourScale&#34;:&#34;d3.scaleOrdinal([\&#34; #FBB4AE\&#34;, \&#34;#B3CDE3\&#34;, \&#34;#CCEBC5\&#34;, \&#34;#DECBE4\&#34;, \&#34;#FED9A6\&#34;, \&#34;#FFFFCC\&#34;, \&#34;#B3E2CD\&#34;, \&#34;#FDCDAC\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8 \&#34;])&#34;,&#34;fontSize&#34;:12,&#34;fontFamily&#34;:null,&#34;nodeWidth&#34;:15,&#34;nodePadding&#34;:10,&#34;units&#34;:&#34;&#34;,&#34;margin&#34;:{&#34;top&#34;:null,&#34;right&#34;:-10,&#34;bottom&#34;:null,&#34;left&#34;:0},&#34;iterations&#34;:0,&#34;sinksRight&#34;:true}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;col-md-6&#34;&gt;
+&lt;p&gt;&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:360px;height:800px;&#34; class=&#34;sankeyNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;links&#34;:{&#34;source&#34;:[0,1,1,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,3,3,5,5,5],&#34;target&#34;:[6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35],&#34;value&#34;:[53478.11593,69227.19013,32996.54624,172835.1822,2187.119499,11.40374138,35686.96933,298499.1297,197927.504,131621.8125,151195.6375,219125.6545,439338.0925,292331.9414,193427.9272,540464.0581,183412.9654,110474.356,132882.1359,403786.2405,183216.0588,90446.19801,43892.17695,270826.4532,102074.319,541880.905,261904.9818,106651.6618,536943.8939,70836.39283],&#34;group&#34;:[&#34;sil&#34;,&#34;fishing&#34;,&#34;fishing&#34;,&#34;min&#34;,&#34;min&#34;,&#34;min&#34;,&#34;min&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;food&#34;,&#34;prodcoffee&#34;,&#34;prodcoffee&#34;,&#34;food&#34;,&#34;food&#34;,&#34;bebtab&#34;,&#34;bebtab&#34;,&#34;bebtab&#34;]},&#34;nodes&#34;:{&#34;name&#34;:[&#34;Forestry&#34;,&#34;Fishing&#34;,&#34;Mining&#34;,&#34;Foods&#34;,&#34;Prodcoffee&#34;,&#34;bebtab&#34;,&#34;Forestry products&#34;,&#34;Fishing products&#34;,&#34;Aquaculture products&#34;,&#34;Stone, sand and clay&#34;,&#34;Salt&#34;,&#34;Oil and natural gas&#34;,&#34;Other metallic minerals, non-metallic&#34;,&#34;Meat and edible offal of birds&#34;,&#34;Meat and edible offal of cattle&#34;,&#34;Meat and edible offal of pigs&#34;,&#34;Sausages and other meat products&#34;,&#34;Fish, crustaceans and preserved molluscs&#34;,&#34;Fruit, vegetables and canned vegetables&#34;,&#34;Crude and refined vegetable oils&#34;,&#34;Other oils and fats of vegetable and animal origin&#34;,&#34;Milk products&#34;,&#34;Peeled, processed and semi-finished rice&#34;,&#34;Wheat flour&#34;,&#34;Other milling products&#34;,&#34;Bakery products&#34;,&#34;Cane sugar, molasses, syrups and other sugars&#34;,&#34;Cocoa, chocolates and confectionery&#34;,&#34;Macaroni, noodles and similar farinaceous products&#34;,&#34;Gold coffee&#34;,&#34;Ground coffee, soluble, extracts and concentrates&#34;,&#34;Meals, prepared dishes and other food products&#34;,&#34;Prepared foods for animals&#34;,&#34;Distilled alcoholic beverages and wines&#34;,&#34;Beer, malt, soft drinks and bottled water&#34;,&#34;Tobacco products&#34;],&#34;group&#34;:[&#34;Forestry&#34;,&#34;Fishing&#34;,&#34;Mining&#34;,&#34;Foods&#34;,&#34;Prodcoffee&#34;,&#34;bebtab&#34;,&#34;Forestry products&#34;,&#34;Fishing products&#34;,&#34;Aquaculture products&#34;,&#34;Stone, sand and clay&#34;,&#34;Salt&#34;,&#34;Oil and natural gas&#34;,&#34;Other metallic minerals, non-metallic&#34;,&#34;Meat and edible offal of birds&#34;,&#34;Meat and edible offal of cattle&#34;,&#34;Meat and edible offal of pigs&#34;,&#34;Sausages and other meat products&#34;,&#34;Fish, crustaceans and preserved molluscs&#34;,&#34;Fruit, vegetables and canned vegetables&#34;,&#34;Crude and refined vegetable oils&#34;,&#34;Other oils and fats of vegetable and animal origin&#34;,&#34;Milk products&#34;,&#34;Peeled, processed and semi-finished rice&#34;,&#34;Wheat flour&#34;,&#34;Other milling products&#34;,&#34;Bakery products&#34;,&#34;Cane sugar, molasses, syrups and other sugars&#34;,&#34;Cocoa, chocolates and confectionery&#34;,&#34;Macaroni, noodles and similar farinaceous products&#34;,&#34;Gold coffee&#34;,&#34;Ground coffee, soluble, extracts and concentrates&#34;,&#34;Meals, prepared dishes and other food products&#34;,&#34;Prepared foods for animals&#34;,&#34;Distilled alcoholic beverages and wines&#34;,&#34;Beer, malt, soft drinks and bottled water&#34;,&#34;Tobacco products&#34;]},&#34;options&#34;:{&#34;NodeID&#34;:&#34;node&#34;,&#34;NodeGroup&#34;:&#34;node&#34;,&#34;LinkGroup&#34;:&#34;group&#34;,&#34;colourScale&#34;:&#34;d3.scaleOrdinal([\&#34; #FBB4AE\&#34;, \&#34;#B3CDE3\&#34;, \&#34;#CCEBC5\&#34;, \&#34;#DECBE4\&#34;, \&#34;#FED9A6\&#34;, \&#34;#FFFFCC\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8 \&#34;])&#34;,&#34;fontSize&#34;:12,&#34;fontFamily&#34;:null,&#34;nodeWidth&#34;:15,&#34;nodePadding&#34;:10,&#34;units&#34;:&#34;&#34;,&#34;margin&#34;:{&#34;top&#34;:null,&#34;right&#34;:-10,&#34;bottom&#34;:null,&#34;left&#34;:0},&#34;iterations&#34;:0,&#34;sinksRight&#34;:true}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;&lt;div id=&#34;htmlwidget-4&#34; style=&#34;width:360px;height:1000px;&#34; class=&#34;sankeyNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-4&#34;&gt;{&#34;x&#34;:{&#34;links&#34;:{&#34;source&#34;:[10,0,1,10,10,2,2,2,2,2,3,3,4,4,4,4,4,4,4,4,4,4,10,5,5,10,6,6,6,8,7,7,7,7,7,7,7,10,10,8,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,9,10,10,11,12,10,10,10,10,10,10,10,13],&#34;target&#34;:[14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81],&#34;value&#34;:[214329.3294,765572.3861,168889.5272,101753.5693,7761.923115,842268.2998,1235973.852,205724.3484,746803.9914,864574.9008,3370196.637,433678.969,1652.835678,374908.6538,353690.5068,487959.5721,286272.2732,80076.37028,28305.16588,148381.4019,30252.62675,174801.5542,93263.01441,536098.5299,1374609.249,65831.83994,480922.3527,152101.0752,205098.4415,566285.3298,34829.98797,62744.09259,797210.99,306425.5031,374990.4134,174591.7343,72203.67675,1956031.691,743323.1688,168788.7036,146217.9109,434450.7662,316991.7178,125489.6093,532193.2345,213113.0379,31273.79253,396715.4107,162755.5047,35740.11218,110437.2144,126467.7029,232332.4309,135247.9228,889122.9631,702714.8807,555120.2523,24761.56547,2050816.351,1926719.36,235986.7239,95837.54848,102771.1018,10055.29324,176517.355,10403.04833,21008.64638,282337.9895],&#34;group&#34;:[&#34;otrsvc&#34;,&#34;elegas&#34;,&#34;water&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;trade&#34;,&#34;trade&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;bld&#34;,&#34;otrsvc&#34;,&#34;hotelrest&#34;,&#34;hotelrest&#34;,&#34;otrsvc&#34;,&#34;tel&#34;,&#34;tel&#34;,&#34;tel&#34;,&#34;svcprf&#34;,&#34;fin&#34;,&#34;fin&#34;,&#34;fin&#34;,&#34;fin&#34;,&#34;fin&#34;,&#34;fin&#34;,&#34;fin&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;svcprf&#34;,&#34;svcprf&#34;,&#34;svcprf&#34;,&#34;svcprf&#34;,&#34;svcprf&#34;,&#34;svcprf&#34;,&#34;svcprf&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;admpub&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;edu&#34;,&#34;health&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;otrsvc&#34;,&#34;domest&#34;]},&#34;nodes&#34;:{&#34;name&#34;:[&#34;elegas&#34;,&#34;water&#34;,&#34;bld&#34;,&#34;trade&#34;,&#34;trns&#34;,&#34;hotelrest&#34;,&#34;tel&#34;,&#34;fin&#34;,&#34;svcprf&#34;,&#34;admpub&#34;,&#34;otrsvc&#34;,&#34;edu&#34;,&#34;health&#34;,&#34;domest&#34;,&#34;Repair and installation of machinery&#34;,&#34;Electric power, gas, steam and air conditioning&#34;,&#34;Drinking water and sewage&#34;,&#34;Collection service, waste treatment&#34;,&#34;Environmental protection services&#34;,&#34;Residential buildings&#34;,&#34;Non-residential buildings&#34;,&#34;Roads and railways&#34;,&#34;Non-residential buildings Construction of public service projects&#34;,&#34;Special and general construction services&#34;,&#34;Commerce Services&#34;,&#34;Maintenance and repair of vehicles&#34;,&#34;Railway transport services&#34;,&#34;Land transport services&#34;,&#34;Taxi service&#34;,&#34;Freight transport&#34;,&#34;Transport of passengers by sea and air&#34;,&#34;Warehousing and storage services&#34;,&#34;Parking services&#34;,&#34;Other services related to transportation&#34;,&#34;Loading and unloading service&#34;,&#34;Other transport support services&#34;,&#34;Postal and courier services&#34;,&#34;Accommodation Services&#34;,&#34;Service of food and drinks&#34;,&#34;Radio, television and film services&#34;,&#34;Telephone services&#34;,&#34;Internet services&#34;,&#34;Other telecommunications services&#34;,&#34;Information services, programming&#34;,&#34;Central banking services&#34;,&#34;Other explicit monetary intermediation services&#34;,&#34;Financial intermediation services&#34;,&#34;Other financial services and investment banking&#34;,&#34;Insurance, reinsurance and pension fund services&#34;,&#34;Auxiliary services of monetary and financial intermediation&#34;,&#34;Auxiliary services for insurance and pension funds&#34;,&#34;Housing rental services&#34;,&#34;Non-residential property rental services&#34;,&#34;Juridical services&#34;,&#34;Accounting, tax consulting and other services&#34;,&#34;Financial management consulting services&#34;,&#34;Architecture, engineering and related services&#34;,&#34;Scientific research and development services&#34;,&#34;Advertising services&#34;,&#34;Other professional, scientific and technical services&#34;,&#34;Veterinary services&#34;,&#34;Car rental services&#34;,&#34;Rental and lease of licenses&#34;,&#34;Other rental services&#34;,&#34;Employment agency services&#34;,&#34;Services of travel agencies, tour operators&#34;,&#34;Security and investigation services&#34;,&#34;Cleaning of buildings and landscape care and maintenance&#34;,&#34;Office administrative and support services&#34;,&#34;General public services of the government&#34;,&#34;Services to the community in general&#34;,&#34;Administrative services of compulsory social security schemes&#34;,&#34;Teaching services&#34;,&#34;Human health care services&#34;,&#34;Artistic, entertainment and recreational services&#34;,&#34;Business association services&#34;,&#34;Computer repair services&#34;,&#34;Clothes washing, drying and cleaning services&#34;,&#34;Hairdressing and other beauty treatments&#34;,&#34;Funeral and related services&#34;,&#34;Other services&#34;,&#34;Domestic services&#34;],&#34;group&#34;:[&#34;elegas&#34;,&#34;water&#34;,&#34;bld&#34;,&#34;trade&#34;,&#34;trns&#34;,&#34;hotelrest&#34;,&#34;tel&#34;,&#34;fin&#34;,&#34;svcprf&#34;,&#34;admpub&#34;,&#34;otrsvc&#34;,&#34;edu&#34;,&#34;health&#34;,&#34;domest&#34;,&#34;Repair and installation of machinery&#34;,&#34;Electric power, gas, steam and air conditioning&#34;,&#34;Drinking water and sewage&#34;,&#34;Collection service, waste treatment&#34;,&#34;Environmental protection services&#34;,&#34;Residential buildings&#34;,&#34;Non-residential buildings&#34;,&#34;Roads and railways&#34;,&#34;Non-residential buildings Construction of public service projects&#34;,&#34;Special and general construction services&#34;,&#34;Commerce Services&#34;,&#34;Maintenance and repair of vehicles&#34;,&#34;Railway transport services&#34;,&#34;Land transport services&#34;,&#34;Taxi service&#34;,&#34;Freight transport&#34;,&#34;Transport of passengers by sea and air&#34;,&#34;Warehousing and storage services&#34;,&#34;Parking services&#34;,&#34;Other services related to transportation&#34;,&#34;Loading and unloading service&#34;,&#34;Other transport support services&#34;,&#34;Postal and courier services&#34;,&#34;Accommodation Services&#34;,&#34;Service of food and drinks&#34;,&#34;Radio, television and film services&#34;,&#34;Telephone services&#34;,&#34;Internet services&#34;,&#34;Other telecommunications services&#34;,&#34;Information services, programming&#34;,&#34;Central banking services&#34;,&#34;Other explicit monetary intermediation services&#34;,&#34;Financial intermediation services&#34;,&#34;Other financial services and investment banking&#34;,&#34;Insurance, reinsurance and pension fund services&#34;,&#34;Auxiliary services of monetary and financial intermediation&#34;,&#34;Auxiliary services for insurance and pension funds&#34;,&#34;Housing rental services&#34;,&#34;Non-residential property rental services&#34;,&#34;Juridical services&#34;,&#34;Accounting, tax consulting and other services&#34;,&#34;Financial management consulting services&#34;,&#34;Architecture, engineering and related services&#34;,&#34;Scientific research and development services&#34;,&#34;Advertising services&#34;,&#34;Other professional, scientific and technical services&#34;,&#34;Veterinary services&#34;,&#34;Car rental services&#34;,&#34;Rental and lease of licenses&#34;,&#34;Other rental services&#34;,&#34;Employment agency services&#34;,&#34;Services of travel agencies, tour operators&#34;,&#34;Security and investigation services&#34;,&#34;Cleaning of buildings and landscape care and maintenance&#34;,&#34;Office administrative and support services&#34;,&#34;General public services of the government&#34;,&#34;Services to the community in general&#34;,&#34;Administrative services of compulsory social security schemes&#34;,&#34;Teaching services&#34;,&#34;Human health care services&#34;,&#34;Artistic, entertainment and recreational services&#34;,&#34;Business association services&#34;,&#34;Computer repair services&#34;,&#34;Clothes washing, drying and cleaning services&#34;,&#34;Hairdressing and other beauty treatments&#34;,&#34;Funeral and related services&#34;,&#34;Other services&#34;,&#34;Domestic services&#34;]},&#34;options&#34;:{&#34;NodeID&#34;:&#34;node&#34;,&#34;NodeGroup&#34;:&#34;node&#34;,&#34;LinkGroup&#34;:&#34;group&#34;,&#34;colourScale&#34;:&#34;d3.scaleOrdinal([\&#34; #FBB4AE\&#34;, \&#34;#B3CDE3\&#34;, \&#34;#CCEBC5\&#34;, \&#34;#DECBE4\&#34;, \&#34;#FED9A6\&#34;, \&#34;#FFFFCC\&#34;, \&#34;#E5D8BD\&#34;, \&#34;#B3E2CD\&#34;, \&#34;#FDCDAC\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#F4CAE4\&#34;, \&#34;#E6F5C9\&#34;, \&#34;#FFF2AE\&#34;, \&#34;#F1E2CC\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8\&#34;, \&#34;#CBD5E8 \&#34;])&#34;,&#34;fontSize&#34;:12,&#34;fontFamily&#34;:null,&#34;nodeWidth&#34;:15,&#34;nodePadding&#34;:10,&#34;units&#34;:&#34;&#34;,&#34;margin&#34;:{&#34;top&#34;:null,&#34;right&#34;:-10,&#34;bottom&#34;:null,&#34;left&#34;:0},&#34;iterations&#34;:0,&#34;sinksRight&#34;:true}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Within the aggregate information, is possible to obtain GDP by expenditure approach, how appears on figure 2. The component with greatest weight is the private consumption, in urban households, with 54%. On the other hand, public investment only represents 2% of the total investment, which is 21%, private investment becomes relevant with 19%. Imports represent 35% and exports 32%, showing a current account deficit of 3%.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;figure-1.-composition-of-gdp.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Figure 1. Composition of GDP.&lt;/h4&gt;
+&lt;div class=&#34;figure1&#34;&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;div id=&#34;42a02cc25e6d&#34; style=&#34;width:100%;height:400px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;42a02cc25e6d&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;42a03a550cb&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;42a03a550cb&#34;,&#34;attrs&#34;:{&#34;42a03a550cb&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;name&#34;:&#34;Rural&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(178,223,138)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a03a550cb.1&#34;:{&#34;x&#34;:{},&#34;y&#34;:[0.536536114091274,0,0,0,0],&#34;name&#34;:&#34;Urban&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(251,154,153)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a03a550cb.2&#34;:{&#34;x&#34;:{},&#34;y&#34;:[0.00779344549378176,0,0,0,0],&#34;name&#34;:&#34;NPISH&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(217,217,217)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a03a550cb.3&#34;:{&#34;x&#34;:{},&#34;y&#34;:[0,0.186520955541397,0,0,0],&#34;name&#34;:&#34;Private&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(202,178,214)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a03a550cb.4&#34;:{&#34;x&#34;:{},&#34;y&#34;:[0,0.0194604169082624,0,0,0],&#34;name&#34;:&#34;Public&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(128,177,211)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a03a550cb.5&#34;:{&#34;x&#34;:{},&#34;y&#34;:[0,0.00118542259755823,0,0,0],&#34;name&#34;:&#34;Stock variation&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(51,160,44)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a03a550cb.6&#34;:{&#34;x&#34;:{},&#34;y&#34;:[0,0,0.170792341065884,0,0],&#34;name&#34;:&#34;Government&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(251,128,114)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a03a550cb.7&#34;:{&#34;x&#34;:{},&#34;y&#34;:[0,0,0,0.315858055300063,0],&#34;name&#34;:&#34;Exports&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(253,180,98)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a03a550cb.8&#34;:{&#34;x&#34;:{},&#34;y&#34;:[0,0,0,0,0.353912038741596],&#34;name&#34;:&#34;Imports&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgb(188,128,189)&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:60,&#34;t&#34;:25,&#34;r&#34;:10},&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;title&#34;:&#34;Percentage&#34;,&#34;tickformat&#34;:&#34;%&#34;},&#34;barmode&#34;:&#34;stack&#34;,&#34;legend&#34;:{&#34;orientation&#34;:&#34;h&#34;,&#34;y&#34;:1.2},&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;title&#34;:&#34;Expense component&#34;,&#34;type&#34;:&#34;category&#34;,&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;Exports&#34;,&#34;Government&#34;,&#34;Imports&#34;,&#34;Investment&#34;,&#34;Private consumption&#34;]},&#34;hovermode&#34;:&#34;closest&#34;,&#34;showlegend&#34;:true},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;modeBarButtonsToAdd&#34;:[{&#34;name&#34;:&#34;Collaborate&#34;,&#34;icon&#34;:{&#34;width&#34;:1000,&#34;ascent&#34;:500,&#34;descent&#34;:-50,&#34;path&#34;:&#34;M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z&#34;},&#34;click&#34;:&#34;function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == &#39;?viewer_pane=1&#39;) {\n          alert(&#39;To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html&#39;);\n        } else {\n          window.open(&#39;https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html&#39;, &#39;_blank&#39;);\n        }\n      }&#34;}],&#34;cloud&#34;:false},&#34;data&#34;:[{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0.118136133128969,0,0,0,0],&#34;name&#34;:&#34;Rural&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(31,119,180,1)&#34;,&#34;color&#34;:&#34;rgb(178,223,138)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0.536536114091274,0,0,0,0],&#34;name&#34;:&#34;Urban&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(255,127,14,1)&#34;,&#34;color&#34;:&#34;rgb(251,154,153)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0.00779344549378176,0,0,0,0],&#34;name&#34;:&#34;NPISH&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(44,160,44,1)&#34;,&#34;color&#34;:&#34;rgb(217,217,217)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0,0.186520955541397,0,0,0],&#34;name&#34;:&#34;Private&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(214,39,40,1)&#34;,&#34;color&#34;:&#34;rgb(202,178,214)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0,0.0194604169082624,0,0,0],&#34;name&#34;:&#34;Public&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(148,103,189,1)&#34;,&#34;color&#34;:&#34;rgb(128,177,211)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0,0.00118542259755823,0,0,0],&#34;name&#34;:&#34;Stock variation&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(140,86,75,1)&#34;,&#34;color&#34;:&#34;rgb(51,160,44)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0,0,0.170792341065884,0,0],&#34;name&#34;:&#34;Government&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(227,119,194,1)&#34;,&#34;color&#34;:&#34;rgb(251,128,114)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0,0,0,0.315858055300063,0],&#34;name&#34;:&#34;Exports&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(127,127,127,1)&#34;,&#34;color&#34;:&#34;rgb(253,180,98)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Private consumption&#34;,&#34;Investment&#34;,&#34;Government&#34;,&#34;Exports&#34;,&#34;Imports&#34;],&#34;y&#34;:[0,0,0,0,0.353912038741596],&#34;name&#34;:&#34;Imports&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(188,189,34,1)&#34;,&#34;color&#34;:&#34;rgb(188,128,189)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1}},&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[&#34;config.modeBarButtonsToAdd.0.click&#34;],&#34;jsHooks&#34;:{&#34;render&#34;:[{&#34;code&#34;:&#34;function(el, x) { var ctConfig = crosstalk.var(&#39;plotlyCrosstalkOpts&#39;).set({\&#34;on\&#34;:\&#34;plotly_click\&#34;,\&#34;persistent\&#34;:false,\&#34;dynamic\&#34;:false,\&#34;selectize\&#34;:false,\&#34;opacityDim\&#34;:0.2,\&#34;selected\&#34;:{\&#34;opacity\&#34;:1}}); }&#34;,&#34;data&#34;:null}]}}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The composition of expenditure of commodities is shown in table 2. The consumption of agricultural products and food are an important part of households, for the case of urban, the consume in other services is slightly higher, the difference in pattern seem to be minimum by the degree of aggregation of the accounts of goods and services, in addition also by the type of household’s disaggregation. The government makes a significant expenditure on health and education, representing 63% of the total. Exports are fairly distributed, however, food and agricultural products are the most exported, adding a 25%, hotel and professional services have a high percentage (9% respectively), and machinery 13.91%. On the side of imports the most important good is machinery with 18%, in addition chemicals and refined petroleum products accounts for 28%.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;table-1.-expenditure-of-commodities.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Table 1. Expenditure of commodities.&lt;/h4&gt;
+&lt;table class=&#34;table table-hover table-condensed&#34; style=&#34;font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Commodities
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Rural
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Urban
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+NPISH
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Private
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Public
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Government
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Exports
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Imports
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+agr
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d5ffd5&#34;&gt;0.0332&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #dbffdb&#34;&gt;0.0244&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb&#34;&gt;0.0090&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0002&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0001&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #68ff68&#34;&gt;0.0820&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2&#34;&gt;0.0425&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+banana
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0014&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0010&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #99ff99&#34;&gt;0.0555&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+coffee
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc&#34;&gt;0.0049&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0001&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+sil
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0009&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0009&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9&#34;&gt;0.0028&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0001&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+fishing
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc&#34;&gt;0.0018&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0013&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0005&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9&#34;&gt;0.0042&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+mining
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0002&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0002&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0003&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9&#34;&gt;0.0042&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+food
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.2048&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #21ff21&#34;&gt;0.1509&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d4ffd4&#34;&gt;0.0680&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0021&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #24ff24&#34;&gt;0.1190&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #abffab&#34;&gt;0.0588&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+prodcoffee
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6&#34;&gt;0.0066&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7&#34;&gt;0.0048&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2&#34;&gt;0.0328&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0011&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+bebtab
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #cfffcf&#34;&gt;0.0384&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c9ffc9&#34;&gt;0.0368&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f3fff3&#34;&gt;0.0062&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f1fff1&#34;&gt;0.0092&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+textleather
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c9ffc9&#34;&gt;0.0426&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c1ffc1&#34;&gt;0.0422&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4&#34;&gt;0.0142&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #beffbe&#34;&gt;0.0452&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+otrmnf
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6&#34;&gt;0.0328&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #cbffcb&#34;&gt;0.0349&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2&#34;&gt;0.0302&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6&#34;&gt;0.0238&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba&#34;&gt;0.0376&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #9fff9f&#34;&gt;0.0670&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+refpet
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c7ffc7&#34;&gt;0.0443&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #b8ffb8&#34;&gt;0.0484&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0001&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #3cff3c&#34;&gt;0.1370&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+chemicals
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2&#34;&gt;0.0486&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #b3ffb3&#34;&gt;0.0516&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e9ffe9&#34;&gt;0.0277&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #beffbe&#34;&gt;0.0352&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #3aff3a&#34;&gt;0.1384&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+rubberplast
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee&#34;&gt;0.0135&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea&#34;&gt;0.0143&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #b5ffb5&#34;&gt;0.0399&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #bfffbf&#34;&gt;0.0446&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+prodminmno
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc&#34;&gt;0.0018&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc&#34;&gt;0.0019&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ebffeb&#34;&gt;0.0107&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #edffed&#34;&gt;0.0121&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+prodment
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb&#34;&gt;0.0028&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa&#34;&gt;0.0030&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb&#34;&gt;0.0097&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc&#34;&gt;0.0076&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0&#34;&gt;0.0252&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #75ff75&#34;&gt;0.0970&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+mac
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0&#34;&gt;0.0377&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3&#34;&gt;0.0406&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #abffab&#34;&gt;0.2034&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c5ffc5&#34;&gt;0.1580&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0011&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.1391&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.1794&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+vehicles
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6&#34;&gt;0.0329&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ccffcc&#34;&gt;0.0348&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d8ffd8&#34;&gt;0.0936&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee&#34;&gt;0.0457&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc&#34;&gt;0.0015&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #99ff99&#34;&gt;0.0717&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+otrsvc
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #34ff34&#34;&gt;0.1625&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.1740&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.4065&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0007&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #92ff92&#34;&gt;0.1405&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #0cff0c&#34;&gt;0.1325&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d8ffd8&#34;&gt;0.0273&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+elegas
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea&#34;&gt;0.0168&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4&#34;&gt;0.0184&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0006&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0006&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+water
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8&#34;&gt;0.0050&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6&#34;&gt;0.0055&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0001&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+bld
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8&#34;&gt;0.0053&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6&#34;&gt;0.0058&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.6219&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.7034&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+trade
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f0fff0&#34;&gt;0.0120&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ecffec&#34;&gt;0.0127&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0001&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+trns
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3&#34;&gt;0.0477&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #b9ffb9&#34;&gt;0.0476&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0009&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #9dff9d&#34;&gt;0.0530&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3&#34;&gt;0.0195&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+hotelrest
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6&#34;&gt;0.0586&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #a3ffa3&#34;&gt;0.0626&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5&#34;&gt;0.0119&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #54ff54&#34;&gt;0.0929&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e6ffe6&#34;&gt;0.0172&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+tel
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d7ffd7&#34;&gt;0.0314&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d2ffd2&#34;&gt;0.0306&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0046&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0002&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9&#34;&gt;0.0031&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa&#34;&gt;0.0031&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+svcprf
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa&#34;&gt;0.0034&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9&#34;&gt;0.0036&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e0ffe0&#34;&gt;0.0487&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6&#34;&gt;0.0219&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e8ffe8&#34;&gt;0.0612&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #48ff48&#34;&gt;0.0993&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2&#34;&gt;0.0089&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+fin
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c8ffc8&#34;&gt;0.0441&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba&#34;&gt;0.0468&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9&#34;&gt;0.0082&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8&#34;&gt;0.0078&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa&#34;&gt;0.0027&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #efffef&#34;&gt;0.0108&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+admpub
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0002&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe&#34;&gt;0.0002&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #77ff77&#34;&gt;0.1754&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+edu
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e0ffe0&#34;&gt;0.0244&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c0ffc0&#34;&gt;0.0426&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba&#34;&gt;0.1094&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.3312&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7&#34;&gt;0.0039&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+health
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ddffdd&#34;&gt;0.0268&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c5ffc5&#34;&gt;0.0390&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #1dff1d&#34;&gt;0.3591&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #17ff17&#34;&gt;0.3013&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee&#34;&gt;0.0092&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+domest
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e9ffe9&#34;&gt;0.0176&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3&#34;&gt;0.0186&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;On the income side, households have different sources of income, which were added by salaried and non-salaried work income, capital, companies, land, international and government transfers, plus social contributions to workers, which also collects the government and is responsible for carrying out the transfer as health services and pensions. The income of urban households is greater than rural, this is mainly due to the composition of their income, which are shown in figure 3. The component of greater weight is wage labor in both cases, non-salaried employment has more important in rural households, another great differentiation is the income of capital and companies, in urban households they represent 29% and in rural households 21%.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;figure-2.-income-distribution-of-households.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Figure 2. Income distribution of households.&lt;/h4&gt;
+&lt;div class=&#34;figure1&#34;&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;div id=&#34;42a03fa3947&#34; style=&#34;width:100%;height:400px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;42a03fa3947&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;42a036284afd&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;42a036284afd&#34;,&#34;attrs&#34;:{&#34;42a036284afd&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Salaried&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;#D33F6A&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a036284afd.1&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Not&lt;br&gt;salaried&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;#DC5C5A&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a036284afd.2&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Capital&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;#E37647&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a036284afd.3&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Enterprises&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;#E88E34&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a036284afd.4&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Land&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;#EAA628&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a036284afd.5&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Transfers&lt;br&gt;from&lt;br&gt;the&lt;br&gt;Rest&lt;br&gt;Of&lt;br&gt;the&lt;br&gt;World&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;#E9BE35&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a036284afd.6&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Government&lt;br&gt;transfer&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;#E6D457&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;},&#34;42a036284afd.7&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Social&lt;br&gt;contributions&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;#E2E6BD&#34;},&#34;alpha&#34;:1,&#34;sizes&#34;:[10,100],&#34;type&#34;:&#34;bar&#34;}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:60,&#34;t&#34;:25,&#34;r&#34;:10},&#34;barmode&#34;:&#34;stack&#34;,&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;title&#34;:&#34;Percentage&#34;},&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;title&#34;:&#34;Households&#34;,&#34;type&#34;:&#34;category&#34;,&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;Rural&#34;,&#34;Urban&#34;]},&#34;hovermode&#34;:&#34;closest&#34;,&#34;showlegend&#34;:true},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;modeBarButtonsToAdd&#34;:[{&#34;name&#34;:&#34;Collaborate&#34;,&#34;icon&#34;:{&#34;width&#34;:1000,&#34;ascent&#34;:500,&#34;descent&#34;:-50,&#34;path&#34;:&#34;M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z&#34;},&#34;click&#34;:&#34;function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == &#39;?viewer_pane=1&#39;) {\n          alert(&#39;To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html&#39;);\n        } else {\n          window.open(&#39;https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html&#39;, &#39;_blank&#39;);\n        }\n      }&#34;}],&#34;cloud&#34;:false},&#34;data&#34;:[{&#34;x&#34;:[49.688,43.932],&#34;y&#34;:[&#34;Rural&#34;,&#34;Urban&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Salaried&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(31,119,180,1)&#34;,&#34;color&#34;:&#34;#D33F6A&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[10.811,7.94],&#34;y&#34;:[&#34;Rural&#34;,&#34;Urban&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Not&lt;br&gt;salaried&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(255,127,14,1)&#34;,&#34;color&#34;:&#34;#DC5C5A&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[6.042,8.51],&#34;y&#34;:[&#34;Rural&#34;,&#34;Urban&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Capital&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(44,160,44,1)&#34;,&#34;color&#34;:&#34;#E37647&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[14.73,20.749],&#34;y&#34;:[&#34;Rural&#34;,&#34;Urban&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Enterprises&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(214,39,40,1)&#34;,&#34;color&#34;:&#34;#E88E34&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[0.167,0.235],&#34;y&#34;:[&#34;Rural&#34;,&#34;Urban&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Land&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(148,103,189,1)&#34;,&#34;color&#34;:&#34;#EAA628&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[1.592,1.757],&#34;y&#34;:[&#34;Rural&#34;,&#34;Urban&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Transfers&lt;br&gt;from&lt;br&gt;the&lt;br&gt;Rest&lt;br&gt;Of&lt;br&gt;the&lt;br&gt;World&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(140,86,75,1)&#34;,&#34;color&#34;:&#34;#E9BE35&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[7.398,8.164],&#34;y&#34;:[&#34;Rural&#34;,&#34;Urban&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Government&lt;br&gt;transfer&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(227,119,194,1)&#34;,&#34;color&#34;:&#34;#E6D457&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[9.536,8.673],&#34;y&#34;:[&#34;Rural&#34;,&#34;Urban&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;name&#34;:&#34;Social&lt;br&gt;contributions&#34;,&#34;marker&#34;:{&#34;fillcolor&#34;:&#34;rgba(127,127,127,1)&#34;,&#34;color&#34;:&#34;#E2E6BD&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;transparent&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1}},&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[&#34;config.modeBarButtonsToAdd.0.click&#34;],&#34;jsHooks&#34;:{&#34;render&#34;:[{&#34;code&#34;:&#34;function(el, x) { var ctConfig = crosstalk.var(&#39;plotlyCrosstalkOpts&#39;).set({\&#34;on\&#34;:\&#34;plotly_click\&#34;,\&#34;persistent\&#34;:false,\&#34;dynamic\&#34;:false,\&#34;selectize\&#34;:false,\&#34;opacityDim\&#34;:0.2,\&#34;selected\&#34;:{\&#34;opacity\&#34;:1}}); }&#34;,&#34;data&#34;:null}]}}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In the case of government, the sources of income are shown in the figure 3, where it is evident that the main sources of income are internal transfers with 38.7 %, of which 25% come from urban households, whereas external transfers only 0.275%. The other major sources of income are indirect tax with 20.6%, being 18% for Sales tax and 2.57% of taxes on net goods (subtracting the subsidy value), direct taxes would be the following with 17.5%. Another important information that the matrix show is the effectives rates by type of taxes, which are shown in the table 2. For the case imports, the highest rate falls for beverages and tobacco with 40%, refined petroleum products they have rate of 31% and vehicles 24%. For the case of sales tax, the desegregation is based on commodities, that appears in figure 4. Hotel and restaurants services are the ones that contributed the most the sales tax with 14%, followed by machinery and food with 9%, telecommunications and chemicals 8%. On the other hand, professional, transport, refined oil, mining and agricultural services each contribute about 1%.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;figure-3.-distribution-of-government-income.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Figure 3. Distribution of government income.&lt;/h4&gt;
+&lt;div class=&#34;figure2&#34;&gt;
+&lt;div class=&#34;sunburst html-widget&#34; id=&#34;htmlwidget-5&#34; style=&#34;width:100%;height:450px; position:relative;&#34;&gt;
+&lt;div&gt;
+&lt;div class=&#34;sunburst-main&#34;&gt;
+&lt;div class=&#34;sunburst-sequence&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;sunburst-chart&#34;&gt;
+&lt;div class=&#34;sunburst-explanation&#34; style=&#34;visibility:hidden;&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sunburst-sidebar&#34;&gt;
+&lt;input type=&#34;checkbox&#34; class=&#34;sunburst-togglelegend&#34; style=&#34;visibility:hidden;&#34;&gt;Legend&lt;/input&gt;
+&lt;div class=&#34;sunburst-legend&#34; style=&#34;visibility:hidden;&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-5&#34;&gt;{&#34;x&#34;:{&#34;data&#34;:{&#34;children&#34;:[{&#34;name&#34;:&#34;Factors&#34;,&#34;children&#34;:[{&#34;name&#34;:&#34;factors&#34;,&#34;size&#34;:72638,&#34;colname&#34;:&#34;X2&#34;}],&#34;colname&#34;:&#34;X1&#34;},{&#34;name&#34;:&#34;Activities taxes&#34;,&#34;children&#34;:[{&#34;name&#34;:&#34;Activities&#34;,&#34;size&#34;:648585,&#34;colname&#34;:&#34;X2&#34;}],&#34;colname&#34;:&#34;X1&#34;},{&#34;name&#34;:&#34;Indirect taxes&#34;,&#34;children&#34;:[{&#34;name&#34;:&#34;Sales tax&#34;,&#34;size&#34;:1122978,&#34;colname&#34;:&#34;X2&#34;},{&#34;name&#34;:&#34;Commodities&#34;,&#34;size&#34;:160175,&#34;colname&#34;:&#34;X2&#34;}],&#34;colname&#34;:&#34;X1&#34;},{&#34;name&#34;:&#34;Direct taxes&#34;,&#34;children&#34;:[{&#34;name&#34;:&#34;Direct&#34;,&#34;size&#34;:1087237,&#34;colname&#34;:&#34;X2&#34;}],&#34;colname&#34;:&#34;X1&#34;},{&#34;name&#34;:&#34;Duty&#34;,&#34;children&#34;:[{&#34;name&#34;:&#34;Duty&#34;,&#34;size&#34;:701696,&#34;colname&#34;:&#34;X2&#34;}],&#34;colname&#34;:&#34;X1&#34;},{&#34;name&#34;:&#34;Exports Tax&#34;,&#34;children&#34;:[{&#34;name&#34;:&#34;Exports&#34;,&#34;size&#34;:8659,&#34;colname&#34;:&#34;X2&#34;}],&#34;colname&#34;:&#34;X1&#34;},{&#34;name&#34;:&#34;Internal transfers&#34;,&#34;children&#34;:[{&#34;name&#34;:&#34;Rural&#34;,&#34;size&#34;:388457,&#34;colname&#34;:&#34;X2&#34;},{&#34;name&#34;:&#34;Urban&#34;,&#34;size&#34;:1611303,&#34;colname&#34;:&#34;X2&#34;},{&#34;name&#34;:&#34;Enterprises&#34;,&#34;size&#34;:405317,&#34;colname&#34;:&#34;X2&#34;}],&#34;colname&#34;:&#34;X1&#34;},{&#34;name&#34;:&#34;External transfers&#34;,&#34;children&#34;:[{&#34;name&#34;:&#34;External transfers&#34;,&#34;size&#34;:17131,&#34;colname&#34;:&#34;X2&#34;}],&#34;colname&#34;:&#34;X1&#34;}],&#34;name&#34;:&#34;root&#34;},&#34;options&#34;:{&#34;legendOrder&#34;:[&#34;Factors&#34;,&#34;Activities taxes&#34;,&#34;Indirect taxes&#34;,&#34;Direct taxes&#34;,&#34;Duty&#34;,&#34;Exports Tax&#34;,&#34;Internal transfers&#34;,&#34;External transfers&#34;],&#34;colors&#34;:{&#34;domain&#34;:[&#34;Factors&#34;,&#34;Activities taxes&#34;,&#34;Indirect taxes&#34;,&#34;Direct taxes&#34;,&#34;Duty&#34;,&#34;Exports Tax&#34;,&#34;Internal transfers&#34;,&#34;External transfers&#34;],&#34;range&#34;:[&#34;#B3E2CD&#34;,&#34;#FDCDAC&#34;,&#34;#CBD5E8&#34;,&#34;#ffff99&#34;,&#34;#E6F5C9&#34;,&#34;#FFF2AE&#34;,&#34;#fddaec&#34;,&#34;#CCCCCC&#34;,&#34;#ffff00&#34;,&#34;#3fa678&#34;,&#34;#f9761f&#34;,&#34;#3e5a8e&#34;,&#34;#839cc9&#34;,&#34;#ffff00&#34;,&#34;#8dc224&#34;,&#34;#f76eb5&#34;,&#34;#aa095c&#34;,&#34;#f42590&#34;,&#34;#CCCCCC&#34;]},&#34;valueField&#34;:&#34;size&#34;,&#34;percent&#34;:true,&#34;count&#34;:true,&#34;explanation&#34;:null,&#34;breadcrumb&#34;:[],&#34;legend&#34;:{&#34;w&#34;:140},&#34;sortFunction&#34;:null,&#34;sumNodes&#34;:true}},&#34;evals&#34;:[],&#34;jsHooks&#34;:{&#34;render&#34;:[{&#34;code&#34;:&#34;\n  function(el,x) {\n  // force show the legend\n  d3.selectAll(&#39;.sunburst-legend text&#39;).attr(&#39;font-size&#39;, &#39;10px&#39;);\n  \n  d3.select(el).select(&#39;.sunburst-togglelegend&#39;).property(&#39;checked&#39;, true);\n\n  //   simulate click\n  d3.select(el).select(&#39;.sunburst-togglelegend&#39;).on(&#39;click&#39;)();\n\n  // remove legend text\n  document.getElementsByClassName(&#39;sunburst-sidebar&#39;)[0].childNodes[2].nodeValue = &#39;&#39;; \n\n  // remove the legend toggle\n  d3.select(el).select(&#39;.sunburst-togglelegend&#39;).remove()\n  }\n   &#34;,&#34;data&#34;:null}]}}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class=&#34;figure2&#34;&gt;
+&lt;h4 id=&#34;figure-4.-distribution-of-government-by-tax.&#34;&gt;Figure 4. Distribution of government by tax.&lt;/h4&gt;
+&lt;div id=&#34;htmlwidget-6&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-6&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/mcsmaunal.en_files/figure-html//widgets/widget_unnamed-chunk-2.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;The effective rates by type of taxes are shown in table 3. In the case of sales rates, the highest rate of hotels and tourist services, which is correlated with its high collection, but not with other goods. In the case of imports, the highest rate falls for beverages and tobacco with 40%, refined petroleum products have a rate of 31% and vehicles 24%. Export rates are in most cases 0, only in agricultural products there is some rate with values close to 1%. For the activities tax, values are close to 2% and 3%, water being the good with the highest rate.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;table-2.-effective-sales-tax-rates&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Table 2. Effective sales tax rates&lt;/h4&gt;
+&lt;div class=&#34;figure2&#34;&gt;
+&lt;table class=&#34;table table-hover table-condensed&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Commodities
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Imports
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Exports
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Sales
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Activities
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Production
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+agr
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9&#34;&gt;0.0082&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde&#34;&gt;0.0017&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6&#34;&gt;0.0051&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;agr &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d2ffd2&#34;&gt;0.0102&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+banano
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0022&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #34ff34&#34;&gt;0.0107&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;banana &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #6dff6d&#34;&gt;0.0246&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+coffee
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #a0ffa0&#34;&gt;0.1493&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde&#34;&gt;0.0017&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;coffee &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f4fff4&#34;&gt;0.0053&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+for
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb&#34;&gt;0.0060&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ecffec&#34;&gt;0.0107&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;for &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #1aff1a&#34;&gt;0.0365&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+fishing
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd&#34;&gt;0.0029&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb&#34;&gt;0.0021&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;fishing &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #58ff58&#34;&gt;0.0277&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+min
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #cfffcf&#34;&gt;0.0760&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #80ff80&#34;&gt;0.0754&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;min &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #9aff9a&#34;&gt;0.0182&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+food
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4&#34;&gt;0.0417&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ceffce&#34;&gt;0.0287&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;food &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #cdffcd&#34;&gt;0.0109&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+prodcoffe
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6&#34;&gt;0.1149&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.0135&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc&#34;&gt;0.0016&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;prodcoffee &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e5ffe5&#34;&gt;0.0074&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+bebtab
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.4045&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #4dff4d&#34;&gt;0.1052&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;bebtab &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #dcffdc&#34;&gt;0.0088&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+textcuero
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c6ffc6&#34;&gt;0.0890&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #82ff82&#34;&gt;0.0740&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;texleather &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3&#34;&gt;0.0123&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+otrmnf
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4&#34;&gt;0.0414&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2&#34;&gt;0.0361&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;otrmnf &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2&#34;&gt;0.0124&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+refpet
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #3bff3b&#34;&gt;0.3103&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6&#34;&gt;0.0051&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;refpet &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #efffef&#34;&gt;0.0060&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+chemicals
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f3fff3&#34;&gt;0.0190&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c0ffc0&#34;&gt;0.0374&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;rubberplast&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0&#34;&gt;0.0105&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+rubberplast
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea&#34;&gt;0.0331&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #9aff9a&#34;&gt;0.0596&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;chemicals &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3&#34;&gt;0.0123&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+prodminmno
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde&#34;&gt;0.0510&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #4dff4d&#34;&gt;0.1054&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;prodminmno &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ccffcc&#34;&gt;0.0111&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+prodment
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5&#34;&gt;0.0151&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #9dff9d&#34;&gt;0.0577&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;prodment &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #cdffcd&#34;&gt;0.0109&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+mac
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ebffeb&#34;&gt;0.0303&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #aaffaa&#34;&gt;0.0503&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;mac &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ceffce&#34;&gt;0.0107&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+vehicles
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #6aff6a&#34;&gt;0.2358&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #66ff66&#34;&gt;0.0909&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;vehicles &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #5bff5b&#34;&gt;0.0272&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+otrsvc
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5&#34;&gt;0.0056&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;otrsvc &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #78ff78&#34;&gt;0.0231&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+elegas
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6&#34;&gt;0.0432&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;elegas &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #82ff82&#34;&gt;0.0216&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+water
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;water &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.0403&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+bld
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;bld &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6&#34;&gt;0.0096&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+trade
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #60ff60&#34;&gt;0.0944&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;trade &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #71ff71&#34;&gt;0.0241&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+trns
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2&#34;&gt;0.0072&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;trns &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #63ff63&#34;&gt;0.0261&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+hotelrest
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;0.1515&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;hotelrest &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #8aff8a&#34;&gt;0.0205&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+tel
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #50ff50&#34;&gt;0.1034&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;tel &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #43ff43&#34;&gt;0.0307&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+svcprf
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7&#34;&gt;0.0045&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;svcprf &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #90ff90&#34;&gt;0.0196&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+fin
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee&#34;&gt;0.0101&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;fin &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #89ff89&#34;&gt;0.0206&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+admpub
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;edu &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0038&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+edu
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;health &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #b0ffb0&#34;&gt;0.0151&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+health
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;domest &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee&#34;&gt;0.0062&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+domest
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;0.0000&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff&#34;&gt;admpub &lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3&#34;&gt;0.0078&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div&gt;
+&lt;div&gt;
+
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Efectos de la reforma tributaria en Costa Rica: Implementación del IVA</title>
+      <link>/en/publication/vat/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/en/publication/vat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blanchard indicator</title>
+      <link>/en/project/tabla/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/tabla/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>General Equilibrium Model</title>
+      <link>/en/project/cge/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/cge/</guid>
+      <description>&lt;p&gt;One of the objectives of the project is the realization of a Computable General Equilibrium Model, which allows analyzing the effects of a possible fiscal reform. For the execution of this, the STAGE model of the CGEMOD team has been implemented.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VAT reform simulator</title>
+      <link>/en/project/incidencia/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/incidencia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Change base year of GDP in Costa Rica</title>
+      <link>/en/post/pib/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
+      
+      <guid>/en/post/pib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Socio-Demographic Factors and Intergenesic Interval in Nicaraguan Immigrant Mothers in Costa Rica</title>
+      <link>/en/publication/inmigrant/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>/en/publication/inmigrant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using Input-output analysis to analyze the economy of the grande de San Ramón</title>
+      <link>/en/publication/i_o/</link>
+      <pubDate>Sun, 01 Jul 2007 00:00:00 +0000</pubDate>
+      
+      <guid>/en/publication/i_o/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

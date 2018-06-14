@@ -26,3 +26,6 @@ math = true
 image = "headers/wide_coyun.png"
 caption = ""
 +++
+
+En esta sección se realizará una revisión trimestral de las cifras fiscales de Costa Rica, con el objetivo de ver la coyuntura en el tema de recaudación y gastos, además de ver los temas de discusión nacional sobre el manejo de las finanzas públicas.
+

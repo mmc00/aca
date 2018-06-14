@@ -1,0 +1,83 @@
+name1;source1;target1;value1;group1;name2;source2;target2;value2;group2;name3;source3;target3;value3;group3;name4;source4;target4;value4;group4
+agr;0;3;40794.07807;agr;Forestry;0;6;53478.11593;sil;text;0;9;252102.9279;texcuero;elegas;10;14;214329.3294;otrsvc
+banana;0;4;113196.2511;agr;Fishing;1;7;69227.19013;fishing;otrmnf;0;10;494308.3983;texcuero;water;0;15;765572.3861;elegas
+coffee;0;5;46486.7411;agr;Mining;1;8;32996.54624;fishing;refpet;0;11;61358.27749;texcuero;bld;1;16;168889.5272;water
+Bean;0;6;675.8932705;agr;Foods;2;9;172835.1822;min;Chemicals;0;12;160261.3827;texcuero;trade;10;17;101753.5693;otrsvc
+Corn;0;7;120859.5913;agr;Prodcoffee;2;10;2187.119499;min;rubberplast;1;13;169739.2965;otrmnf;trns;10;18;7761.923115;otrsvc
+Wheat;0;8;93456.03185;agr;bebtab;2;11;11.40374138;min;prodminnomet;1;14;783063.9518;otrmnf;hotelrest;2;19;842268.2998;bld
+Other cereals;0;9;17462.45832;agr;Forestry products;2;12;35686.96933;min;prodmet;1;15;240302.4979;otrmnf;tel;2;20;1235973.852;bld
+Legumes and other oil seeds;0;10;37861.54906;agr;Fishing products;3;13;298499.1297;food;mac;2;16;775971.1823;refpet;fin;2;21;205724.3484;bld
+Rice;0;11;26011.10168;agr;Aquaculture products;3;14;197927.504;food;vehicles;2;17;661460.0213;refpet;svcprf;2;22;746803.9914;bld
+Watermelon;0;12;19791.94055;agr;Stone, sand and clay;3;15;131621.8125;food;Artículos textiles, excepto prendas de vestir;2;18;104924.9974;refpet;admpub;2;23;864574.9008;bld
+Cantaloupe;0;13;25772.45854;agr;Salt;3;16;151195.6375;food;Clothing;2;19;95954.41897;refpet;otrsvc;3;24;3370196.637;trade
+Onions;0;14;70725.97446;agr;Oil and natural gas;3;17;219125.6545;food;Leather and related products, except footwear;2;20;77883.22162;refpet;edu;3;25;433678.969;trade
+Chayote;0;15;85458.59147;agr;Other metallic minerals, non-metallic;3;18;439338.0925;food;Footwear;3;21;548324.3246;químicos;health;4;26;1652.835678;bld
+Potato;0;16;102865.7748;agr;Meat and edible offal of birds;3;19;292331.9414;food;Wood and cork, wood products and cork;3;22;272870.6973;chemicals;domest;4;27;374908.6538;bld
+Roots and tubers;0;17;35784.76354;agr;Meat and edible offal of cattle;3;20;193427.9272;food;Paper and paper products;3;23;205435.3604;chemicals;Repair and installation of machinery;4;28;353690.5068;bld
+Vegetables;0;18;25801.33772;agr;Meat and edible offal of pigs;3;21;540464.0581;food;Products of the edition, printing and recordings;3;24;201821.9814;chemicals;Electric power, gas, steam and air conditioning;4;29;487959.5721;bld
+Sugar cane;0;20;442126.8725;agr;Sausages and other meat products;3;22;183412.9654;food;Gasoline;3;25;507209.9964;chemicals;Drinking water and sewage;4;30;286272.2732;bld
+Flowers;0;21;24175.16541;agr;Fish, crustaceans and preserved molluscs;3;23;110474.356;food;Diesel;3;26;165910.2552;chemicals;Collection service, waste treatment;4;31;80076.37028;bld
+Foliage;0;22;438062.2228;agr;Fruit, vegetables and canned vegetables;3;24;132882.1359;food;Bunker;3;27;545702.3443;chemicals;Environmental protection services;4;32;28305.16588;bld
+Banana;0;24;94156.07255;agr;Crude and refined vegetable oils;3;25;403786.2405;food;Lubricating oils and greases;4;28;288633.6223;rubberplast;Residential buildings;4;33;148381.4019;bld
+Plantain;0;25;188089.0624;agr;Other oils and fats of vegetable and animal origin;3;26;183216.0588;food;Other petroleum products and coke;4;29;108715.753;rubberplast;Non-residential buildings;4;34;30252.62675;bld
+Pineapple;0;26;12748.43641;agr;Milk products;3;27;90446.19801;food;Basic chemicals and fertilizers;4;30;626157.2939;rubberplast;Roads and railways;4;35;174801.5542;bld
+Oil palm;0;27;25404.65524;agr;Peeled, processed and semi-finished rice;3;28;43892.17695;food;Plastics and synthetic rubber in primary forms;5;31;109422.7987;prodminnomet;Non-residential buildings Construction of public service projects;10;36;93263.01441;otrsvc
+Coffee in fruit;0;28;7621.960451;agr;Wheat flour;4;29;270826.4532;prodcoffee;Pesticides and other chemical products for agricultural use;5;32;119249.9672;prodminnomet;Special and general construction services;5;37;536098.5299;hotelrest
+Mango;0;29;51946.52235;agr;Other milling products;4;30;102074.319;prodcoffee;Paints, varnishes, coatings;5;33;146537.0413;prodminnomet;Commerce Services;5;38;1374609.249;hotelrest
+Orange;0;30;117123.3703;agr;Bakery products;3;31;541880.905;food;Soaps, detergents, perfumes;5;34;283189.4713;prodminnomet;Maintenance and repair of vehicles;10;39;65831.83994;otrsvc
+Palmetto;0;31;70029.85884;agr;Cane sugar, molasses, syrups and other sugars;3;32;261904.9818;food;Artificial fibers and chemical products;6;35;653638.6885;prodmet;Railway transport services;6;40;480922.3527;tel
+Other non-perennial and perennial plant products;0;32;119009.9861;agr;Cocoa, chocolates and confectionery;5;33;106651.6618;bebtab;Pharmaceutical and medicinal products;6;36;216122.9938;prodmet;Land transport services;6;41;152101.0752;tel
+Other fruits, nuts and other oleaginous fruits;0;33;77064.2593;agr;Macaroni, noodles and similar farinaceous products;5;34;536943.8939;bebtab;Rubber products;6;37;65405.18242;prodmet;Taxi service;6;42;205098.4415;tel
+Live plants and roots;0;34;162155.2877;agr;Gold coffee;5;35;70836.39283;bebtab;Plastic profiles, pipe and connections;6;38;477280.8175;prodmet;Freight transport;8;43;566285.3298;svcprf
+Cattle;0;35;9546.684148;agr;Ground coffee, soluble, extracts and concentrates;;;;;Other plastic products;7;39;317402.9331;mac;Transport of passengers by sea and air;7;44;34829.98797;fin
+Pig Cattle;0;36;71519.88346;agr;Meals, prepared dishes and other food products;;;;;Glass and glass products;7;40;440329.7984;mac;Warehousing and storage services;7;45;62744.09259;fin
+Standing chicken;0;37;186580.9092;agr;Prepared foods for animals;;;;;Refractory products, construction materials;7;41;129128.1529;mac;Parking services;7;46;797210.99;fin
+Other live animals;1;19;13986.00586;banana;Distilled alcoholic beverages and wines;;;;;Cement, lime and plaster;7;42;25775.87277;mac;Other services related to transportation;7;47;306425.5031;fin
+Eggs;2;23;170789.9747;coffee;Beer, malt, soft drinks and bottled water;;;;;Articles of concrete, cement and plaster;7;43;29446.45301;mac;Loading and unloading service;7;48;374990.4134;fin
+Raw milk;;;;;Tobacco products;;;;;Basic Products of Iron and Steel;7;44;250682.3673;mac;Other transport support services;7;49;174591.7343;fin
+Other animal products;;;;;;;;;;Primary products of aluminum, zinc;7;45;289370.6321;mac;Postal and courier services;7;50;72203.67675;fin
+Support services for agriculture;;;;;;;;;;Metal products for structural use;7;46;54935.09984;mac;Accommodation Services;10;51;1956031.691;otrsvc
+;;;;;;;;;;Other metal products;7;47;213098.4287;mac;Service of food and drinks;10;52;743323.1688;otrsvc
+;;;;;;;;;;Electronic components and boards;7;48;30766.75319;mac;Radio, television and film services;8;53;168788.7036;svcprf
+;;;;;;;;;;Communications equipment;7;49;636177.7522;mac;Telephone services;8;54;146217.9109;svcprf
+;;;;;;;;;;Measuring equipment, test, navigation;8;50;814302.8288;vehicles;Internet services;8;55;434450.7662;svcprf
+;;;;;;;;;;Irradiation equipment, electronic, medical;8;51;189445.5941;vehicles;Other telecommunications services;8;56;316991.7178;svcprf
+;;;;;;;;;;Optical instruments, photographic;8;52;59712.26025;vehicles;Information services, programming;8;57;125489.6093;svcprf
+;;;;;;;;;;Motors, generators, electric transformers;1;53;106178.7075;otrmnf;Central banking services;8;58;532193.2345;svcprf
+;;;;;;;;;;Batteries, batteries, accumulators, cables;1;54;160480.3296;otrmnf;Other explicit monetary intermediation services;8;59;213113.0379;svcprf
+;;;;;;;;;;Electrical lighting equipment;7;55;813976.496;mac;Financial intermediation services;10;60;31273.79253;otrsvc
+;;;;;;;;;;Refrigerators, cookers, washing machines;1;56;292760.3763;otrmnf;Other financial services and investment banking;10;61;396715.4107;otrsvc
+;;;;;;;;;;Other types of electrical equipment;1;57;107974.3227;otrmnf;Insurance, reinsurance and pension fund services;10;62;162755.5047;otrsvc
+;;;;;;;;;;Machinery of general and special use;1;58;341879.4894;otrmnf;Auxiliary services of monetary and financial intermediation;10;63;35740.11218;otrsvc
+;;;;;;;;;;Trailers and semi-trailers;;;;;Auxiliary services for insurance and pension funds;10;64;110437.2144;otrsvc
+;;;;;;;;;;Parts for motor vehicles;;;;;Housing rental services;10;65;126467.7029;otrsvc
+;;;;;;;;;;Other types of transport equipment;;;;;Non-residential property rental services;10;66;232332.4309;otrsvc
+;;;;;;;;;;Wooden furniture;;;;;Juridical services;10;67;135247.9228;otrsvc
+;;;;;;;;;;Furniture of another type of material;;;;;Accounting, tax consulting and other services;10;68;889122.9631;otrsvc
+;;;;;;;;;;Medical and dental instruments and supplies;;;;;Financial management consulting services;9;69;702714.8807;admpub
+;;;;;;;;;;Other manufacturing products;;;;;Architecture, engineering and related services;10;70;555120.2523;otrsvc
+;;;;;;;;;;Waste and scrap;;;;;Scientific research and development services;10;71;24761.56547;otrsvc
+;;;;;;;;;;Manufacturing services;;;;;Advertising services;11;72;2050816.351;edu
+;;;;;;;;;;;;;;;Other professional, scientific and technical services;12;73;1926719.36;health
+;;;;;;;;;;;;;;;Veterinary services;10;74;235986.7239;otrsvc
+;;;;;;;;;;;;;;;Car rental services;10;75;95837.54848;otrsvc
+;;;;;;;;;;;;;;;Rental and lease of licenses;10;76;102771.1018;otrsvc
+;;;;;;;;;;;;;;;Other rental services;10;77;10055.29324;otrsvc
+;;;;;;;;;;;;;;;Employment agency services;10;78;176517.355;otrsvc
+;;;;;;;;;;;;;;;Services of travel agencies, tour operators;10;79;10403.04833;otrsvc
+;;;;;;;;;;;;;;;Security and investigation services;10;80;21008.64638;otrsvc
+;;;;;;;;;;;;;;;Cleaning of buildings and landscape care and maintenance;13;81;282337.9895;domest
+;;;;;;;;;;;;;;;Office administrative and support services;;;;
+;;;;;;;;;;;;;;;General public services of the government;;;;
+;;;;;;;;;;;;;;;Services to the community in general;;;;
+;;;;;;;;;;;;;;;Administrative services of compulsory social security schemes;;;;
+;;;;;;;;;;;;;;;Teaching services;;;;
+;;;;;;;;;;;;;;;Human health care services;;;;
+;;;;;;;;;;;;;;;Artistic, entertainment and recreational services;;;;
+;;;;;;;;;;;;;;;Business association services;;;;
+;;;;;;;;;;;;;;;Computer repair services;;;;
+;;;;;;;;;;;;;;;Clothes washing, drying and cleaning services;;;;
+;;;;;;;;;;;;;;;Hairdressing and other beauty treatments;;;;
+;;;;;;;;;;;;;;;Funeral and related services;;;;
+;;;;;;;;;;;;;;;Other services;;;;
+;;;;;;;;;;;;;;;Domestic services;;;;

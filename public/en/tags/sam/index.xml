@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAM on </title>
+    <link>/en/tags/sam/</link>
+    <description>Recent content in SAM on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 19 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/en/tags/sam/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Characterization of the Costa Rican Economy through the Social Accounting Matrix</title>
+      <link>/en/post/mcsmaunal/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/mcsmaunal/</guid>
+      <description>The Social Accounting Matrix (SAM), belongs to a set of data prepared by the Central bank of Costa Rica, which allow to be obtaining a relevant information about the country. Among the features that matrix has, is the ability to show the interactions between different agents. It could be inferred, that the SAM is a picture of the economy, keeping the static characteristic.</description>
+    </item>
+    
+  </channel>
+</rss>

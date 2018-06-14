@@ -1,0 +1,675 @@
+---
+title: "Characterization of the Costa Rican Economy through the Social Accounting Matrix"
+author: "Marlon Molina C"
+date: 2017-12-19
+categories: ["Models"]
+tags: ["Models", "SAM", "CGE"]
+header: 
+  image: headers/blue.png
+---
+
+\usepackage[utf8]{inputenc} 
+
+
+<div style="line-height: 2em;">
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The Social Accounting Matrix (SAM), belongs to a set of data prepared by the Central bank of Costa Rica, which allow to be obtaining a relevant information about the country. Among the features that matrix has, is the ability to show the interactions between different agents. It could be inferred, that the SAM is a picture of the economy, keeping the static characteristic. 
+
+<style>
+ .figure1 {
+   margin-top: 20px;
+   margin-bottom: 60px;
+ }
+</style>
+
+<style>
+ .figure2 {
+   margin-top: 20px;
+   margin-bottom: 110px;
+ }
+</style>
+
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 150px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+</style>
+
+<style>
+  .col3 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+</style>
+
+<style>
+body {
+text-align: justify}
+</style>
+
+For the start, a closed Economy is most easy to understand for the model of circular flow, the factors sell their services to activities, obtained income for it, which allows to institutions to purchases in the different market. The activities obtain income from the sale of products and pay for factors and intermediate inputs. With an open economy, the same logic is followed, institutions sell their services for domestic and external productions. In addition, they have the possibility of buying domestic of foreign products. 
+
+The SAM is a square matrix, where each account of columns has its counterpart in the rows, and the information in each cell takes into account the quantify and the price, being this equal for each entry of row, thus reflecting the Law of the One Price (LOOP), the articles are homogeneous, and their price does not differ by agent. In fact, the matrix is an account that reflects the circular flow model.
+
+$$
+T_{i,j} = \sum_{i,j} p_{i} q_{i,j} =  p_{i} Q_{i} \quad \land Q_{i} = \sum_{j} q_{i,j}
+$$
+
+The total quantities must be equal per column and per row, that is:
+
+$$
+\sum_{i} p_{i,j}q_{i,j} = \sum_{i}T_{i,j} = \sum_{j}T_{j,i} = \sum_{i} p_{j,i}q_{j,i}  \qquad \forall i = j
+$$
+Due the advance in the 	Costa Rica National Accounts, the information from the Supply and Utilization Accounts is used for the construction, without the need to resort to other sources of information. The base year of SAM is 2012, started with aggregate accounts and were disaggregated with other data obtained from surveys. In total, the new National Accounts of 2012 have 183 products 	and 136 activities, which were added in 32 types in both cases, designed to facilitate integration in the CGE model, this appears on figure 1. 
+
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(networkD3)
+library(RColorBrewer)
+library(shiny)
+mapa <- read.csv("agric_try1.csv", header = TRUE, sep = ";")
+
+links <- list()
+nodes <- list()
+links[["links_1"]] <- mapa[1:35 , c('source1','target1','value1', 'group1')]
+colnames(links[["links_1"]]) <- c('source','target','value', 'group')
+colors <- brewer.pal(3, "Pastel1")
+colors <- c(colors, rep("#CBD5E8", 35))
+nodes[["nodes_1"]] <- data.frame(mapa[1:38, c('name1')], colors)
+links[["links_2"]] <- mapa[1:30 , c('source2','target2','value2', 'group2')]
+colors <- brewer.pal(6, "Pastel1")
+colors <- c(colors, rep("#CBD5E8", 30))
+nodes[["nodes_2"]] <- data.frame(mapa[1:36, c('name2')], colors)
+links[["links_3"]] <- mapa[1:50 , c('source3','target3','value3', 'group3')]
+colors <- c(brewer.pal(6, "Pastel1"), brewer.pal(3, "Pastel2"))
+colors <- c(colors, rep("#CBD5E8", 50))
+nodes[["nodes_3"]] <- data.frame(mapa[1:59, c('name3')], colors)
+links[["links_4"]] <- mapa[1:68 , c('source4','target4','value4', 'group4')]
+colors <- c(brewer.pal(7, "Pastel1"), brewer.pal(7, "Pastel2"))
+colors <- c(colors, rep("#CBD5E8", 68))
+nodes[["nodes_4"]] <- data.frame(mapa[1:82, c('name4')], colors)
+for(i in 1:4){
+  colnames(links[[paste0('links_', i)]]) <- c('source', 'target', 'value', 'group')
+  colnames(nodes[[paste0('nodes_', i)]]) <- c('node', 'colors')
+}
+
+sankey <- list()
+
+for(i in 1:4){
+  if (i == 1 || i == 2){h = 800
+  w = 360} else{h = 1000
+  w =  360}  
+  colors  <- paste(unlist(nodes[[paste0('nodes_', i)]]['colors']), collapse = '", "')
+  colorJS <- paste('d3.scaleOrdinal(["', colors, '"])')  
+  sankey[[paste0('Graph',i)]] <- sankeyNetwork(Links = links[[paste0('links_', i)]], Nodes = nodes[[paste0('nodes_', i)]], 
+                                               Source = 'source', Target = 'target', Value = 'value', 
+                                               NodeID = 'node', LinkGroup = "group",
+                                               colourScale = colorJS,
+                                               iterations = 0, height = h, width = w, margin = c('right' = -10, 'left' = 0),
+                                               fontSize= 12, sinksRight = T)
+}
+```
+#### Figure 1. Scheme of aggregation of goods and services
+<div class = "row">
+<div class = "col-md-6">
+```{r agregacion, echo=FALSE, message=FALSE, warning=FALSE}
+sankey$Graph1
+sankey$Graph3
+```
+</div>
+
+<div class = "col-md-6">
+```{r agregacion2, echo=FALSE, message=FALSE, warning=FALSE}
+sankey$Graph2
+sankey$Graph4
+```
+</div>
+</div>
+
+Within the aggregate information, is possible to obtain GDP by expenditure approach, how appears on figure 2. The component with greatest weight is the private consumption, in urban households, with 54%. On the other hand, public investment only represents 2% of the total investment, which is 21%, private investment becomes relevant with 19%. Imports represent 35% and exports 32%, showing a current account deficit of 3%. 
+
+#### Figure 1. Composition of GDP. 
+<div class="figure1">
+```{r Datos, echo=FALSE, message=FALSE, warning=FALSE}
+library(readxl)
+library(plotly)
+BCCR_SAM_CRI <- read_excel("sam_BCCR_32.xls") 
+BCCR_SAM_CRI <- data.frame(BCCR_SAM_CRI, row.names = T, col.names=T)
+BCCR_SAM_CRI <- BCCR_SAM_CRI[, -100]
+rownames(BCCR_SAM_CRI) <- colnames(BCCR_SAM_CRI)
+Data <- list()
+Account  <- c('Private consumption', 'Investment', 'Government',
+             'Exports', 'Imports')
+Rural   <- c(sum(BCCR_SAM_CRI[33:64,89])/23371405.92,
+             0, 0, 0, 0)
+Urban  <- c(sum(BCCR_SAM_CRI[33:64,90])/23371405.92,
+             0, 0, 0, 0)
+NPISH  <- c(sum(BCCR_SAM_CRI[33:64,91])/23371405.92,
+             0, 0, 0, 0)
+Private <- c(0, sum(BCCR_SAM_CRI[33:64,96])/23371405.92,
+             0, 0, 0)
+assign('Public', c(0, sum(BCCR_SAM_CRI[33:64,97])/23371405.92,
+                    0, 0, 0))
+assign('Stock variation',  c(0, -sum(BCCR_SAM_CRI[33:64,98])/23371405.92,
+                     0, 0, 0))
+Government<- c(0, 0, sum(BCCR_SAM_CRI[33:64,93])/23371405.92,
+             0, 0)
+Exports <- c(0, 0, 0, sum(BCCR_SAM_CRI[33:64,94])/23371405.92,
+                   0)
+Imports <- c(0, 0, 0, 0, (sum(BCCR_SAM_CRI[94,33:64]))/23371405.92)
+
+Data$PIB      <- data.frame(Account, Rural, Urban, NPISH, 
+                            Private, get('Public'), get('Stock variation'), 
+                            Government, Exports, Imports)
+colnames(Data$PIB)[6] <- "Public"
+colnames(Data$PIB)[7] <- "Stock variation"
+Graficos <- list()
+
+colors <- c('rgb(190,186,218)', 'rgb(178,223,138)', 'rgb(251,154,153)', 'rgb(217,217,217)', 'rgb(202,178,214)',
+            'rgb(128,177,211)', 'rgb(51,160,44)', 'rgb(251,128,114)', 'rgb(253,180,98)' , 'rgb(188,128,189)',
+            'rgb(141,211,199)', 'rgb(177,89,40)')
+
+Graficos$PIB <- plot_ly(Data$PIB, x = ~Account, y = ~Rural, type = 'bar', name = 'Rural', marker = list(color = colors[[2]])) %>%
+  layout(yaxis = list(title = 'Percentage', tickformat = "%"), barmode = 'stack')
+for(i in 3:10){
+  Graficos$PIB <- add_trace(Graficos$PIB, y = Data$PIB[[i]], name = colnames(Data$PIB)[i], marker = list(color = colors[[i]])) 
+}
+Graficos$PIB <- layout(Graficos$PIB, legend = list(orientation = 'h', y = 1.2),  yaxis = list(title = 'Percentage'), xaxis = list(title = "Expense component"), barmode = 'stack')
+div(Graficos$PIB, align = "center")
+```
+</div>
+The composition of expenditure of commodities is shown in table 2. The consumption of agricultural products and food are an important part of households, for the case of urban, the consume in other services is slightly higher, the difference in pattern seem to be minimum by the degree of aggregation of the accounts of goods and services, in addition also by the type of household’s disaggregation. The government makes a significant expenditure on health and education, representing 63% of the total. Exports are fairly distributed, however, food and agricultural products are the most exported, adding a 25%, hotel and professional services have a high percentage (9% respectively), and machinery 13.91%. On the side of imports the most important good is machinery with 18%, in addition chemicals and refined petroleum products accounts for 28%.   
+
+#### Table 1. Expenditure of commodities.
+```{r Gasto Bienes, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(formattable)
+library(dplyr)
+library(kableExtra)
+Commodities <- c('agr', 'banana', 'coffee', 'sil',
+            'fishing', 'mining', 'food', 'prodcoffee', 'bebtab',                   'textleather', 'otrmnf', 'refpet', 'chemicals', 'rubberplast', 'prodminmno',
+            'prodment', 'mac', 'vehicles', 'otrsvc', 'elegas',   'water', 'bld',
+            'trade', 'trns', 'hotelrest', 'tel',
+            'svcprf', 'fin', 
+            'admpub', 'edu', 'health',
+            'domest')
+Rural  <- c(BCCR_SAM_CRI[33:64,89])/sum(BCCR_SAM_CRI[33:64,89])
+Urban <- c(BCCR_SAM_CRI[33:64,90])/sum(BCCR_SAM_CRI[33:64,90])
+NPISH <- c(BCCR_SAM_CRI[33:64,91])/sum(BCCR_SAM_CRI[33:64,91])
+Private<- c(BCCR_SAM_CRI[33:64,96])/sum(BCCR_SAM_CRI[33:64,96])
+assign('Public', c(BCCR_SAM_CRI[33:64,97])/sum(BCCR_SAM_CRI[33:64,97]))
+Government<- c(BCCR_SAM_CRI[33:64,93])/sum(BCCR_SAM_CRI[33:64,93])
+Exports<- c(BCCR_SAM_CRI[33:64,94])/sum(BCCR_SAM_CRI[33:64,94])
+Imports<- unlist(BCCR_SAM_CRI[94, 33:64])/sum(BCCR_SAM_CRI[94,33:64])
+Data$Consumo <- data.frame(Commodities, Rural, Urban, NPISH, Private, 'Public' = get('Public') ,Government, Exports, Imports)
+is.num <- sapply(Data$Consumo, is.numeric)
+Data$Consumo[is.num] <- lapply(Data$Consumo[is.num], round, 4)
+rownames(Data$Consumo) <- Commodities
+Data$Consumo %>% 
+  mutate(
+    Commodities = rownames(.),
+    Rural = color_tile("white","green")(Rural),
+    Urban = color_tile("white","green")(Urban),
+    NPISH = color_tile("white","green")(NPISH),
+    Private = color_tile("white","green")(Private),
+    'Public' = color_tile("white","green")(get('Public')),
+    Government= color_tile("white","green")(Government),
+    Exports= color_tile("white","green")(Exports),
+    Imports = color_tile("white","green")(Imports)
+  ) %>%
+  select(Commodities, everything()) %>%
+  kable(format = "html", escape = F, align=c(rep('c', 8))) %>%
+  kable_styling(bootstrap_options = c("hover", "condensed"), position = "center", full_width = F, font_size = 16)
+```
+
+On the income side, households have different sources of income, which were added by salaried and non-salaried work income, capital, companies, land, international and government transfers, plus social contributions to workers, which also collects the government and is responsible for carrying out the transfer as health services and pensions. The income of urban households is greater than rural, this is mainly due to the composition of their income, which are shown in figure 3. The component of greater weight is wage labor in both cases, non-salaried employment has more important in rural households, another great differentiation is the income of capital and companies, in urban households they represent 29% and in rural households 21%.
+
+#### Figure 2. Income distribution of households. 
+<div class="figure1">
+```{r Hogares, echo=FALSE, message=FALSE, warning=FALSE}
+Rural <- c(sum(BCCR_SAM_CRI['hhd.rur', 68:70]),
+           sum(BCCR_SAM_CRI['hhd.rur', 71:73]),
+           BCCR_SAM_CRI['hhd.rur','f.cap'],
+           BCCR_SAM_CRI['hhd.rur','ent'],
+           BCCR_SAM_CRI['hhd.rur','gov'],
+           BCCR_SAM_CRI['hhd.rur','row'],
+           BCCR_SAM_CRI['hhd.rur','f.land'],
+           sum(BCCR_SAM_CRI['hhd.rur', 79:81]))/BCCR_SAM_CRI['hhd.rur', 'total']
+Rural <- round(Rural*100,3)
+
+Urban <- c(sum(BCCR_SAM_CRI['hhd.urb', 68:70]),
+           sum(BCCR_SAM_CRI['hhd.urb', 71:73]),
+           BCCR_SAM_CRI['hhd.urb','f.cap'],
+           BCCR_SAM_CRI['hhd.urb','ent'],
+           BCCR_SAM_CRI['hhd.urb','gov'],
+           BCCR_SAM_CRI['hhd.urb','row'],
+           BCCR_SAM_CRI['hhd.urb','f.land'],
+           sum(BCCR_SAM_CRI['hhd.urb', 79:81]))/BCCR_SAM_CRI['hhd.urb', 'total']
+Urban <- round(Urban*100,3)
+Data$Households <- rbind.data.frame(Rural , Urban)
+Data$Households <- cbind.data.frame(Households = c('Rural', 'Urban'), Data$Households)
+colnames(Data$Households) <- c('Households','Salaried', 'Notsalaried', 'Capital', 'Enterprises',
+                               'Governmenttransfer',
+                               'TransfersfromtheRestOftheWorld',
+                               'Land',
+                               'Socialcontributions')
+Graficos$Households <- plot_ly(Data$Households, x = ~Salaried, y = ~Households, 
+                            type = 'bar', orientation = 'h',
+                            name = 'Salaried',
+                            marker = list(color = "#D33F6A"
+                            )) %>%
+  add_trace(x = ~Notsalaried, name = 'Not<br>salaried', marker = list(color = "#DC5C5A")) %>% 
+  add_trace(x = ~Capital, name = 'Capital', marker = list(color = "#E37647")) %>%
+  add_trace(x = ~Enterprises, name = 'Enterprises', marker = list(color = "#E88E34")) %>%
+  add_trace(x = ~Land, name = 'Land', marker = list(color = "#EAA628" ))  %>% 
+  add_trace(x = ~TransfersfromtheRestOftheWorld, name = 'Transfers<br>from<br>the<br>Rest<br>Of<br>the<br>World', marker = list(color = "#E9BE35"))  %>% 
+  add_trace(x = ~Governmenttransfer, name = 'Government<br>transfer', marker = list(color = "#E6D457"))  %>%
+  add_trace(x = ~Socialcontributions, name = 'Social<br>contributions', marker = list(color = "#E2E6BD")) %>%
+  layout(barmode = 'stack',
+         xaxis = list(title = "Percentage")) 
+div(Graficos$Households, align = "center")
+```
+</div>
+
+In the case of government, the sources of income are shown in the figure 3, where it is evident that the main sources of income are internal transfers with 38.7 %, of which 25% come from urban households, whereas external transfers only 0.275%. The other major sources of income are indirect tax with 20.6%, being 18% for Sales tax and 2.57% of taxes on net goods (subtracting the subsidy value), direct taxes would be the following with 17.5%. Another important information that the matrix show is the effectives rates by type of taxes, which are shown in the table 2. For the case imports, the highest rate falls for beverages and tobacco with 40%, refined petroleum products they have rate of 31% and vehicles 24%. For the case of sales tax, the desegregation is based on commodities, that appears in figure 4. Hotel and restaurants services are the ones that contributed the most the sales tax with 14%, followed by machinery and food with 9%, telecommunications and chemicals 8%. On the other hand, professional, transport, refined oil, mining and agricultural services each contribute about 1%.
+
+#### Figure 3. Distribution of government income.
+<div class="figure2">
+```{r Gobierno, echo=FALSE, message=FALSE, warning=FALSE}
+library(sunburstR)
+library(dplyr)
+library(tidyr)
+library(htmlwidgets)
+Data$Gobierno <- data.frame(
+  #Cuenta = c('Valores') , 
+  Agregacion = c('Factors', 'Activities taxes',
+                 'Indirect taxes', 'Indirect taxes',
+                 'Direct taxes',
+                 'Duty',
+                 'Exports Tax',
+                 'Internal transfers', 'Internal transfers', 'Internal transfers',
+                 'External transfers'),
+  
+  Cuenta = c('factors', 
+             'Activities',
+             'Sales tax', 'Commodities',
+             'Direct',
+             'Duty',
+             'Exports',
+             'Rural','Urban', 'Enterprises',
+             'External transfers'),
+  
+  Valores = round(c(
+              sum(BCCR_SAM_CRI['gov', c('f.cap', 'f.land', 'f.for', 'f.fsh', 'f.ext')]),
+              BCCR_SAM_CRI['gov', 'tax.act'],
+              BCCR_SAM_CRI['gov', 'tax.vat'],
+              BCCR_SAM_CRI['gov', 'tax.com']-BCCR_SAM_CRI['gov', 'sub.com'],
+              BCCR_SAM_CRI['gov', 'tax.dir'],
+              BCCR_SAM_CRI['gov', 'tax.imp'],
+              BCCR_SAM_CRI['gov', 'tax.exp'],
+              BCCR_SAM_CRI['gov', 'hhd.rur'],
+              BCCR_SAM_CRI['gov', 'hhd.urb'],
+              BCCR_SAM_CRI['gov', 'ent'],
+              BCCR_SAM_CRI['gov', 'row'])), 2)
+colors <- list(domain = c(unique(as.character(Data$Gobierno$Agregacion), 
+                                 unique(as.character(Data$Gobierno$Cuenta)))),
+               range  =  c(c("#B3E2CD", "#FDCDAC", "#CBD5E8", "#ffff99", "#E6F5C9", "#FFF2AE", "#fddaec",
+                             "#CCCCCC"), c('#ffff00', '#3fa678', '#f9761f',
+                                           '#3e5a8e', '#839cc9', '#ffff00', '#8dc224',
+                                           '#f76eb5', '#aa095c', '#f42590', '#CCCCCC'))
+)
+sb  <-  Data$Gobierno %>%
+  unite(C,  Agregacion,  Cuenta, sep = "-") %>%
+  select(C,  Valores) %>%
+  sunburst(.,  count = T, colors = colors,
+           withD3 = T,
+           width="100%",
+           height = '450',
+           legend = list(w=140), 
+           legendOrder = unique(unlist(strsplit(as.character(Data$Gobierno$Agregacion),"-"))))
+sb <- htmlwidgets::onRender(
+  sb,
+  "
+  function(el,x) {
+  // force show the legend
+  d3.selectAll('.sunburst-legend text').attr('font-size', '10px');
+  
+  d3.select(el).select('.sunburst-togglelegend').property('checked', true);
+
+  //   simulate click
+  d3.select(el).select('.sunburst-togglelegend').on('click')();
+
+  // remove legend text
+  document.getElementsByClassName('sunburst-sidebar')[0].childNodes[2].nodeValue = ''; 
+
+  // remove the legend toggle
+  d3.select(el).select('.sunburst-togglelegend').remove()
+  }
+   "
+)
+sb
+```
+</div>
+
+<div class="figure2">
+#### Figure 4. Distribution of government by tax.
+```{r eval=TRUE, echo=FALSE, fig.keep='none', message=FALSE, warning=FALSE}
+library(treemap)
+library(shiny)
+library(htmlwidgets)
+library(d3treeR)
+library(reshape2)
+library(readxl)
+library(plotly)
+library(htmlwidgets)
+library(widgetframe)
+BCCR_SAM_CRI <- read_excel("sam_BCCR_32.xls") 
+BCCR_SAM_CRI <- data.frame(BCCR_SAM_CRI, row.names = T, col.names=T)
+BCCR_SAM_CRI <- BCCR_SAM_CRI[, -100]
+rownames(BCCR_SAM_CRI) <- colnames(BCCR_SAM_CRI)
+Data <- list()
+Data$IVA <- data.frame(
+  goods <- c('Farming',  'Banana', 'Coffee',
+             'Forestry', 'Fishing',
+             'Mining', 'Foods', 'prodcoffee',
+             'Beverages and tobacco', 'Textiles and leather', 'Manufacture',
+             'Refined oil', 'Chemicals', 'Rubber and plastic',
+             'Not metallic','Metallic', 'Machinery', 'Vehicles',
+             'Other services', 'Electricity and gas', 'Water',
+             'Building',
+             'Trade', 'Transport', 'Hotel and restaurant', 'Communications',
+             'Professional services',
+             'Financial', "Public administration", "Education",
+             "Health", "Domestic services"),
+  
+  Valores <- round(c(
+    BCCR_SAM_CRI['tax.vat', 'c.otragr'],
+    BCCR_SAM_CRI['tax.vat', 'c.banano'],
+    BCCR_SAM_CRI['tax.vat', 'c.cafeenfruta'],
+    BCCR_SAM_CRI['tax.vat', 'c.for'],
+    BCCR_SAM_CRI['tax.vat', 'c.pesca'],
+    BCCR_SAM_CRI['tax.vat', 'c.min'],
+    BCCR_SAM_CRI['tax.vat', 'c.alimentos'],
+    BCCR_SAM_CRI['tax.vat', 'c.prodcafe'],
+    BCCR_SAM_CRI['tax.vat', 'c.bebtab'],
+    BCCR_SAM_CRI['tax.vat', 'c.texcuero'],
+    BCCR_SAM_CRI['tax.vat', 'c.otrmnf'],
+    BCCR_SAM_CRI['tax.vat', 'c.refpet'],
+    BCCR_SAM_CRI['tax.vat', 'c.quimicos'],
+    BCCR_SAM_CRI['tax.vat', 'c.cauchoplast'],
+    BCCR_SAM_CRI['tax.vat', 'c.prodminnomet'],
+    BCCR_SAM_CRI['tax.vat', 'c.prodmet'],
+    BCCR_SAM_CRI['tax.vat', 'c.maq'],
+    BCCR_SAM_CRI['tax.vat', 'c.vehiculos'],
+    BCCR_SAM_CRI['tax.vat', 'c.otrsvc'],
+    BCCR_SAM_CRI['tax.vat', 'c.elegas'],
+    BCCR_SAM_CRI['tax.vat', 'c.agua'],
+    BCCR_SAM_CRI['tax.vat', 'c.cns'],
+    BCCR_SAM_CRI['tax.vat', 'c.comercio'],
+    BCCR_SAM_CRI['tax.vat', 'c.trns'],
+    BCCR_SAM_CRI['tax.vat', 'c.hotelrest'],
+    BCCR_SAM_CRI['tax.vat', 'c.com'],
+    BCCR_SAM_CRI['tax.vat', 'c.svcprf'],
+    BCCR_SAM_CRI['tax.vat', 'c.fin'],
+    BCCR_SAM_CRI['tax.vat', 'c.admpub'],
+    BCCR_SAM_CRI['tax.vat', 'c.edu'],
+    BCCR_SAM_CRI['tax.vat', 'c.salud'],
+    BCCR_SAM_CRI['tax.vat', 'c.domest']
+  )/BCCR_SAM_CRI['tax.vat', 'total'],3
+  ),
+  
+  Valores2 <- round(c(
+    BCCR_SAM_CRI['tax.imp', 'c.otragr'],
+    BCCR_SAM_CRI['tax.imp', 'c.banano'],
+    BCCR_SAM_CRI['tax.imp', 'c.cafeenfruta'],
+    BCCR_SAM_CRI['tax.imp', 'c.for'],
+    BCCR_SAM_CRI['tax.imp', 'c.pesca'],
+    BCCR_SAM_CRI['tax.imp', 'c.min'],
+    BCCR_SAM_CRI['tax.imp', 'c.alimentos'],
+    BCCR_SAM_CRI['tax.imp', 'c.prodcafe'],
+    BCCR_SAM_CRI['tax.imp', 'c.bebtab'],
+    BCCR_SAM_CRI['tax.imp', 'c.texcuero'],
+    BCCR_SAM_CRI['tax.imp', 'c.otrmnf'],
+    BCCR_SAM_CRI['tax.imp', 'c.refpet'],
+    BCCR_SAM_CRI['tax.imp', 'c.quimicos'],
+    BCCR_SAM_CRI['tax.imp', 'c.cauchoplast'],
+    BCCR_SAM_CRI['tax.imp', 'c.prodminnomet'],
+    BCCR_SAM_CRI['tax.imp', 'c.prodmet'],
+    BCCR_SAM_CRI['tax.imp', 'c.maq'],
+    BCCR_SAM_CRI['tax.imp', 'c.vehiculos'],
+    BCCR_SAM_CRI['tax.imp', 'c.otrsvc'],
+    BCCR_SAM_CRI['tax.imp', 'c.elegas'],
+    BCCR_SAM_CRI['tax.imp', 'c.agua'],
+    BCCR_SAM_CRI['tax.imp', 'c.cns'],
+    BCCR_SAM_CRI['tax.imp', 'c.comercio'],
+    BCCR_SAM_CRI['tax.imp', 'c.trns'],
+    BCCR_SAM_CRI['tax.imp', 'c.hotelrest'],
+    BCCR_SAM_CRI['tax.imp', 'c.com'],
+    BCCR_SAM_CRI['tax.imp', 'c.svcprf'],
+    BCCR_SAM_CRI['tax.imp', 'c.fin'],
+    BCCR_SAM_CRI['tax.imp', 'c.admpub'],
+    BCCR_SAM_CRI['tax.imp', 'c.edu'],
+    BCCR_SAM_CRI['tax.imp', 'c.salud'],
+    BCCR_SAM_CRI['tax.imp', 'c.domest']
+  )/BCCR_SAM_CRI['tax.imp', 'total'],3
+  ),
+  
+  Valores3 <- round(c(
+    BCCR_SAM_CRI['tax.exp', 'c.otragr'],
+    BCCR_SAM_CRI['tax.exp', 'c.banano'],
+    BCCR_SAM_CRI['tax.exp', 'c.cafeenfruta'],
+    BCCR_SAM_CRI['tax.exp', 'c.for'],
+    BCCR_SAM_CRI['tax.exp', 'c.pesca'],
+    BCCR_SAM_CRI['tax.exp', 'c.min'],
+    BCCR_SAM_CRI['tax.exp', 'c.alimentos'],
+    BCCR_SAM_CRI['tax.exp', 'c.prodcafe'],
+    BCCR_SAM_CRI['tax.exp', 'c.bebtab'],
+    BCCR_SAM_CRI['tax.exp', 'c.texcuero'],
+    BCCR_SAM_CRI['tax.exp', 'c.otrmnf'],
+    BCCR_SAM_CRI['tax.exp', 'c.refpet'],
+    BCCR_SAM_CRI['tax.exp', 'c.quimicos'],
+    BCCR_SAM_CRI['tax.exp', 'c.cauchoplast'],
+    BCCR_SAM_CRI['tax.exp', 'c.prodminnomet'],
+    BCCR_SAM_CRI['tax.exp', 'c.prodmet'],
+    BCCR_SAM_CRI['tax.exp', 'c.maq'],
+    BCCR_SAM_CRI['tax.exp', 'c.vehiculos'],
+    BCCR_SAM_CRI['tax.exp', 'c.otrsvc'],
+    BCCR_SAM_CRI['tax.exp', 'c.elegas'],
+    BCCR_SAM_CRI['tax.exp', 'c.agua'],
+    BCCR_SAM_CRI['tax.exp', 'c.cns'],
+    BCCR_SAM_CRI['tax.exp', 'c.comercio'],
+    BCCR_SAM_CRI['tax.exp', 'c.trns'],
+    BCCR_SAM_CRI['tax.exp', 'c.hotelrest'],
+    BCCR_SAM_CRI['tax.exp', 'c.com'],
+    BCCR_SAM_CRI['tax.exp', 'c.svcprf'],
+    BCCR_SAM_CRI['tax.exp', 'c.fin'],
+    BCCR_SAM_CRI['tax.exp', 'c.admpub'],
+    BCCR_SAM_CRI['tax.exp', 'c.edu'],
+    BCCR_SAM_CRI['tax.exp', 'c.salud'],
+    BCCR_SAM_CRI['tax.exp', 'c.domest']
+  )/BCCR_SAM_CRI['tax.exp', 'total'],3
+  ),
+  
+  Valores4 <- round(c(
+    BCCR_SAM_CRI['tax.act', 'a.otragr'],
+    BCCR_SAM_CRI['tax.act', 'a.banano'],
+    BCCR_SAM_CRI['tax.act', 'a.cafeenfruta'],
+    BCCR_SAM_CRI['tax.act', 'a.for'],
+    BCCR_SAM_CRI['tax.act', 'a.pesca'],
+    BCCR_SAM_CRI['tax.act', 'a.min'],
+    BCCR_SAM_CRI['tax.act', 'a.alimentos'],
+    BCCR_SAM_CRI['tax.act', 'a.prodcafe'],
+    BCCR_SAM_CRI['tax.act', 'a.bebtab'],
+    BCCR_SAM_CRI['tax.act', 'a.texcuero'],
+    BCCR_SAM_CRI['tax.act', 'a.otrmnf'],
+    BCCR_SAM_CRI['tax.act', 'a.refpet'],
+    BCCR_SAM_CRI['tax.act', 'a.quimicos'],
+    BCCR_SAM_CRI['tax.act', 'a.cauchoplast'],
+    BCCR_SAM_CRI['tax.act', 'a.prodminnomet'],
+    BCCR_SAM_CRI['tax.act', 'a.prodmet'],
+    BCCR_SAM_CRI['tax.act', 'a.maq'],
+    BCCR_SAM_CRI['tax.act', 'a.vehiculos'],
+    BCCR_SAM_CRI['tax.act', 'a.otrsvc'],
+    BCCR_SAM_CRI['tax.act', 'a.elegas'],
+    BCCR_SAM_CRI['tax.act', 'a.agua'],
+    BCCR_SAM_CRI['tax.act', 'a.cns'],
+    BCCR_SAM_CRI['tax.act', 'a.comercio'],
+    BCCR_SAM_CRI['tax.act', 'a.trns'],
+    BCCR_SAM_CRI['tax.act', 'a.hotelrest'],
+    BCCR_SAM_CRI['tax.act', 'a.com'],
+    BCCR_SAM_CRI['tax.act', 'a.svcprf'],
+    BCCR_SAM_CRI['tax.act', 'a.fin'],
+    BCCR_SAM_CRI['tax.act', 'a.admpub'],
+    BCCR_SAM_CRI['tax.act', 'a.edu'],
+    BCCR_SAM_CRI['tax.act', 'a.salud'],
+    BCCR_SAM_CRI['tax.act', 'a.domest']
+  )/BCCR_SAM_CRI['tax.act', 'total'],4
+  )
+  
+)
+names <- as.character(Data$IVA[,1])
+Data$IVA <- rbind.data.frame(Data$IVA[,2], Data$IVA[,3], Data$IVA[,4], Data$IVA[,5])
+Data$IVA <- cbind.data.frame(Account = c('Sales tax', 'Import duty',
+                                         'Export tax', 'Activities tax'), Data$IVA)
+colnames(Data$IVA) <- c('Account', names)
+
+colors <- c("#DB9D85", "#D3A178", "#CAA66E", "#BEAA67", "#B1AF64", "#A2B367", "#92B66E",
+            "#80B979", "#6DBC86", "#5ABD93", "#47BEA2", "#3ABEAF", "#39BDBC", "#45BAC8",
+            "#5AB7D2", "#70B3DA", "#87AEDF", "#9CA8E2", "#B0A3E1", "#C09DDE", "#CD99D8")
+
+
+#View(Data$IVA)
+
+Data$IVAm <- melt(Data$IVA[, c('Account', 'Farming', 'Banana',
+                               'Coffee',  'Forestry', 'Fishing',                                            'Mining', 'Foods',  'prodcoffee',
+                               'Beverages and tobacco', 'Textiles and leather', 'Manufacture',
+                               'Refined oil', 'Chemicals', 'Rubber and plastic',
+                               'Not metallic','Metallic', 'Machinery', 'Vehicles',
+                               'Other services', 'Electricity and gas',
+                               'Water', 'Building',
+                               'Trade', 'Transport', 'Hotel and restaurant', 'Communications',
+                               'Professional services',
+                               'Financial', 'Public administration', 'Education', 'Health', 'Domestic services'
+                               )], id.vars = 1)
+
+
+
+# p3 <- ggplot(Data$IVAm, aes(x = Account, y = value, fill = variable)) 
+#   geom_bar(aes(x = Account, fill = variable), position="dodge") 
+#   scale_x_discrete(name = 'Goods ') +
+#   scale_y_continuous(name = 'Percentaje', labels = percent_format()) +
+#   theme_classic() + 
+#   theme(legend.position = 'bottom', axis.line = element_line(colour = 'black'),
+#         text=element_text(family = 'Times New Roman', size=12))
+# 
+# p3
+
+Data$IVAm$value <- Data$IVAm$value * 100
+Data$IVAm$label <- paste(Data$IVAm$variable," ",paste0(Data$IVAm$value,'%'), sep = "\n")
+
+
+#Data$IVAm1      <- Data$IVAm[Data$IVAm$value > 0.4,]
+Data$IVAm1      <- Data$IVAm
+Data$IVAm1[,2]  <- as.character(Data$IVAm1[,2])
+#Data$IVAm1[22, ]<- c('Goods', 'Others', 3.4, 'Others\n3.4')
+Data$IVAm1[,3]  <- as.numeric(Data$IVAm1[,3])
+
+
+tp <- treemap(
+          Data$IVAm1,
+          index=c("Account", "label"),
+                #fontface.labels = 1,
+                #fontfamily.labels = 'sans',
+                #border.lwds = 0.5,
+                vSize= "value",
+                vColor="value",
+                #fontcolor.labels = 'white',
+                palette = "RdYlGn",
+                #position.legend = "bottom",
+                #palette="BuGn", #"Blues"
+                type= "index"
+                #border.col ="white"
+         )
+
+library(highcharter)
+lst <- highchart() %>% 
+  hc_add_series_treemap(tp, allowDrillToNode = TRUE,
+                        layoutAlgorithm = "squarified")
+frameWidget(lst)
+```
+</div>
+
+The effective rates by type of taxes are shown in table 3. In the case of sales rates, the highest rate of hotels and tourist services, which is correlated with its high collection, but not with other goods. In the case of imports, the highest rate falls for beverages and tobacco with 40%, refined petroleum products have a rate of 31% and vehicles 24%. Export rates are in most cases 0, only in agricultural products there is some rate with values close to 1%. For the activities tax, values are close to 2% and 3%, water being the good with the highest rate. 
+
+#### Table 2. Effective sales tax rates
+<div class="figure2">
+```{r effective tax rate, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(formattable)
+library(dplyr)
+library(kableExtra)
+Commodities <- c('agr', 'banano', 'coffee', 'for',
+            'fishing', 'min', 'food', 'prodcoffe', 'bebtab', 'textcuero', 'otrmnf', 'refpet', 'chemicals', 'rubberplast', 'prodminmno',
+            'prodment', 'mac', 'vehicles', 'otrsvc', 'elegas', 'water', 'bld',
+            'trade', 'trns', 'hotelrest', 'tel',
+            'svcprf', 'fin', 
+            'admpub', 'edu', 'health',
+            'domest')
+Imports <- mapply("/", c(BCCR_SAM_CRI[84,33:64]),c(BCCR_SAM_CRI[94,33:64]), SIMPLIFY = FALSE)
+Exports <- mapply("/", c(BCCR_SAM_CRI[85,33:64]),c(BCCR_SAM_CRI[33:64,94]), SIMPLIFY = FALSE)
+Sales   <- list()
+for (i in 33:64) {
+  Sales[[colnames(BCCR_SAM_CRI)[i]]] <- BCCR_SAM_CRI[83, i] /   (sum(BCCR_SAM_CRI[i, c(89:91)])+
+                                                                    BCCR_SAM_CRI[i, 93]+
+                                                                    sum(BCCR_SAM_CRI[i, c(96:98)])+
+                                                                    sum(BCCR_SAM_CRI[i, 1:32])-
+                                                                    sum(BCCR_SAM_CRI[83,i]))
+}   
+assign('Production', list())
+Prod <- list()
+for (i in 1:32) {
+  Prod[[colnames(BCCR_SAM_CRI)[i]]] <- BCCR_SAM_CRI[82, i] / BCCR_SAM_CRI[99, i]   
+} 
+assign('Production', Prod)
+#Actividades <- colnames(BCCR_SAM_CRI)[1:32]
+Activities <- c('agr', 'banana', 'coffee',
+                 'for', 'fishing', 'min',
+                 'food', 'prodcoffee',
+                 'bebtab', 'texleather', 'otrmnf',
+                 'refpet', 'rubberplast', 'chemicals',
+                 'prodminmno', 'prodment', 'mac',
+                 'vehicles', 'otrsvc', 'elegas',
+                 'water', 'bld', 'trade', 'trns',
+                 'hotelrest', 'tel', 'svcprf',
+                 'fin', 'edu', 'health', 
+                 'domest', 'admpub')
+Data$Tasas <- data.frame(Commodities, Imports=unlist(Imports), Exports = unlist(Exports), Sales=unlist(Sales), Activities, 'Production'=unlist(get('Production')))
+Data$Tasas <- Data$Tasas  %>% replace(is.na(.), 0)
+is.num <- sapply(Data$Tasas, is.numeric)
+Data$Tasas[is.num] <- lapply(Data$Tasas[is.num], round, 4)
+rownames(Data$Tasas) <- Commodities
+Data$Tasas %>% 
+  mutate(
+    Commodities = rownames(.),
+    Exports= color_tile("white","green")(Exports),
+    Imports = color_tile("white","green")(Imports),
+    Sales = color_tile("white","green")(Sales),
+    Activities = color_tile("white","white")(Activities),
+    'Production' = color_tile("white","green")(get('Production'))
+  ) %>%
+  select(Commodities, everything()) %>%
+  kable(format = "html", escape = F, align=c(rep('c', 8))) %>%
+  kable_styling(bootstrap_options = c("hover", "condensed"), position = "center", full_width = T)
+```
+<div>
+<div>

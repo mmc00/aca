@@ -2,7 +2,7 @@
 # Projects widget.
 widget = "projects"
 active = true
-date = "2016-04-20T00:00:00"
+date = 2016-04-20T00:00:00
 
 title = "Proyectos"
 subtitle = ""
@@ -39,6 +39,10 @@ filter_default = 0
 [[filter]]
   name = "Coyuntura Fiscal"
   tag = ".Coyuntura"
+  
+[[filter]]
+  name = "Aplicaciones"
+  tag = ".Apps"
 
 +++
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Proyecto de Estudios Fiscales</title>
-    <link>/publication.html</link>
-    <description>Recent content in Publications on Proyecto de Estudios Fiscales</description>
+    <title>Publications on </title>
+    <link>/publication/</link>
+    <description>Recent content in Publications on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>&amp;copy; 2018</copyright>
@@ -14,28 +14,28 @@
     
     <item>
       <title>Efectos de la reforma tributaria en Costa Rica: Implementación del IVA</title>
-      <link>/publication/vat.html</link>
+      <link>/publication/vat/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/vat.html</guid>
+      <guid>/publication/vat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Socio-Demographic Factors and Intergenesic Interval in Nicaraguan Immigrant Mothers in Costa Rica</title>
-      <link>/publication/inmigrant.html</link>
+      <link>/publication/inmigrant/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>/publication/inmigrant.html</guid>
+      <guid>/publication/inmigrant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Using Input-output analysis to analyze the economy of the grande de San Ramón</title>
-      <link>/publication/i_o.html</link>
+      <link>/publication/i_o/</link>
       <pubDate>Sun, 01 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>/publication/i_o.html</guid>
+      <guid>/publication/i_o/</guid>
       <description></description>
     </item>
     

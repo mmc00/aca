@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAM on </title>
+    <link>/tags/sam/</link>
+    <description>Recent content in SAM on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 19 Dec 2017 21:13:14 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/sam/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Caracterización de la Economía costarricense mediante la Matriz de Contabilidad Social</title>
+      <link>/post/mcsmaunal/</link>
+      <pubDate>Tue, 19 Dec 2017 21:13:14 -0500</pubDate>
+      
+      <guid>/post/mcsmaunal/</guid>
+      <description>La Matriz de Contabilidad Social (MCS), pertenece a un conjunto de datos que elabora el Banco Central de Costa Rica, la cual permite obtener información relevante sobre el país en cuestión. Entre las características que posee la matriz, se encuentra la capacidad de mostrar todas las transacciones que se realizan en la Economía, es decir, la capacidad de mostrar las interacciones entre distintos agentes.</description>
+    </item>
+    
+  </channel>
+</rss>

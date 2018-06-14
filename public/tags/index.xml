@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on </title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0600</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content tagged as &#39;Academic&#39;</title>
+      <link>/tags/academic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0600</pubDate>
+      
+      <guid>/tags/academic/</guid>
+      <description>Here is a list of all the content that has been tagged as academic.</description>
+    </item>
+    
+    <item>
+      <title>Apps</title>
+      <link>/tags/apps/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CGE</title>
+      <link>/tags/cge/</link>
+      <pubDate>Tue, 19 Dec 2017 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/cge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coyuntura</title>
+      <link>/tags/coyuntura/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/coyuntura/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Equipo</title>
+      <link>/tags/equipo/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/equipo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modelos</title>
+      <link>/tags/modelos/</link>
+      <pubDate>Tue, 19 Dec 2017 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/modelos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PIB</title>
+      <link>/tags/pib/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
+      
+      <guid>/tags/pib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SAM</title>
+      <link>/tags/sam/</link>
+      <pubDate>Tue, 19 Dec 2017 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/sam/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

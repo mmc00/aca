@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.41" />
+  <meta name="author" content="Lena Smith">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="\usepackage[utf8]{inputenc}
+The Social Accounting Matrix (SAM), belongs to a set of data prepared by the Central bank of Costa Rica, which allow to be obtaining a relevant information about the country. Among the features that matrix has, is the ability to show the interactions between different agents. It could be inferred, that the SAM is a picture of the economy, keeping the static characteristic.  .figure1 { margin-top: 20px; margin-bottom: 60px; }   .">
+
+  
+  <link rel="alternate" hreflang="es" href="/post/mcsmaunal.en.utf8/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/academic.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-116315459-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/mcsmaunal.en.utf8/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@GeorgeCushen">
+  <meta property="twitter:creator" content="@GeorgeCushen">
+  
+  <meta property="og:site_name" content="">
+  <meta property="og:url" content="/post/mcsmaunal.en.utf8/">
+  <meta property="og:title" content="Characterization of the Costa Rican Economy through the Social Accounting Matrix | ">
+  <meta property="og:description" content="\usepackage[utf8]{inputenc}
+The Social Accounting Matrix (SAM), belongs to a set of data prepared by the Central bank of Costa Rica, which allow to be obtaining a relevant information about the country. Among the features that matrix has, is the ability to show the interactions between different agents. It could be inferred, that the SAM is a picture of the economy, keeping the static characteristic.  .figure1 { margin-top: 20px; margin-bottom: 60px; }   ."><meta property="og:image" content="/img/headers/blue.png">
+  <meta property="og:locale" content="es">
+  
+  <meta property="article:published_time" content="2017-12-19T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2017-12-19T00:00:00&#43;00:00">
+  
+
+  
+  
+
+  <title>Characterization of the Costa Rican Economy through the Social Accounting Matrix | </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Barra de navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/"><img src="/img/icon4.png" alt=""></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#people">
+            
+            <span>Equipo</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publicaciones</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Proyectos</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Cursos</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contacto</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  
+  
+    <img src="/img/headers/blue.png" class="article-banner" itemprop="image">
+  
+
+  
+</div>
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Characterization of the Costa Rican Economy through the Social Accounting Matrix</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-12-19 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Dec 19, 2017
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lena Smith">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min de lectura
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/models/">Models</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Characterization%20of%20the%20Costa%20Rican%20Economy%20through%20the%20Social%20Accounting%20Matrix&amp;url=%2fpost%2fmcsmaunal.en.utf8%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fmcsmaunal.en.utf8%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fmcsmaunal.en.utf8%2f&amp;title=Characterization%20of%20the%20Costa%20Rican%20Economy%20through%20the%20Social%20Accounting%20Matrix"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fmcsmaunal.en.utf8%2f&amp;title=Characterization%20of%20the%20Costa%20Rican%20Economy%20through%20the%20Social%20Accounting%20Matrix"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Characterization%20of%20the%20Costa%20Rican%20Economy%20through%20the%20Social%20Accounting%20Matrix&amp;body=%2fpost%2fmcsmaunal.en.utf8%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>\usepackage[utf8]{inputenc}</p>
+
+<div style="line-height: 2em;">
+
+
+The Social Accounting Matrix (SAM), belongs to a set of data prepared by the Central bank of Costa Rica, which allow to be obtaining a relevant information about the country. Among the features that matrix has, is the ability to show the interactions between different agents. It could be inferred, that the SAM is a picture of the economy, keeping the static characteristic. 
+
+<style>
+ .figure1 {
+   margin-top: 20px;
+   margin-bottom: 60px;
+ }
+</style>
+
+<style>
+ .figure2 {
+   margin-top: 20px;
+   margin-bottom: 110px;
+ }
+</style>
+
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 150px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+</style>
+
+<style>
+  .col3 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+</style>
+
+<style>
+body {
+text-align: justify}
+</style>
+
+For the start, a closed Economy is most easy to understand for the model of circular flow, the factors sell their services to activities, obtained income for it, which allows to institutions to purchases in the different market. The activities obtain income from the sale of products and pay for factors and intermediate inputs. With an open economy, the same logic is followed, institutions sell their services for domestic and external productions. In addition, they have the possibility of buying domestic of foreign products. 
+
+The SAM is a square matrix, where each account of columns has its counterpart in the rows, and the information in each cell takes into account the quantify and the price, being this equal for each entry of row, thus reflecting the Law of the One Price (LOOP), the articles are homogeneous, and their price does not differ by agent. In fact, the matrix is an account that reflects the circular flow model.
+
+$$
+T_{i,j} = \sum_{i,j} p_{i} q_{i,j} =  p_{i} Q_{i} \quad \land Q_{i} = \sum_{j} q_{i,j}
+$$
+
+The total quantities must be equal per column and per row, that is:
+
+$$
+\sum_{i} p_{i,j}q_{i,j} = \sum_{i}T_{i,j} = \sum_{j}T_{j,i} = \sum_{i} p_{j,i}q_{j,i}  \qquad \forall i = j
+$$
+Due the advance in the  Costa Rica National Accounts, the information from the Supply and Utilization Accounts is used for the construction, without the need to resort to other sources of information. The base year of SAM is 2012, started with aggregate accounts and were disaggregated with other data obtained from surveys. In total, the new National Accounts of 2012 have 183 products  and 136 activities, which were added in 32 types in both cases, designed to facilitate integration in the CGE model, this appears on figure 1. 
+
+
+
+#### Figure 1. Scheme of aggregation of goods and services
+<div class = "row">
+<div class = "col-md-6">
+preserve76c826a6eb55dff2preservee221604c4db0c9bc
+</div>
+
+<div class = "col-md-6">
+preserve042229591053cb28preservea8b7a56ccc35204d
+</div>
+</div>
+
+<p>Within the aggregate information, is possible to obtain GDP by expenditure approach, how appears on figure 2. The component with greatest weight is the private consumption, in urban households, with 54%. On the other hand, public investment only represents 2% of the total investment, which is 21%, private investment becomes relevant with 19%. Imports represent 35% and exports 32%, showing a current account deficit of 3%.</p>
+
+<h4 id="figure-1-composition-of-gdp">Figure 1. Composition of GDP.</h4>
+
+<div class="figure1">
+preservec275bba2487b3daf
+</div>
+The composition of expenditure of commodities is shown in table 2. The consumption of agricultural products and food are an important part of households, for the case of urban, the consume in other services is slightly higher, the difference in pattern seem to be minimum by the degree of aggregation of the accounts of goods and services, in addition also by the type of household’s disaggregation. The government makes a significant expenditure on health and education, representing 63% of the total. Exports are fairly distributed, however, food and agricultural products are the most exported, adding a 25%, hotel and professional services have a high percentage (9% respectively), and machinery 13.91%. On the side of imports the most important good is machinery with 18%, in addition chemicals and refined petroleum products accounts for 28%.   
+
+#### Table 1. Expenditure of commodities.
+<table class="table table-hover table-condensed" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:center;"> Commodities </th>
+   <th style="text-align:center;"> Rural </th>
+   <th style="text-align:center;"> Urban </th>
+   <th style="text-align:center;"> NPISH </th>
+   <th style="text-align:center;"> Private </th>
+   <th style="text-align:center;"> Public </th>
+   <th style="text-align:center;"> Government </th>
+   <th style="text-align:center;"> Exports </th>
+   <th style="text-align:center;"> Imports </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> agr </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d5ffd5">0.0332</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dbffdb">0.0244</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0090</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #68ff68">0.0820</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0425</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> banana </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0014</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0010</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #99ff99">0.0555</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> coffee </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0049</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> sil </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0009</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0009</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0028</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> fishing </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0018</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0013</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0005</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0042</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> mining </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0003</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0042</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> food </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.2048</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #21ff21">0.1509</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d4ffd4">0.0680</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0021</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #24ff24">0.1190</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #abffab">0.0588</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> prodcoffee </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0066</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7">0.0048</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0328</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0011</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> bebtab </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cfffcf">0.0384</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c9ffc9">0.0368</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3fff3">0.0062</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f1fff1">0.0092</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> textleather </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c9ffc9">0.0426</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c1ffc1">0.0422</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4">0.0142</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #beffbe">0.0452</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> otrmnf </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6">0.0328</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cbffcb">0.0349</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2">0.0302</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0238</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba">0.0376</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9fff9f">0.0670</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> refpet </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c7ffc7">0.0443</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b8ffb8">0.0484</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #3cff3c">0.1370</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> chemicals </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0486</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b3ffb3">0.0516</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e9ffe9">0.0277</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #beffbe">0.0352</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #3aff3a">0.1384</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> rubberplast </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0135</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea">0.0143</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b5ffb5">0.0399</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #bfffbf">0.0446</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> prodminmno </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0018</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0019</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ebffeb">0.0107</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #edffed">0.0121</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> prodment </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0028</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa">0.0030</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0097</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0076</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0">0.0252</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #75ff75">0.0970</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> mac </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0">0.0377</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3">0.0406</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #abffab">0.2034</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c5ffc5">0.1580</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0011</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.1391</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.1794</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> vehicles </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6">0.0329</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ccffcc">0.0348</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d8ffd8">0.0936</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0457</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0015</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #99ff99">0.0717</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> otrsvc </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #34ff34">0.1625</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.1740</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.4065</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0007</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #92ff92">0.1405</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #0cff0c">0.1325</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d8ffd8">0.0273</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> elegas </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea">0.0168</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4">0.0184</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0006</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0006</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> water </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8">0.0050</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0055</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> bld </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8">0.0053</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0058</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.6219</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.7034</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> trade </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f0fff0">0.0120</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ecffec">0.0127</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0001</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> trns </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3">0.0477</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b9ffb9">0.0476</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0009</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9dff9d">0.0530</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3">0.0195</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> hotelrest </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6">0.0586</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #a3ffa3">0.0626</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5">0.0119</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #54ff54">0.0929</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e6ffe6">0.0172</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> tel </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d7ffd7">0.0314</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d2ffd2">0.0306</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0046</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0031</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa">0.0031</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> svcprf </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa">0.0034</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0036</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e0ffe0">0.0487</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0219</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e8ffe8">0.0612</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #48ff48">0.0993</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2">0.0089</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> fin </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c8ffc8">0.0441</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba">0.0468</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0082</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f8fff8">0.0078</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fafffa">0.0027</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #efffef">0.0108</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> admpub </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fefffe">0.0002</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #77ff77">0.1754</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> edu </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e0ffe0">0.0244</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c0ffc0">0.0426</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #baffba">0.1094</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.3312</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7">0.0039</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> health </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ddffdd">0.0268</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c5ffc5">0.0390</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #1dff1d">0.3591</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #17ff17">0.3013</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0092</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> domest </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e9ffe9">0.0176</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3">0.0186</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+  </tr>
+</tbody>
+</table>
+
+On the income side, households have different sources of income, which were added by salaried and non-salaried work income, capital, companies, land, international and government transfers, plus social contributions to workers, which also collects the government and is responsible for carrying out the transfer as health services and pensions. The income of urban households is greater than rural, this is mainly due to the composition of their income, which are shown in figure 3. The component of greater weight is wage labor in both cases, non-salaried employment has more important in rural households, another great differentiation is the income of capital and companies, in urban households they represent 29% and in rural households 21%.
+
+#### Figure 2. Income distribution of households. 
+<div class="figure1">
+preserve5f51cd1d7364290c
+</div>
+
+<p>In the case of government, the sources of income are shown in the figure 3, where it is evident that the main sources of income are internal transfers with 38.7 %, of which 25% come from urban households, whereas external transfers only 0.275%. The other major sources of income are indirect tax with 20.6%, being 18% for Sales tax and 2.57% of taxes on net goods (subtracting the subsidy value), direct taxes would be the following with 17.5%. Another important information that the matrix show is the effectives rates by type of taxes, which are shown in the table 2. For the case imports, the highest rate falls for beverages and tobacco with 40%, refined petroleum products they have rate of 31% and vehicles 24%. For the case of sales tax, the desegregation is based on commodities, that appears in figure 4. Hotel and restaurants services are the ones that contributed the most the sales tax with 14%, followed by machinery and food with 9%, telecommunications and chemicals 8%. On the other hand, professional, transport, refined oil, mining and agricultural services each contribute about 1%.</p>
+
+<h4 id="figure-3-distribution-of-government-income">Figure 3. Distribution of government income.</h4>
+
+<div class="figure2">
+preserve3f6a4c8f8795bb8f
+</div>
+
+<div class="figure2">
+#### Figure 4. Distribution of government by tax.
+preserve02233141b6fb9223
+</div>
+
+<p>The effective rates by type of taxes are shown in table 3. In the case of sales rates, the highest rate of hotels and tourist services, which is correlated with its high collection, but not with other goods. In the case of imports, the highest rate falls for beverages and tobacco with 40%, refined petroleum products have a rate of 31% and vehicles 24%. Export rates are in most cases 0, only in agricultural products there is some rate with values close to 1%. For the activities tax, values are close to 2% and 3%, water being the good with the highest rate.</p>
+
+<h4 id="table-2-effective-sales-tax-rates">Table 2. Effective sales tax rates</h4>
+
+<p><div class="figure2">
+<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:center;"> Commodities </th>
+   <th style="text-align:center;"> Imports </th>
+   <th style="text-align:center;"> Exports </th>
+   <th style="text-align:center;"> Sales </th>
+   <th style="text-align:center;"> Activities </th>
+   <th style="text-align:center;"> Production </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> agr </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f9fff9">0.0082</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde">0.0017</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0051</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">agr        </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d2ffd2">0.0102</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> banano </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0022</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #34ff34">0.0107</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">banana     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #6dff6d">0.0246</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> coffee </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #a0ffa0">0.1493</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde">0.0017</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">coffee     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f4fff4">0.0053</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> for </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0060</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ecffec">0.0107</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">for        </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #1aff1a">0.0365</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> fishing </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fdfffd">0.0029</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fbfffb">0.0021</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">fishing    </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #58ff58">0.0277</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> min </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cfffcf">0.0760</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #80ff80">0.0754</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">min        </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9aff9a">0.0182</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> food </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4">0.0417</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ceffce">0.0287</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">food       </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cdffcd">0.0109</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> prodcoffe </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6">0.1149</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.0135</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fcfffc">0.0016</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">prodcoffee </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e5ffe5">0.0074</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> bebtab </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.4045</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #4dff4d">0.1052</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">bebtab     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dcffdc">0.0088</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> textcuero </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c6ffc6">0.0890</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #82ff82">0.0740</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">texleather </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3">0.0123</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> otrmnf </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e4ffe4">0.0414</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0361</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">otrmnf     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c2ffc2">0.0124</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> refpet </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #3bff3b">0.3103</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f6fff6">0.0051</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">refpet     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #efffef">0.0060</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> chemicals </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3fff3">0.0190</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c0ffc0">0.0374</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">rubberplast</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d0ffd0">0.0105</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> rubberplast </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eaffea">0.0331</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9aff9a">0.0596</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">chemicals  </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3ffc3">0.0123</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> prodminmno </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #deffde">0.0510</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #4dff4d">0.1054</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">prodminmno </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ccffcc">0.0111</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> prodment </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5">0.0151</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #9dff9d">0.0577</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">prodment   </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cdffcd">0.0109</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> mac </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ebffeb">0.0303</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #aaffaa">0.0503</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">mac        </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ceffce">0.0107</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> vehicles </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #6aff6a">0.2358</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #66ff66">0.0909</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">vehicles   </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #5bff5b">0.0272</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> otrsvc </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f5fff5">0.0056</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">otrsvc     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #78ff78">0.0231</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> elegas </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b6ffb6">0.0432</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">elegas     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #82ff82">0.0216</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> water </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">water      </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.0403</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> bld </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">bld        </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d6ffd6">0.0096</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> trade </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #60ff60">0.0944</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">trade      </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #71ff71">0.0241</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> trns </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f2fff2">0.0072</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">trns       </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #63ff63">0.0261</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> hotelrest </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00">0.1515</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">hotelrest  </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #8aff8a">0.0205</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> tel </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #50ff50">0.1034</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">tel        </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #43ff43">0.0307</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> svcprf </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f7fff7">0.0045</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">svcprf     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #90ff90">0.0196</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> fin </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0101</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">fin        </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #89ff89">0.0206</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> admpub </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">edu        </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0038</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> edu </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">health     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b0ffb0">0.0151</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> health </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">domest     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eeffee">0.0062</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> domest </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.0000</span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">admpub     </span> </td>
+   <td style="text-align:center;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e3ffe3">0.0078</span> </td>
+  </tr>
+</tbody>
+</table>
+<div>
+<div></p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/models/">Models</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/sam/">SAM</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/cge/">CGE</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Relacionado</h3>
+      <ul>
+        
+        <li><a href="/post/mcsmaunal.en.knit/">Characterization of the Costa Rican Economy through the Social Accounting Matrix</a></li>
+        
+        <li><a href="/project/cge/">Modelo Equilibrio General</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Citar</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copiar
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Descargar
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

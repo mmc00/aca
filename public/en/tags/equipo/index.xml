@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Equipo on </title>
+    <link>/en/tags/equipo/</link>
+    <description>Recent content in Equipo on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/en/tags/equipo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ricardo Alvarado Barrantes</title>
+      <link>/en/people/ricardo/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/en/people/ricardo/</guid>
+      <description>Economista por la Universidad Nacional de Costa Rica. Cuenta con amplia experiencia en temas de estadísticas económicas, bases de datos y en la elaboración de reportes dinámicos. Se ha desempeñado como Consultor estadístico en el Consejo Monetario Centroamericano desde el 2014 y consultor independiente tanto en el ámbito nacional como en el internacional. En la actualidad, está culminando la tesis de Licenciatura en Economía en la Universidad Nacional de Costa Rica y está cursando la Maestría Big data y Business Analytics en la Universidad Camilo José Cela, España.</description>
+    </item>
+    
+  </channel>
+</rss>

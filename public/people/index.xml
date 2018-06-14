@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Peoples on Proyecto de Estudios Fiscales</title>
-    <link>/people.html</link>
-    <description>Recent content in Peoples on Proyecto de Estudios Fiscales</description>
+    <title>Peoples on </title>
+    <link>/people/</link>
+    <description>Recent content in Peoples on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>&amp;copy; 2018</copyright>
@@ -13,38 +13,38 @@
     
     
     <item>
-      <title>David Cardoza Roodriguez</title>
-      <link>/people/david.html</link>
+      <title>David Cardoza Rodriguez</title>
+      <link>/people/david/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/people/david.html</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
+      <guid>/people/david/</guid>
+      <description>Licenciado en Economía de la Universidad Nacional, y Maestría en el Torcuato Di Tella. He realizado investigaciones en temas fiscales e Incidencia. Soy profesor de los cursos Econometría, Microeconomía y Estadística en la Escuela de Economía de la Universidad Nacional, además dirijo la catedra de métodos cuantitativos.</description>
     </item>
     
     <item>
       <title>Marlon Molina Corella</title>
-      <link>/people/marlon.html</link>
+      <link>/people/marlon/</link>
       <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/people/marlon.html</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
+      <guid>/people/marlon/</guid>
+      <description>Economista de la Universidad Nacional, tengo experiecia en modelos de fiscales, entre ellos microsimulaciones en Incidencia y Modelos de Equilibrio General Computable. También soy aficionado a la programacion en R. He trabajo 2 años en el Proyecto.</description>
     </item>
     
     <item>
       <title>Francisco Sancho Mora</title>
-      <link>/people/francisco.html</link>
+      <link>/people/francisco/</link>
       <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/people/francisco.html</guid>
+      <guid>/people/francisco/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
     </item>
     
     <item>
       <title>Ricardo Alvarado Barrantes</title>
-      <link>/people/ricardo.html</link>
+      <link>/people/ricardo/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/people/ricardo.html</guid>
+      <guid>/people/ricardo/</guid>
       <description>Economista por la Universidad Nacional de Costa Rica. Cuenta con amplia experiencia en temas de estadísticas económicas, bases de datos y en la elaboración de reportes dinámicos. Se ha desempeñado como Consultor estadístico en el Consejo Monetario Centroamericano desde el 2014 y consultor independiente tanto en el ámbito nacional como en el internacional. En la actualidad, está culminando la tesis de Licenciatura en Economía en la Universidad Nacional de Costa Rica y está cursando la Maestría Big data y Business Analytics en la Universidad Camilo José Cela, España.</description>
     </item>
     

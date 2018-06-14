@@ -1,6 +1,6 @@
 ---
 title: "Caracterización de la Economía costarricense mediante la Matriz de Contabilidad Social"
-author: "Marlon Molina C"
+author: "Marlon Molina Corella"
 date: 2017-12-19T21:13:14-05:00
 output: 
 categories: ["Modelos"]
@@ -64,9 +64,7 @@ Se puede partir desde una Economía cerrada para entender el flujo circular, los
 Con una Economía abierta, se sigue la misma lógica, las instituciones venden sus servicios para la producción doméstica y externa. Además, tienen la posibilidad de comprar productos nacionales o extranjeros. Es preciso aclarar que la explicación previa es una simplificación de la Economía, porque también existen otros elementos, como los impuestos y el ahorro. Una representación del flujo circular se muestra en la figura 1.
 
 #### Figura 1. Flujo circular de una Economía cerrada
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics("CFLOW.png")
-```
+![](/post/mcsmaunal_files/CFLOW.png)
 
 La MCS es una matriz cuadrada, donde cada cuenta de las columnas tiene su contraparte en las filas, además, la información en cada celda tiene presente la cantidad y el precio, siendo este igual por cada entrada de la fila, desprendiendo así la Ley del Precio Único, los artículos son homogéneos y su precio no difiere por agente:
 
@@ -116,20 +114,20 @@ sankey <- list()
 
 for(i in 1:4){
   if (i == 1){h = 500
-  w = 420
+  w = 360
   h1 = -10
   w1 = 40}  
   if (i == 2){h = 800
-  w = 420
+  w = 360
   h1 = -10
   w1 = 40} 
   if (i == 3){h = 1000
-  w = 420} 
+  w = 360} 
   if (i == 4){h = 1000
-  w = 420} 
+  w = 360} 
   if (i == 1 || i == 2){h = 800
-  w = 420} else{h = 1000
-  w =  420}  
+  w = 360} else{h = 1000
+  w =  360}  
   colors  <- paste(unlist(nodes[[paste0('nodes_', i)]]['colors']), collapse = '", "')
   colorJS <- paste('d3.scaleOrdinal(["', colors, '"])')  
   sankey[[paste0('Graph',i)]] <- sankeyNetwork(Links = links[[paste0('links_', i)]], Nodes = nodes[[paste0('nodes_', i)]], 
@@ -142,17 +140,20 @@ for(i in 1:4){
 }
 ```
 #### Figura 2. Esquema de agregación de bienes y servicios
-<div class="col2">
+<div class = "row">
+<div class = "col-md-6">
 ```{r agregacion, echo=FALSE, message=FALSE, warning=FALSE, out.width='200%'}
 sankey$Graph1
 sankey$Graph3
 ```
 </div>
-<div class="col3">
+
+<div class = "col-md-6">
 ```{r agregacion2, echo=FALSE, fig.show='hold', message=FALSE, warning=FALSE}
 sankey$Graph2
 sankey$Graph4
 ```
+</div>
 </div>
 
 Dentro de la información agregada que se puede obtener de la MCS es la composición por componentes del gasto, como se muestra en la figura 3. El componente de mayor peso es del consumo privado, en mayor medida el de los hogares urbanos, con un 54%. Por otra parte, la inversión pública solo representa un 2% del total de inversión en la Economía, el cual es 21%, la privada toma mayor relevancia con un 19%. Además, las importaciones representan un 35%, mostrando el déficit en cuenta corriente, debido a que las exportaciones son un 32%.  
@@ -246,7 +247,7 @@ Data$Consumo %>%
   ) %>%
   select(Bienes, everything()) %>%
   kable(format = "html", escape = F, align=c(rep('c', 8)), table.attr = "style='width:30%;'") %>%
-  kable_styling(bootstrap_options = c("hover", "condensed"), position = "center", full_width = T, font_size = 12)
+  kable_styling(bootstrap_options = c("hover", "condensed"), position = "center", full_width = T, font_size = 15)
 ```
 
 Por el lado de los ingresos, los hogares tienen distintas fuentes, los cuales se agregaron por ingresos de trabajo asalariado y no asalariado, capital, empresas, tierra, transferencias internacionales y del gobierno, además se incluye las contribuciones sociales a los trabadores, las cuales también recauda el gobierno y se encarga de realizar la transferencia. Los ingresos de los hogares urbanos son mayores que los rurales, esto se debe principalmente a la composición de sus ingresos, los cuales se muestran en la figura 3. El componente de mayor peso es el trabajo asalariado en ambos casos, el empleo no asalariado tiene mayor importancia en los hogares rurales, otra gran diferenciación son los ingresos de capital y empresas, en los hogares urbanos representan 29% y en los rurales un 21%.

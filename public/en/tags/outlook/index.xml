@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Outlook on </title>
+    <link>/en/tags/outlook/</link>
+    <description>Recent content in Outlook on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/en/tags/outlook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fiscal outlook</title>
+      <link>/en/project/coyuntura/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/en/project/coyuntura/</guid>
+      <description>This section provides a quarterly review of tax figures Costa Rica, in order to see the situation on the issue of revenue and expenses, will be made in addition to seeing the issues of national discussion on the management of public finances.</description>
+    </item>
+    
+  </channel>
+</rss>

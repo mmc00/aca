@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Proyecto de Estudios Fiscales</title>
-    <link>/project.html</link>
-    <description>Recent content in Projects on Proyecto de Estudios Fiscales</description>
+    <title>Projects on </title>
+    <link>/project/</link>
+    <description>Recent content in Projects on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>&amp;copy; 2018</copyright>
@@ -14,20 +14,38 @@
     
     <item>
       <title>Coyuntura Fiscal</title>
-      <link>/project/coyuntura.html</link>
+      <link>/project/coyuntura/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/coyuntura.html</guid>
+      <guid>/project/coyuntura/</guid>
+      <description>En esta sección se realizará una revisión trimestral de las cifras fiscales de Costa Rica, con el objetivo de ver la coyuntura en el tema de recaudación y gastos, además de ver los temas de discusión nacional sobre el manejo de las finanzas públicas.</description>
+    </item>
+    
+    <item>
+      <title>Indicador de Blanchard</title>
+      <link>/project/tabla/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/project/tabla/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modelo Equilibrio General</title>
-      <link>/project/cge.html</link>
+      <link>/project/cge/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/project/cge.html</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
+      <guid>/project/cge/</guid>
+      <description>Uno de los objetivos del proyecto es la realización de un Modelo de Equilibrio General Computable, que permita analizar los efectos de una eventual reforma fiscal. Para la ejecución de este se ha implementado el modelo STAGE, del equipo de CGEMOD.</description>
+    </item>
+    
+    <item>
+      <title>Simulador de reforma del IVA</title>
+      <link>/project/incidencia/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/project/incidencia/</guid>
+      <description></description>
     </item>
     
   </channel>

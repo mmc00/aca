@@ -3,7 +3,7 @@
 date = "2018-04-27"
 
 # Project title.
-title = "David Cardoza Roodriguez"
+title = "David Cardoza Rodriguez"
 
 # Project summary to display on homepage.
 summary = "Coordinador e Investigador del Proyecto Fiscal"
@@ -13,7 +13,7 @@ image_preview = "cardoza2.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["CGE", "IVA"]`
-tags = [""]
+tags = ["Equipo"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
@@ -25,7 +25,12 @@ math = false
 #[header]
 #image = ""
 #caption = ""
+
+[[social.icons]]
+icon = "envelope"
+icon_pack = "fa"
+link = "mailto:dcrunicornio@gmail.com"
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+Licenciado en Economía de la Universidad Nacional, y Maestría en el Torcuato Di Tella. He realizado investigaciones en temas fiscales e Incidencia. Soy profesor de los cursos Econometría, Microeconomía y Estadística en la Escuela de Economía de la Universidad Nacional, además dirijo la catedra de métodos cuantitativos. 
 
