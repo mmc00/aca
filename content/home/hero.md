@@ -1,6 +1,6 @@
 +++
 # Hero widget.
-widget = "hero"
+widget = hero
 active = true
 date = 2017-10-15
 
@@ -8,11 +8,10 @@ title = ""
 
 # Order that this section will appear in.
 weight = 3
-
- [header]
+[header]
  overlay_img = "headers/bubbles-wide.jpg"
 +++
-El proyecto de Estudios fiscales es una iniciativa que nació en la escuela de Economía de la Universidad ante la necesidad de brindar herramientas análiticas para la crisis fiscal
+El proyecto de Estudios fiscales es una iniciativa que nació en la escuela de Economía de la Universidad Nacional ante la necesidad de brindar herramientas análiticas para el tema fiscal.
 <br>
 <br>
 <br>

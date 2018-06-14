@@ -5,6 +5,33 @@
     
     <url>
     
+      <loc>/people/david.html</loc>
+      <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/people/marlon.html</loc>
+      <lastmod>2018-03-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/people/francisco.html</loc>
+      <lastmod>2018-02-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/project/coyuntura.html</loc>
       <lastmod>2018-01-27T00:00:00+00:00</lastmod>
     </url>
@@ -14,17 +41,8 @@
     
     <url>
     
-      <loc>/biografia/david.html</loc>
+      <loc>/people/ricardo.html</loc>
       <lastmod>2018-01-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/biografia/marlon.html</loc>
-      <lastmod>2017-12-29T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -70,6 +88,15 @@
     
       <loc>/talk.html</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/vat.html</loc>
+      <lastmod>2016-06-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -123,7 +150,7 @@
     <url>
     
       <loc>/tags.html</loc>
-      <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+      <lastmod>2018-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -133,17 +160,7 @@
     <url>
     
       <loc>/publication_types/2.html</loc>
-      <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/biografia.html</loc>
-      <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -201,6 +218,16 @@
     
     <url>
     
+      <loc>/people.html</loc>
+      <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/project.html</loc>
       <lastmod>2018-01-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -222,7 +249,7 @@
     <url>
     
       <loc>/publication_types.html</loc>
-      <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

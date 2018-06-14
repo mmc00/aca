@@ -5,6 +5,8 @@ date: 2017-12-19T21:13:14-05:00
 output: 
 categories: ["Modelos"]
 tags: ["Modelos", "SAM", "CGE"]
+header: 
+  image: headers/blue.png
 ---
 
 \usepackage[utf8]{inputenc} 
@@ -36,7 +38,7 @@ La Matriz de Contabilidad Social (MCS), pertenece a un conjunto de datos que ela
 <style>
   .col2 {
     columns: 2 200px;         /* number of columns and width in pixels*/
-    -webkit-columns: 2 200px; /* chrome, safari */
+    -webkit-columns: 2 150px; /* chrome, safari */
     -moz-columns: 2 200px;    /* firefox */
     margin-right: 0px;
     margin-bottom: 0px;

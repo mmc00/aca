@@ -75,7 +75,7 @@ alwaysShowLanguageChooser = true
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-  logo = "Rlogo.png"
+  logo = "Rlogo3.png"
 
   # Enable/disable map in Contact widget.
   # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
@@ -153,7 +153,7 @@ alwaysShowLanguageChooser = true
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["blue.css"]
+  custom_css = []
   custom_js  = []
 
   # Publication types.
@@ -289,3 +289,7 @@ alwaysShowLanguageChooser = true
 # Configure the English version of the website.
 [Languages.es]
   languageCode = "es"
+  
+[params.authors]
+
+	[params.authors.Personas]

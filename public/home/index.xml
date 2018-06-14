@@ -18,15 +18,24 @@
       <pubDate>Sun, 15 Oct 2017 00:00:00 -0600</pubDate>
       
       <guid>/home/hero.html</guid>
-      <description>El proyecto de Estudios fiscales es una iniciativa que nació en la escuela de Economía de la Universidad ante la necesidad de brindar herramientas análiticas para la crisis fiscal </description>
+      <description>El proyecto de Estudios fiscales es una iniciativa que nació en la escuela de Economía de la Universidad Nacional ante la necesidad de brindar herramientas análiticas para el tema fiscal. </description>
     </item>
     
     <item>
-      <title>Biografía</title>
-      <link>/home/biography.html</link>
+      <title></title>
+      <link>/home/carousel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/carousel.html</guid>
+      <description>{{&amp;lt; carousel key=&amp;ldquo;my_carousel&amp;rdquo; &amp;gt;}}</description>
+    </item>
+    
+    <item>
+      <title>Personas</title>
+      <link>/home/people.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/biography.html</guid>
+      <guid>/home/people.html</guid>
       <description></description>
     </item>
     

@@ -9,7 +9,7 @@ tags = ["academic"]
 summary = "Las implicaciones fiscales ante el cambio en la medición del PIB"
 
 [header]
-image = "headers/header3.png"
+image = "headers/base.jpg"
 caption = "Credito de la Imagen: BCCR"
 
 [[gallery_item]]

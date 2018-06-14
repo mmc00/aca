@@ -1,5 +1,5 @@
 +++
-title = "Using Input-output analysis to analyze the economy of the grande de San Ramón"
+title = "Socio-Demographic Factors and Intergenesic Interval in Nicaraguan Immigrant Mothers in Costa Rica"
 date = "2008-01-01"
   
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
