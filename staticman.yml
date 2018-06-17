@@ -11,7 +11,7 @@ comments:
 
   # When allowedOrigins is defined, only requests sent from one of the domains
   # listed will be accepted.
-  allowedOrigins: ["localhost", "http://www.pestudiosfiscales.com/"]
+  allowedOrigins: ["localhost", "https://mmc00.github.io/aca/"]
   
   # (*) REQUIRED
   #
@@ -44,7 +44,7 @@ comments:
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
   # Otherwise, entries will be published to the main branch automatically.
-  moderation: true
+  moderation: false
 
   # Name of the site. Used in notification emails.
   name: "Proyecto de Estudios Fiscales"
@@ -64,7 +64,7 @@ comments:
     # (!) ENCRYPTED
     #
     # Mailgun domain (encrypted)
-    domain: "XsHp7/dDfKGRCNuyPkLfHBT6NoDjYxlq9MP/qDLy8/+8yhiM1hm/xkfEAsZXLqE10YBj8+v19xCH10zOL2KO7Pg/Ms2ZyjBrjPhNoXMquAfj5y2dhOtPty5AFzpFgsgZ0sKaJZJEWrF/JdftI8gL2HZRyOPs3629z/rad4q/bSQ="
+    domain: "fdM1Wr2tgS0WirP8G7lavvLMo5QQJ3RaU5RfdIQylPZy6IhIK99gp7eVuEulWIUbOlihNLVCFo9sui1yN/KACnmuancLmpA7tKCgrcfhBOow2aOMUS53+fuDhOas2jdXiMACEelmwTM5NGxzvtv48o98AVzQL5LPfqLR4iQ/vWk="
 
   # (*) REQUIRED
   #
@@ -82,7 +82,7 @@ comments:
 
 blogSubscribers:
   allowedFields: ["name", "email"]
-  allowedOrigins: ["localhost", "http://www.pestudiosfiscales.com/"]
+  allowedOrigins: ["localhost", "https://mmc00.github.io/aca/"]
   branch: "master"
   generatedFields:
     date:
@@ -92,7 +92,7 @@ blogSubscribers:
     tags: ["blog-subscription"]
   format: "yaml"
   commitMessage: "New Staticman blog subscription"
-  moderation: true
+  moderation: false
   name: "Proyecto de Estudios Fiscales"
   path: "data/blogSubscribers"
   filename: "contact-{@date:YYYY-MM-DDTHH-mm-ss.SSS}"
@@ -102,4 +102,4 @@ blogSubscribers:
   notifications:
     enabled: true
     apiKey: "uWXE5jyH7X4dwYGmxNRpE+C2efpKZGtWz9O8dYpQFVgMTX5pGlt64ykwrX2gx5/oZq+yICF4buTIf90g5OcG3ZqdweSVjhF7ApW2JPnfsj6kPrtEBt/zetY1HnO+YbsPAZmWPigm64KWpi1HC35cLBKNPEx3znr0LgpnjGAOdiQ="
-domain: "XsHp7/dDfKGRCNuyPkLfHBT6NoDjYxlq9MP/qDLy8/+8yhiM1hm/xkfEAsZXLqE10YBj8+v19xCH10zOL2KO7Pg/Ms2ZyjBrjPhNoXMquAfj5y2dhOtPty5AFzpFgsgZ0sKaJZJEWrF/JdftI8gL2HZRyOPs3629z/rad4q/bSQ="
+  domain: "fdM1Wr2tgS0WirP8G7lavvLMo5QQJ3RaU5RfdIQylPZy6IhIK99gp7eVuEulWIUbOlihNLVCFo9sui1yN/KACnmuancLmpA7tKCgrcfhBOow2aOMUS53+fuDhOas2jdXiMACEelmwTM5NGxzvtv48o98AVzQL5LPfqLR4iQ/vWk="
