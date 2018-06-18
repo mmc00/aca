@@ -10,7 +10,6 @@
   {{ with .Content }}
   <div class="article-style" itemprop="articleBody">{{ . }}</div>
   {{ end }}
-
   {{ $paginator := .Paginate .Data.Pages }}
   {{ if eq ( $paginator.PageNumber ) 1 }}
     {{ .Scratch.Set "redirectUrl" (print .Permalink "#blogsubscription-submitted") }}
@@ -41,11 +40,7 @@
   </div>
   {{ range $paginator.Pages }}
     {{ $params := dict "post" . }}
-    {{ if eq $.Params.list_format 0 }}
-      {{ partial "post_li_simple" $params }}
-    {{ else }}
-      {{ partial "post_li_detailed" $params }}
-    {{ end }}
+    {{ partial "post_li" $params }}
   {{ end }}
 
   {{ partial "pagination" . }}
