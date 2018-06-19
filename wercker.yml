@@ -2,7 +2,7 @@ box: ubuntu
 build:
   steps:
     - arjen/hugo-build@1.14.1:
-        version: "0.42.1" 
+        version: "0.42" 
         theme: academic
         flags: --buildDrafts=false --noTimes
 deploy:
